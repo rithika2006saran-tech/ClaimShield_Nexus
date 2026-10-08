@@ -1,0 +1,1001 @@
+provider_id,display_label,name,specialty,region,city,enrolled_date,primary_facility_id,primary_facility_type
+PRV-001,P001,Castellan Behavioral Health Group 001,Behavioral Health,NORTH,Highfield,2024-03-24,FAC-113,Clinic
+PRV-002,P002,Castellan Obstetrics Group 002,Obstetrics/Gynecology,NORTH,Highfield,2023-03-22,FAC-205,Clinic
+PRV-003,P003,Okafor Family Medicine Group 003,Family Medicine,NORTH,Highfield,2019-12-22,FAC-086,Clinic
+PRV-004,P004,Thornton Physical Therapy Group 004,Physical Therapy,SOUTH,Palmetto,2019-01-16,FAC-001,Clinic
+PRV-005,P005,Ravenscroft Family Medicine Group 005,Family Medicine,SOUTH,Baywood,2019-05-07,FAC-166,Clinic
+PRV-006,P006,Whitfield Internal Medicine Group 006,Internal Medicine,NORTH,Northvale,2023-11-23,FAC-213,Clinic
+PRV-007,P007,Oyelaran Internal Medicine Group 007,Internal Medicine,EAST,Maplewood,2024-06-15,FAC-150,Hospital
+PRV-008,P008,Galloway Behavioral Health Group 008,Behavioral Health,SOUTH,Southport,2020-06-04,FAC-166,Clinic
+PRV-009,P009,Castellan Dermatology Group 009,Dermatology,EAST,Eastbrook,2021-01-31,FAC-004,Clinic
+PRV-010,P010,Fairbanks Internal Medicine Group 010,Internal Medicine,EAST,Harborview,2020-01-10,FAC-155,Hospital
+PRV-011,P011,Ravenscroft Family Medicine Group 011,Family Medicine,WEST,Cedar Falls,2022-04-14,FAC-109,Clinic
+PRV-012,P012,Navarro Cardiology Group 012,Cardiology,SOUTH,Baywood,2022-07-29,FAC-102,Clinic
+PRV-013,P013,Yarrow Behavioral Health Group 013,Behavioral Health,NORTH,Highfield,2023-10-27,FAC-146,Clinic
+PRV-014,P014,Zimmerman Laboratory Group 014,Laboratory,WEST,Redrock,2024-07-15,FAC-045,Lab
+PRV-015,P015,Kessler Family Medicine Group 015,Family Medicine,NORTH,Highfield,2024-05-29,FAC-083,Clinic
+PRV-016,P016,Brightwater Dermatology Group 016,Dermatology,SOUTH,Palmetto,2017-11-23,FAC-075,Clinic
+PRV-017,P017,Thornton Cardiology Group 017,Cardiology,WEST,Sierra Vista,2018-02-28,FAC-255,Hospital
+PRV-018,P018,Lindqvist Family Medicine Group 018,Family Medicine,EAST,Eastbrook,2023-08-04,FAC-177,Clinic
+PRV-019,P019,Okafor Behavioral Health Group 019,Behavioral Health,WEST,Sierra Vista,2023-10-05,FAC-091,Clinic
+PRV-020,P020,Ravenscroft Family Medicine Group 020,Family Medicine,EAST,Maplewood,2024-07-16,FAC-111,Clinic
+PRV-021,P021,Harmon Family Medicine Group 021,Family Medicine,SOUTH,Southport,2021-07-13,FAC-166,Clinic
+PRV-022,P022,Thornton Cardiology Group 022,Cardiology,EAST,Maplewood,2020-01-09,FAC-151,Hospital
+PRV-023,P023,Pemberton Oncology Group 023,Oncology,NORTH,Pinecrest,2021-02-03,FAC-184,Infusion Center
+PRV-024,P024,Oyelaran Family Medicine Group 024,Family Medicine,WEST,Redrock,2023-03-16,FAC-109,Clinic
+PRV-025,P025,Aldridge Obstetrics Group 025,Obstetrics/Gynecology,NORTH,Lakemont,2024-05-18,FAC-225,Clinic
+PRV-026,P026,Navarro Internal Medicine Group 026,Internal Medicine,WEST,Westlake,2019-11-07,FAC-091,Clinic
+PRV-027,P027,Delacroix Internal Medicine Group 027,Internal Medicine,NORTH,Highfield,2019-07-14,FAC-241,Clinic
+PRV-028,P028,Bellamy Behavioral Health Group 028,Behavioral Health,NORTH,Northvale,2017-05-13,FAC-086,Clinic
+PRV-029,P029,Lindqvist Radiology Group 029,Radiology,NORTH,Northvale,2019-12-21,FAC-128,Imaging Center
+PRV-030,P030,Calloway Dermatology Group 030,Dermatology,NORTH,Lakemont,2019-06-28,FAC-014,Clinic
+PRV-031,P031,Marlowe Pain Management Group 031,Pain Management,WEST,Redrock,2017-02-24,FAC-081,Ambulatory Surgery
+PRV-032,P032,Thornton Family Medicine Group 032,Family Medicine,WEST,Cedar Falls,2019-02-23,FAC-178,Clinic
+PRV-033,P033,Bellamy Physical Therapy Group 033,Physical Therapy,WEST,Cedar Falls,2021-08-20,FAC-157,Clinic
+PRV-034,P034,Aldridge Dermatology Group 034,Dermatology,SOUTH,Southport,2019-09-03,FAC-054,Clinic
+PRV-035,P035,Brightwater Orthopedics Group 035,Orthopedics,EAST,Maplewood,2018-08-03,FAC-183,Ambulatory Surgery
+PRV-036,P036,Sutherland Laboratory Group 036,Laboratory,WEST,Sierra Vista,2017-02-13,FAC-145,Lab
+PRV-037,P037,Oyelaran Internal Medicine Group 037,Internal Medicine,WEST,Westlake,2024-07-31,FAC-189,Clinic
+PRV-038,P038,Pemberton Radiology Group 038,Radiology,WEST,Sierra Vista,2022-08-18,FAC-199,Imaging Center
+PRV-039,P039,Tanaka Oncology Group 039,Oncology,SOUTH,Southport,2018-03-19,FAC-237,Hospital
+PRV-040,P040,Whitfield Family Medicine Group 040,Family Medicine,SOUTH,Baywood,2022-11-24,FAC-166,Clinic
+PRV-041,P041,Delacroix Laboratory Group 041,Laboratory,WEST,Cedar Falls,2023-12-01,FAC-258,Lab
+PRV-042,P042,Kessler Radiology Group 042,Radiology,SOUTH,Palmetto,2020-12-02,FAC-159,Hospital
+PRV-043,P043,Galloway Orthopedics Group 043,Orthopedics,EAST,Harborview,2018-08-27,FAC-152,Ambulatory Surgery
+PRV-044,P044,Delacroix Oncology Group 044,Oncology,SOUTH,Southport,2023-02-27,FAC-229,Hospital
+PRV-045,P045,Harmon Internal Medicine Group 045,Internal Medicine,EAST,Harborview,2021-08-26,FAC-042,Clinic
+PRV-046,P046,Brightwater Family Medicine Group 046,Family Medicine,SOUTH,Sunridge,2018-08-06,FAC-075,Clinic
+PRV-047,P047,Galloway Cardiology Group 047,Cardiology,SOUTH,Baywood,2018-01-26,FAC-127,Clinic
+PRV-048,P048,Vandermeer Orthopedics Group 048,Orthopedics,WEST,Westlake,2017-11-14,FAC-255,Hospital
+PRV-049,P049,Yarrow Physical Therapy Group 049,Physical Therapy,EAST,Harborview,2018-05-09,FAC-132,Clinic
+PRV-050,P050,Bellamy Dermatology Group 050,Dermatology,EAST,Harborview,2022-05-22,FAC-139,Clinic
+PRV-051,P051,Kessler Family Medicine Group 051,Family Medicine,EAST,Maplewood,2017-05-11,FAC-244,Clinic
+PRV-052,P052,Brightwater Internal Medicine Group 052,Internal Medicine,SOUTH,Southport,2022-07-28,FAC-166,Clinic
+PRV-053,P053,Vandermeer Oncology Group 053,Oncology,EAST,Maplewood,2023-09-28,FAC-154,Hospital
+PRV-054,P054,Delacroix Behavioral Health Group 054,Behavioral Health,EAST,Stonebridge,2022-06-17,FAC-139,Clinic
+PRV-055,P055,Okafor Cardiology Group 055,Cardiology,NORTH,Northvale,2022-11-07,FAC-057,Hospital
+PRV-056,P056,Kessler Physical Therapy Group 056,Physical Therapy,NORTH,Lakemont,2021-10-31,FAC-205,Clinic
+PRV-057,P057,Castellan Cardiology Group 057,Cardiology,EAST,Maplewood,2020-03-11,FAC-139,Clinic
+PRV-058,P058,Pemberton Internal Medicine Group 058,Internal Medicine,EAST,Eastbrook,2017-11-26,FAC-222,Hospital
+PRV-059,P059,Calloway Family Medicine Group 059,Family Medicine,WEST,Cedar Falls,2018-04-23,FAC-117,Clinic
+PRV-060,P060,Harmon Cardiology Group 060,Cardiology,NORTH,Lakemont,2018-02-21,FAC-203,Hospital
+PRV-061,P061,Whitfield Radiology Group 061,Radiology,EAST,Stonebridge,2020-12-02,FAC-003,Hospital
+PRV-062,P062,Wexler Cardiology Group 062,Cardiology,SOUTH,Sunridge,2022-12-04,FAC-095,Clinic
+PRV-063,P063,Whitfield Physical Therapy Group 063,Physical Therapy,NORTH,Highfield,2019-04-08,FAC-113,Clinic
+PRV-064,P064,Delacroix Family Medicine Group 064,Family Medicine,SOUTH,Baywood,2022-11-04,FAC-054,Clinic
+PRV-065,P065,Oyelaran Radiology Group 065,Radiology,EAST,Harborview,2021-09-04,FAC-151,Hospital
+PRV-066,P066,Pemberton Laboratory Group 066,Laboratory,NORTH,Northvale,2022-02-22,FAC-138,Lab
+PRV-067,P067,Marlowe Family Medicine Group 067,Family Medicine,EAST,Harborview,2022-05-12,FAC-060,Clinic
+PRV-068,P068,Brightwater Family Medicine Group 068,Family Medicine,WEST,Redrock,2019-05-25,FAC-157,Clinic
+PRV-069,P069,Bellamy Internal Medicine Group 069,Internal Medicine,SOUTH,Southport,2020-02-27,FAC-021,Hospital
+PRV-070,P070,Aldridge Oncology Group 070,Oncology,NORTH,Lakemont,2022-10-01,FAC-006,Infusion Center
+PRV-071,P071,Galloway Behavioral Health Group 071,Behavioral Health,SOUTH,Baywood,2018-11-26,FAC-201,Clinic
+PRV-072,P072,Castellan Radiology Group 072,Radiology,SOUTH,Palmetto,2023-09-27,FAC-141,Hospital
+PRV-073,P073,Lindqvist Oncology Group 073,Oncology,SOUTH,Sunridge,2019-09-04,FAC-053,Infusion Center
+PRV-074,P074,Oyelaran Family Medicine Group 074,Family Medicine,NORTH,Lakemont,2023-10-09,FAC-086,Clinic
+PRV-075,P075,Delacroix Behavioral Health Group 075,Behavioral Health,SOUTH,Sunridge,2018-02-01,FAC-075,Clinic
+PRV-076,P076,Harmon Internal Medicine Group 076,Internal Medicine,SOUTH,Sunridge,2020-02-22,FAC-084,Hospital
+PRV-077,P077,Pemberton Family Medicine Group 077,Family Medicine,WEST,Sierra Vista,2019-03-22,FAC-035,Clinic
+PRV-078,P078,Kessler Behavioral Health Group 078,Behavioral Health,NORTH,Highfield,2021-07-25,FAC-233,Clinic
+PRV-079,P079,Ravenscroft Pain Management Group 079,Pain Management,WEST,Westlake,2024-07-03,FAC-012,Ambulatory Surgery
+PRV-080,P080,Thornton Physical Therapy Group 080,Physical Therapy,SOUTH,Palmetto,2020-07-08,FAC-201,Clinic
+PRV-081,P081,Ravenscroft Oncology Group 081,Oncology,SOUTH,Southport,2023-03-04,FAC-073,Infusion Center
+PRV-082,P082,Oyelaran Laboratory Group 082,Laboratory,WEST,Redrock,2022-10-15,FAC-145,Lab
+PRV-083,P083,Lindqvist Family Medicine Group 083,Family Medicine,NORTH,Northvale,2023-01-11,FAC-260,Clinic
+PRV-084,P084,Harmon Physical Therapy Group 084,Physical Therapy,WEST,Redrock,2020-07-14,FAC-047,Clinic
+PRV-085,P085,Ravenscroft Family Medicine Group 085,Family Medicine,SOUTH,Southport,2022-12-02,FAC-054,Clinic
+PRV-086,P086,Harmon Oncology Group 086,Oncology,EAST,Maplewood,2023-11-05,FAC-011,Infusion Center
+PRV-087,P087,Yarrow Orthopedics Group 087,Orthopedics,SOUTH,Southport,2023-02-13,FAC-030,Ambulatory Surgery
+PRV-088,P088,Bellamy Radiology Group 088,Radiology,SOUTH,Baywood,2019-05-05,FAC-229,Hospital
+PRV-089,P089,Lindqvist Physical Therapy Group 089,Physical Therapy,SOUTH,Palmetto,2021-12-11,FAC-174,Clinic
+PRV-090,P090,Harmon Family Medicine Group 090,Family Medicine,WEST,Westlake,2020-04-11,FAC-157,Clinic
+PRV-091,P091,Bellamy Family Medicine Group 091,Family Medicine,EAST,Stonebridge,2019-08-22,FAC-076,Clinic
+PRV-092,P092,Bellamy Behavioral Health Group 092,Behavioral Health,SOUTH,Baywood,2024-05-01,FAC-191,Clinic
+PRV-093,P093,Thornton Oncology Group 093,Oncology,SOUTH,Palmetto,2017-02-05,FAC-073,Infusion Center
+PRV-094,P094,Lindqvist Family Medicine Group 094,Family Medicine,SOUTH,Sunridge,2020-07-30,FAC-095,Clinic
+PRV-095,P095,Ashby Behavioral Health Group 095,Behavioral Health,NORTH,Lakemont,2021-05-17,FAC-231,Clinic
+PRV-096,P096,Thornton Orthopedics Group 096,Orthopedics,EAST,Stonebridge,2020-03-16,FAC-003,Hospital
+PRV-097,P097,Yarrow Laboratory Group 097,Laboratory,NORTH,Pinecrest,2020-02-24,FAC-061,Lab
+PRV-098,P098,Oyelaran Orthopedics Group 098,Orthopedics,NORTH,Pinecrest,2018-12-18,FAC-221,Ambulatory Surgery
+PRV-099,P099,Okafor Family Medicine Group 099,Family Medicine,EAST,Eastbrook,2022-09-18,FAC-177,Clinic
+PRV-100,P100,Oyelaran Radiology Group 100,Radiology,WEST,Westlake,2017-05-20,FAC-018,Imaging Center
+PRV-101,P101,Bellamy Family Medicine Group 101,Family Medicine,EAST,Stonebridge,2017-03-24,FAC-043,Clinic
+PRV-102,P102,Kessler Orthopedics Group 102,Orthopedics,WEST,Westlake,2022-03-11,FAC-012,Ambulatory Surgery
+PRV-103,P103,Wexler Orthopedics Group 103,Orthopedics,WEST,Westlake,2017-11-28,FAC-012,Ambulatory Surgery
+PRV-104,P104,Okafor Radiology Group 104,Radiology,WEST,Westlake,2021-09-17,FAC-248,Hospital
+PRV-105,P105,Thornton Physical Therapy Group 105,Physical Therapy,WEST,Sierra Vista,2022-02-25,FAC-047,Clinic
+PRV-106,P106,Tanaka Cardiology Group 106,Cardiology,WEST,Westlake,2017-03-20,FAC-156,Hospital
+PRV-107,P107,Zimmerman Dermatology Group 107,Dermatology,NORTH,Highfield,2022-12-27,FAC-231,Clinic
+PRV-108,P108,Pemberton Radiology Group 108,Radiology,EAST,Harborview,2021-04-05,FAC-003,Hospital
+PRV-109,P109,Oyelaran Physical Therapy Group 109,Physical Therapy,SOUTH,Baywood,2023-06-20,FAC-174,Clinic
+PRV-110,P110,Harmon Pain Management Group 110,Pain Management,EAST,Stonebridge,2017-08-21,FAC-152,Ambulatory Surgery
+PRV-111,P111,Sutherland Behavioral Health Group 111,Behavioral Health,EAST,Harborview,2019-05-29,FAC-244,Clinic
+PRV-112,P112,Wexler Physical Therapy Group 112,Physical Therapy,EAST,Harborview,2019-09-26,FAC-010,Clinic
+PRV-113,P113,Yarrow Physical Therapy Group 113,Physical Therapy,SOUTH,Baywood,2018-11-27,FAC-102,Clinic
+PRV-114,P114,Navarro Obstetrics Group 114,Obstetrics/Gynecology,WEST,Cedar Falls,2017-03-07,FAC-109,Clinic
+PRV-115,P115,Marlowe Internal Medicine Group 115,Internal Medicine,SOUTH,Baywood,2017-02-16,FAC-088,Clinic
+PRV-116,P116,Castellan Internal Medicine Group 116,Internal Medicine,EAST,Eastbrook,2022-07-29,FAC-243,Hospital
+PRV-117,P117,Okafor Cardiology Group 117,Cardiology,SOUTH,Palmetto,2022-07-03,FAC-048,Hospital
+PRV-118,P118,Yarrow Physical Therapy Group 118,Physical Therapy,NORTH,Pinecrest,2024-06-29,FAC-185,Clinic
+PRV-119,P119,Galloway Cardiology Group 119,Cardiology,WEST,Redrock,2021-05-12,FAC-210,Hospital
+PRV-120,P120,Tanaka Orthopedics Group 120,Orthopedics,EAST,Eastbrook,2022-12-02,FAC-152,Ambulatory Surgery
+PRV-121,P121,Calloway Obstetrics Group 121,Obstetrics/Gynecology,SOUTH,Sunridge,2020-04-28,FAC-032,Clinic
+PRV-122,P122,Calloway Pain Management Group 122,Pain Management,SOUTH,Sunridge,2017-01-28,FAC-165,Ambulatory Surgery
+PRV-123,P123,Kessler Family Medicine Group 123,Family Medicine,EAST,Harborview,2024-05-30,FAC-132,Clinic
+PRV-124,P124,Castellan Orthopedics Group 124,Orthopedics,SOUTH,Sunridge,2021-02-04,FAC-141,Hospital
+PRV-125,P125,Pemberton Behavioral Health Group 125,Behavioral Health,WEST,Redrock,2021-07-04,FAC-091,Clinic
+PRV-126,P126,Yarrow Family Medicine Group 126,Family Medicine,NORTH,Pinecrest,2017-09-01,FAC-181,Clinic
+PRV-127,P127,Fairbanks Orthopedics Group 127,Orthopedics,WEST,Redrock,2017-11-03,FAC-040,Hospital
+PRV-128,P128,Ravenscroft Family Medicine Group 128,Family Medicine,SOUTH,Palmetto,2022-01-06,FAC-088,Clinic
+PRV-129,P129,Tanaka Pain Management Group 129,Pain Management,EAST,Harborview,2022-07-04,FAC-144,Ambulatory Surgery
+PRV-130,P130,Harmon Cardiology Group 130,Cardiology,NORTH,Pinecrest,2017-12-05,FAC-101,Hospital
+PRV-131,P131,Brightwater Family Medicine Group 131,Family Medicine,EAST,Harborview,2017-11-05,FAC-076,Clinic
+PRV-132,P132,Ravenscroft Pain Management Group 132,Pain Management,EAST,Stonebridge,2021-06-20,FAC-025,Ambulatory Surgery
+PRV-133,P133,Vandermeer Behavioral Health Group 133,Behavioral Health,NORTH,Highfield,2019-03-25,FAC-249,Clinic
+PRV-134,P134,Thornton Orthopedics Group 134,Orthopedics,EAST,Eastbrook,2017-10-05,FAC-151,Hospital
+PRV-135,P135,Marlowe Cardiology Group 135,Cardiology,WEST,Sierra Vista,2017-05-27,FAC-100,Hospital
+PRV-136,P136,Marlowe Internal Medicine Group 136,Internal Medicine,EAST,Eastbrook,2019-08-22,FAC-076,Clinic
+PRV-137,P137,Tanaka Radiology Group 137,Radiology,EAST,Maplewood,2019-11-07,FAC-046,Imaging Center
+PRV-138,P138,Aldridge Family Medicine Group 138,Family Medicine,EAST,Harborview,2022-09-14,FAC-004,Clinic
+PRV-139,P139,Whitfield Dermatology Group 139,Dermatology,WEST,Westlake,2021-02-12,FAC-220,Clinic
+PRV-140,P140,Thornton Oncology Group 140,Oncology,SOUTH,Southport,2024-06-01,FAC-073,Infusion Center
+PRV-141,P141,Pemberton Obstetrics Group 141,Obstetrics/Gynecology,EAST,Maplewood,2021-05-16,FAC-243,Hospital
+PRV-142,P142,Yarrow Family Medicine Group 142,Family Medicine,NORTH,Highfield,2023-09-19,FAC-260,Clinic
+PRV-143,P143,Lindqvist Cardiology Group 143,Cardiology,EAST,Maplewood,2018-12-13,FAC-252,Hospital
+PRV-144,P144,Fairbanks Oncology Group 144,Oncology,NORTH,Highfield,2021-11-16,FAC-173,Infusion Center
+PRV-145,P145,Aldridge Orthopedics Group 145,Orthopedics,EAST,Stonebridge,2017-04-27,FAC-154,Hospital
+PRV-146,P146,Whitfield Oncology Group 146,Oncology,EAST,Stonebridge,2020-08-03,FAC-200,Infusion Center
+PRV-147,P147,Ashby Pain Management Group 147,Pain Management,EAST,Stonebridge,2017-11-22,FAC-025,Ambulatory Surgery
+PRV-148,P148,Kessler Pain Management Group 148,Pain Management,WEST,Sierra Vista,2024-08-06,FAC-020,Ambulatory Surgery
+PRV-149,P149,Harmon Laboratory Group 149,Laboratory,WEST,Redrock,2021-08-16,FAC-045,Lab
+PRV-150,P150,Fairbanks Internal Medicine Group 150,Internal Medicine,WEST,Sierra Vista,2020-10-04,FAC-156,Hospital
+PRV-151,P151,Navarro Radiology Group 151,Radiology,WEST,Redrock,2019-07-17,FAC-219,Hospital
+PRV-152,P152,Thornton Internal Medicine Group 152,Internal Medicine,SOUTH,Sunridge,2017-07-29,FAC-140,Clinic
+PRV-153,P153,Oyelaran Behavioral Health Group 153,Behavioral Health,NORTH,Northvale,2024-01-15,FAC-239,Clinic
+PRV-154,P154,Thornton Radiology Group 154,Radiology,WEST,Redrock,2022-07-22,FAC-100,Hospital
+PRV-155,P155,Sutherland Obstetrics Group 155,Obstetrics/Gynecology,NORTH,Pinecrest,2023-08-12,FAC-031,Hospital
+PRV-156,P156,Zimmerman Dermatology Group 156,Dermatology,NORTH,Lakemont,2021-06-04,FAC-022,Clinic
+PRV-157,P157,Brightwater Laboratory Group 157,Laboratory,SOUTH,Baywood,2019-07-25,FAC-104,Lab
+PRV-158,P158,Ashby Oncology Group 158,Oncology,SOUTH,Sunridge,2022-08-30,FAC-112,Infusion Center
+PRV-159,P159,Wexler Radiology Group 159,Radiology,NORTH,Highfield,2023-06-01,FAC-170,Imaging Center
+PRV-160,P160,Brightwater Oncology Group 160,Oncology,NORTH,Pinecrest,2023-01-10,FAC-182,Hospital
+PRV-161,P161,Ravenscroft Orthopedics Group 161,Orthopedics,NORTH,Highfield,2022-02-19,FAC-211,Hospital
+PRV-162,P162,Galloway Pain Management Group 162,Pain Management,NORTH,Pinecrest,2021-11-17,FAC-217,Ambulatory Surgery
+PRV-163,P163,Navarro Laboratory Group 163,Laboratory,WEST,Redrock,2022-10-08,FAC-023,Lab
+PRV-164,P164,Yarrow Internal Medicine Group 164,Internal Medicine,SOUTH,Sunridge,2022-02-16,FAC-171,Hospital
+PRV-165,P165,Lindqvist Internal Medicine Group 165,Internal Medicine,WEST,Cedar Falls,2017-11-29,FAC-235,Clinic
+PRV-166,P166,Thornton Internal Medicine Group 166,Internal Medicine,EAST,Harborview,2021-02-12,FAC-163,Hospital
+PRV-167,P167,Pemberton Physical Therapy Group 167,Physical Therapy,EAST,Stonebridge,2017-10-16,FAC-060,Clinic
+PRV-168,P168,Bellamy Internal Medicine Group 168,Internal Medicine,WEST,Sierra Vista,2024-07-16,FAC-013,Hospital
+PRV-169,P169,Lindqvist Pain Management Group 169,Pain Management,EAST,Stonebridge,2024-07-27,FAC-131,Ambulatory Surgery
+PRV-170,P170,Brightwater Dermatology Group 170,Dermatology,SOUTH,Palmetto,2019-12-13,FAC-127,Clinic
+PRV-171,P171,Tanaka Oncology Group 171,Oncology,NORTH,Pinecrest,2018-02-08,FAC-203,Hospital
+PRV-172,P172,Yarrow Physical Therapy Group 172,Physical Therapy,SOUTH,Southport,2019-07-03,FAC-208,Clinic
+PRV-173,P173,Calloway Family Medicine Group 173,Family Medicine,NORTH,Northvale,2020-11-22,FAC-227,Clinic
+PRV-174,P174,Lindqvist Laboratory Group 174,Laboratory,SOUTH,Palmetto,2023-10-20,FAC-066,Lab
+PRV-175,P175,Galloway Laboratory Group 175,Laboratory,WEST,Redrock,2021-10-08,FAC-145,Lab
+PRV-176,P176,Tanaka Family Medicine Group 176,Family Medicine,SOUTH,Sunridge,2023-10-02,FAC-191,Clinic
+PRV-177,P177,Zimmerman Family Medicine Group 177,Family Medicine,SOUTH,Sunridge,2023-03-23,FAC-143,Clinic
+PRV-178,P178,Tanaka Family Medicine Group 178,Family Medicine,NORTH,Pinecrest,2018-02-02,FAC-039,Clinic
+PRV-179,P179,Pemberton Orthopedics Group 179,Orthopedics,EAST,Stonebridge,2021-12-11,FAC-108,Hospital
+PRV-180,P180,Wexler Radiology Group 180,Radiology,SOUTH,Southport,2018-10-28,FAC-103,Hospital
+PRV-181,P181,Oyelaran Radiology Group 181,Radiology,WEST,Sierra Vista,2024-04-25,FAC-072,Imaging Center
+PRV-182,P182,Marlowe Internal Medicine Group 182,Internal Medicine,SOUTH,Palmetto,2023-10-30,FAC-140,Clinic
+PRV-183,P183,Galloway Oncology Group 183,Oncology,EAST,Harborview,2023-04-28,FAC-200,Infusion Center
+PRV-184,P184,Sutherland Pain Management Group 184,Pain Management,WEST,Redrock,2022-08-25,FAC-115,Ambulatory Surgery
+PRV-185,P185,Ashby Oncology Group 185,Oncology,NORTH,Pinecrest,2023-04-03,FAC-246,Infusion Center
+PRV-186,P186,Okafor Family Medicine Group 186,Family Medicine,SOUTH,Palmetto,2018-09-26,FAC-095,Clinic
+PRV-187,P187,Fairbanks Dermatology Group 187,Dermatology,SOUTH,Southport,2023-05-07,FAC-088,Clinic
+PRV-188,P188,Marlowe Cardiology Group 188,Cardiology,EAST,Eastbrook,2020-11-24,FAC-163,Hospital
+PRV-189,P189,Delacroix Oncology Group 189,Oncology,NORTH,Lakemont,2023-08-22,FAC-173,Infusion Center
+PRV-190,P190,Kessler Internal Medicine Group 190,Internal Medicine,WEST,Redrock,2018-10-28,FAC-210,Hospital
+PRV-191,P191,Whitfield Physical Therapy Group 191,Physical Therapy,WEST,Cedar Falls,2019-05-31,FAC-189,Clinic
+PRV-192,P192,Oyelaran Family Medicine Group 192,Family Medicine,WEST,Westlake,2018-06-12,FAC-169,Clinic
+PRV-193,P193,Thornton Internal Medicine Group 193,Internal Medicine,WEST,Sierra Vista,2022-07-10,FAC-189,Clinic
+PRV-194,P194,Lindqvist Family Medicine Group 194,Family Medicine,WEST,Redrock,2021-07-03,FAC-189,Clinic
+PRV-195,P195,Whitfield Obstetrics Group 195,Obstetrics/Gynecology,NORTH,Lakemont,2021-01-03,FAC-057,Hospital
+PRV-196,P196,Ashby Physical Therapy Group 196,Physical Therapy,SOUTH,Sunridge,2019-07-13,FAC-095,Clinic
+PRV-197,P197,Kessler Radiology Group 197,Radiology,WEST,Redrock,2023-06-17,FAC-049,Imaging Center
+PRV-198,P198,Vandermeer Behavioral Health Group 198,Behavioral Health,NORTH,Pinecrest,2017-11-04,FAC-185,Clinic
+PRV-199,P199,Delacroix Obstetrics Group 199,Obstetrics/Gynecology,WEST,Westlake,2024-08-23,FAC-047,Clinic
+PRV-200,P200,Pemberton Radiology Group 200,Radiology,SOUTH,Sunridge,2021-07-19,FAC-084,Hospital
+PRV-201,P201,Aldridge Physical Therapy Group 201,Physical Therapy,WEST,Cedar Falls,2021-11-08,FAC-157,Clinic
+PRV-202,P202,Okafor Dermatology Group 202,Dermatology,WEST,Sierra Vista,2018-12-14,FAC-091,Clinic
+PRV-203,P203,Pemberton Physical Therapy Group 203,Physical Therapy,NORTH,Lakemont,2021-03-29,FAC-160,Clinic
+PRV-204,P204,Ashby Family Medicine Group 204,Family Medicine,NORTH,Northvale,2023-08-25,FAC-260,Clinic
+PRV-205,P205,Harmon Laboratory Group 205,Laboratory,WEST,Sierra Vista,2017-02-13,FAC-045,Lab
+PRV-206,P206,Bellamy Obstetrics Group 206,Obstetrics/Gynecology,NORTH,Lakemont,2022-10-08,FAC-211,Hospital
+PRV-207,P207,Marlowe Cardiology Group 207,Cardiology,SOUTH,Sunridge,2023-10-13,FAC-048,Hospital
+PRV-208,P208,Delacroix Radiology Group 208,Radiology,SOUTH,Baywood,2020-04-14,FAC-237,Hospital
+PRV-209,P209,Tanaka Behavioral Health Group 209,Behavioral Health,SOUTH,Southport,2022-11-12,FAC-032,Clinic
+PRV-210,P210,Pemberton Laboratory Group 210,Laboratory,NORTH,Pinecrest,2018-02-21,FAC-118,Lab
+PRV-211,P211,Marlowe Family Medicine Group 211,Family Medicine,WEST,Sierra Vista,2020-09-19,FAC-136,Clinic
+PRV-212,P212,Kessler Physical Therapy Group 212,Physical Therapy,NORTH,Northvale,2017-10-10,FAC-241,Clinic
+PRV-213,P213,Harmon Pain Management Group 213,Pain Management,EAST,Harborview,2018-11-30,FAC-131,Ambulatory Surgery
+PRV-214,P214,Sutherland Oncology Group 214,Oncology,WEST,Redrock,2023-08-06,FAC-179,Infusion Center
+PRV-215,P215,Ashby Oncology Group 215,Oncology,EAST,Maplewood,2017-08-10,FAC-096,Infusion Center
+PRV-216,P216,Castellan Cardiology Group 216,Cardiology,NORTH,Lakemont,2022-08-26,FAC-225,Clinic
+PRV-217,P217,Oyelaran Behavioral Health Group 217,Behavioral Health,SOUTH,Palmetto,2023-08-16,FAC-166,Clinic
+PRV-218,P218,Aldridge Pain Management Group 218,Pain Management,NORTH,Lakemont,2020-10-28,FAC-034,Ambulatory Surgery
+PRV-219,P219,Zimmerman Cardiology Group 219,Cardiology,EAST,Eastbrook,2024-07-16,FAC-139,Clinic
+PRV-220,P220,Delacroix Family Medicine Group 220,Family Medicine,SOUTH,Palmetto,2019-03-31,FAC-106,Clinic
+PRV-221,P221,Aldridge Laboratory Group 221,Laboratory,NORTH,Pinecrest,2019-12-10,FAC-118,Lab
+PRV-222,P222,Delacroix Family Medicine Group 222,Family Medicine,SOUTH,Sunridge,2018-09-24,FAC-123,Clinic
+PRV-223,P223,Pemberton Cardiology Group 223,Cardiology,NORTH,Pinecrest,2023-08-22,FAC-039,Clinic
+PRV-224,P224,Okafor Oncology Group 224,Oncology,SOUTH,Sunridge,2023-08-30,FAC-112,Infusion Center
+PRV-225,P225,Yarrow Physical Therapy Group 225,Physical Therapy,WEST,Westlake,2020-06-26,FAC-157,Clinic
+PRV-226,P226,Galloway Radiology Group 226,Radiology,EAST,Maplewood,2019-08-15,FAC-151,Hospital
+PRV-227,P227,Thornton Internal Medicine Group 227,Internal Medicine,WEST,Redrock,2022-02-15,FAC-210,Hospital
+PRV-228,P228,Zimmerman Oncology Group 228,Oncology,SOUTH,Baywood,2018-05-18,FAC-103,Hospital
+PRV-229,P229,Pemberton Family Medicine Group 229,Family Medicine,NORTH,Northvale,2023-06-25,FAC-121,Clinic
+PRV-230,P230,Brightwater Internal Medicine Group 230,Internal Medicine,NORTH,Highfield,2020-08-03,FAC-068,Hospital
+PRV-231,P231,Tanaka Cardiology Group 231,Cardiology,NORTH,Northvale,2017-09-20,FAC-146,Clinic
+PRV-232,P232,Aldridge Radiology Group 232,Radiology,WEST,Westlake,2020-03-18,FAC-080,Imaging Center
+PRV-233,P233,Navarro Dermatology Group 233,Dermatology,WEST,Cedar Falls,2024-04-12,FAC-099,Clinic
+PRV-234,P234,Harmon Oncology Group 234,Oncology,EAST,Maplewood,2019-12-11,FAC-096,Infusion Center
+PRV-235,P235,Lindqvist Internal Medicine Group 235,Internal Medicine,NORTH,Pinecrest,2021-08-11,FAC-182,Hospital
+PRV-236,P236,Calloway Cardiology Group 236,Cardiology,EAST,Stonebridge,2018-11-04,FAC-222,Hospital
+PRV-237,P237,Delacroix Orthopedics Group 237,Orthopedics,EAST,Maplewood,2017-04-10,FAC-097,Ambulatory Surgery
+PRV-238,P238,Vandermeer Pain Management Group 238,Pain Management,WEST,Westlake,2024-01-12,FAC-135,Ambulatory Surgery
+PRV-239,P239,Thornton Family Medicine Group 239,Family Medicine,EAST,Eastbrook,2022-11-18,FAC-224,Clinic
+PRV-240,P240,Ashby Cardiology Group 240,Cardiology,EAST,Maplewood,2017-08-05,FAC-042,Clinic
+PRV-241,P241,Calloway Behavioral Health Group 241,Behavioral Health,NORTH,Northvale,2022-08-04,FAC-205,Clinic
+PRV-242,P242,Delacroix Orthopedics Group 242,Orthopedics,WEST,Redrock,2021-01-07,FAC-040,Hospital
+PRV-243,P243,Galloway Oncology Group 243,Oncology,NORTH,Highfield,2024-08-16,FAC-173,Infusion Center
+PRV-244,P244,Okafor Radiology Group 244,Radiology,WEST,Redrock,2023-10-14,FAC-180,Imaging Center
+PRV-245,P245,Vandermeer Dermatology Group 245,Dermatology,SOUTH,Sunridge,2023-03-31,FAC-058,Clinic
+PRV-246,P246,Sutherland Cardiology Group 246,Cardiology,WEST,Redrock,2018-05-14,FAC-256,Clinic
+PRV-247,P247,Zimmerman Obstetrics Group 247,Obstetrics/Gynecology,NORTH,Highfield,2017-05-30,FAC-227,Clinic
+PRV-248,P248,Okafor Dermatology Group 248,Dermatology,NORTH,Highfield,2021-03-20,FAC-120,Clinic
+PRV-249,P249,Delacroix Cardiology Group 249,Cardiology,WEST,Sierra Vista,2019-02-07,FAC-235,Clinic
+PRV-250,P250,Harmon Family Medicine Group 250,Family Medicine,EAST,Eastbrook,2022-01-18,FAC-010,Clinic
+PRV-251,P251,Lindqvist Laboratory Group 251,Laboratory,SOUTH,Palmetto,2019-02-14,FAC-029,Lab
+PRV-252,P252,Bellamy Family Medicine Group 252,Family Medicine,WEST,Sierra Vista,2018-12-03,FAC-099,Clinic
+PRV-253,P253,Vandermeer Cardiology Group 253,Cardiology,EAST,Harborview,2022-12-17,FAC-177,Clinic
+PRV-254,P254,Kessler Behavioral Health Group 254,Behavioral Health,NORTH,Pinecrest,2022-12-01,FAC-041,Clinic
+PRV-255,P255,Ashby Internal Medicine Group 255,Internal Medicine,SOUTH,Palmetto,2023-01-22,FAC-123,Clinic
+PRV-256,P256,Calloway Oncology Group 256,Oncology,EAST,Stonebridge,2022-12-19,FAC-002,Infusion Center
+PRV-257,P257,Oyelaran Behavioral Health Group 257,Behavioral Health,NORTH,Northvale,2021-10-16,FAC-153,Clinic
+PRV-258,P258,Aldridge Orthopedics Group 258,Orthopedics,WEST,Redrock,2017-03-02,FAC-156,Hospital
+PRV-259,P259,Aldridge Internal Medicine Group 259,Internal Medicine,NORTH,Highfield,2022-06-02,FAC-101,Hospital
+PRV-260,P260,Thornton Pain Management Group 260,Pain Management,NORTH,Lakemont,2018-07-09,FAC-074,Ambulatory Surgery
+PRV-261,P261,Bellamy Radiology Group 261,Radiology,EAST,Eastbrook,2018-05-08,FAC-003,Hospital
+PRV-262,P262,Aldridge Internal Medicine Group 262,Internal Medicine,SOUTH,Baywood,2018-03-16,FAC-123,Clinic
+PRV-263,P263,Calloway Oncology Group 263,Oncology,WEST,Cedar Falls,2024-07-15,FAC-129,Infusion Center
+PRV-264,P264,Calloway Radiology Group 264,Radiology,NORTH,Northvale,2017-07-18,FAC-203,Hospital
+PRV-265,P265,Navarro Laboratory Group 265,Laboratory,NORTH,Northvale,2024-04-18,FAC-118,Lab
+PRV-266,P266,Galloway Orthopedics Group 266,Orthopedics,EAST,Eastbrook,2022-06-22,FAC-163,Hospital
+PRV-267,P267,Kessler Physical Therapy Group 267,Physical Therapy,SOUTH,Palmetto,2023-09-30,FAC-166,Clinic
+PRV-268,P268,Tanaka Cardiology Group 268,Cardiology,SOUTH,Baywood,2023-04-21,FAC-075,Clinic
+PRV-269,P269,Aldridge Family Medicine Group 269,Family Medicine,EAST,Stonebridge,2017-12-03,FAC-043,Clinic
+PRV-270,P270,Sutherland Pain Management Group 270,Pain Management,WEST,Cedar Falls,2020-01-20,FAC-081,Ambulatory Surgery
+PRV-271,P271,Castellan Behavioral Health Group 271,Behavioral Health,SOUTH,Sunridge,2024-04-06,FAC-191,Clinic
+PRV-272,P272,Ravenscroft Family Medicine Group 272,Family Medicine,SOUTH,Sunridge,2018-05-10,FAC-001,Clinic
+PRV-273,P273,Castellan Cardiology Group 273,Cardiology,NORTH,Northvale,2020-01-14,FAC-260,Clinic
+PRV-274,P274,Harmon Cardiology Group 274,Cardiology,EAST,Maplewood,2020-08-16,FAC-078,Clinic
+PRV-275,P275,Vandermeer Family Medicine Group 275,Family Medicine,NORTH,Lakemont,2018-07-22,FAC-249,Clinic
+PRV-276,P276,Castellan Physical Therapy Group 276,Physical Therapy,WEST,Westlake,2022-12-29,FAC-254,Clinic
+PRV-277,P277,Marlowe Behavioral Health Group 277,Behavioral Health,EAST,Eastbrook,2023-02-28,FAC-024,Clinic
+PRV-278,P278,Ashby Obstetrics Group 278,Obstetrics/Gynecology,SOUTH,Palmetto,2021-12-23,FAC-207,Hospital
+PRV-279,P279,Fairbanks Internal Medicine Group 279,Internal Medicine,WEST,Sierra Vista,2019-05-10,FAC-044,Hospital
+PRV-280,P280,Tanaka Physical Therapy Group 280,Physical Therapy,EAST,Harborview,2018-11-13,FAC-060,Clinic
+PRV-281,P281,Castellan Orthopedics Group 281,Orthopedics,NORTH,Northvale,2020-05-19,FAC-101,Hospital
+PRV-282,P282,Ashby Oncology Group 282,Oncology,NORTH,Northvale,2019-04-26,FAC-173,Infusion Center
+PRV-283,P283,Delacroix Internal Medicine Group 283,Internal Medicine,SOUTH,Southport,2023-03-24,FAC-237,Hospital
+PRV-284,P284,Tanaka Behavioral Health Group 284,Behavioral Health,WEST,Cedar Falls,2024-09-09,FAC-175,Clinic
+PRV-285,P285,Kessler Radiology Group 285,Radiology,NORTH,Highfield,2022-07-17,FAC-101,Hospital
+PRV-286,P286,Harmon Dermatology Group 286,Dermatology,EAST,Eastbrook,2023-05-18,FAC-060,Clinic
+PRV-287,P287,Okafor Radiology Group 287,Radiology,WEST,Westlake,2017-07-23,FAC-044,Hospital
+PRV-288,P288,Okafor Family Medicine Group 288,Family Medicine,EAST,Maplewood,2020-12-01,FAC-077,Clinic
+PRV-289,P289,Aldridge Radiology Group 289,Radiology,WEST,Westlake,2020-12-01,FAC-255,Hospital
+PRV-290,P290,Brightwater Internal Medicine Group 290,Internal Medicine,WEST,Redrock,2023-01-15,FAC-210,Hospital
+PRV-291,P291,Navarro Radiology Group 291,Radiology,WEST,Westlake,2020-05-23,FAC-018,Imaging Center
+PRV-292,P292,Bellamy Behavioral Health Group 292,Behavioral Health,SOUTH,Baywood,2018-12-04,FAC-140,Clinic
+PRV-293,P293,Castellan Cardiology Group 293,Cardiology,EAST,Stonebridge,2021-03-02,FAC-111,Clinic
+PRV-294,P294,Oyelaran Physical Therapy Group 294,Physical Therapy,EAST,Eastbrook,2018-03-11,FAC-253,Clinic
+PRV-295,P295,Okafor Behavioral Health Group 295,Behavioral Health,WEST,Sierra Vista,2021-06-14,FAC-189,Clinic
+PRV-296,P296,Yarrow Family Medicine Group 296,Family Medicine,EAST,Harborview,2021-10-16,FAC-056,Clinic
+PRV-297,P297,Ravenscroft Internal Medicine Group 297,Internal Medicine,NORTH,Northvale,2024-07-27,FAC-068,Hospital
+PRV-298,P298,Kessler Cardiology Group 298,Cardiology,WEST,Sierra Vista,2022-05-09,FAC-100,Hospital
+PRV-299,P299,Sutherland Cardiology Group 299,Cardiology,NORTH,Pinecrest,2024-03-18,FAC-205,Clinic
+PRV-300,P300,Vandermeer Family Medicine Group 300,Family Medicine,SOUTH,Baywood,2020-03-06,FAC-140,Clinic
+PRV-301,P301,Ashby Family Medicine Group 301,Family Medicine,EAST,Stonebridge,2017-06-17,FAC-089,Clinic
+PRV-302,P302,Thornton Family Medicine Group 302,Family Medicine,WEST,Sierra Vista,2019-05-15,FAC-136,Clinic
+PRV-303,P303,Harmon Cardiology Group 303,Cardiology,EAST,Harborview,2017-04-05,FAC-244,Clinic
+PRV-304,P304,Ashby Internal Medicine Group 304,Internal Medicine,WEST,Redrock,2023-03-18,FAC-189,Clinic
+PRV-305,P305,Aldridge Radiology Group 305,Radiology,WEST,Westlake,2018-07-21,FAC-212,Imaging Center
+PRV-306,P306,Sutherland Cardiology Group 306,Cardiology,EAST,Maplewood,2023-08-28,FAC-003,Hospital
+PRV-307,P307,Brightwater Internal Medicine Group 307,Internal Medicine,EAST,Harborview,2017-06-06,FAC-119,Hospital
+PRV-308,P308,Oyelaran Dermatology Group 308,Dermatology,EAST,Harborview,2018-05-21,FAC-132,Clinic
+PRV-309,P309,Brightwater Internal Medicine Group 309,Internal Medicine,SOUTH,Southport,2020-06-18,FAC-141,Hospital
+PRV-310,P310,Zimmerman Internal Medicine Group 310,Internal Medicine,NORTH,Pinecrest,2024-09-10,FAC-068,Hospital
+PRV-311,P311,Ashby Internal Medicine Group 311,Internal Medicine,SOUTH,Baywood,2024-03-18,FAC-237,Hospital
+PRV-312,P312,Delacroix Oncology Group 312,Oncology,EAST,Harborview,2018-04-02,FAC-108,Hospital
+PRV-313,P313,Zimmerman Physical Therapy Group 313,Physical Therapy,WEST,Sierra Vista,2024-05-24,FAC-235,Clinic
+PRV-314,P314,Aldridge Family Medicine Group 314,Family Medicine,WEST,Redrock,2021-07-30,FAC-117,Clinic
+PRV-315,P315,Sutherland Dermatology Group 315,Dermatology,WEST,Westlake,2020-09-01,FAC-035,Clinic
+PRV-316,P316,Castellan Family Medicine Group 316,Family Medicine,WEST,Westlake,2021-08-20,FAC-035,Clinic
+PRV-317,P317,Navarro Family Medicine Group 317,Family Medicine,WEST,Westlake,2017-07-17,FAC-099,Clinic
+PRV-318,P318,Castellan Family Medicine Group 318,Family Medicine,EAST,Eastbrook,2020-01-30,FAC-177,Clinic
+PRV-319,P319,Bellamy Family Medicine Group 319,Family Medicine,NORTH,Lakemont,2022-11-19,FAC-113,Clinic
+PRV-320,P320,Marlowe Family Medicine Group 320,Family Medicine,NORTH,Lakemont,2018-02-26,FAC-181,Clinic
+PRV-321,P321,Bellamy Dermatology Group 321,Dermatology,NORTH,Northvale,2017-07-20,FAC-063,Clinic
+PRV-322,P322,Okafor Oncology Group 322,Oncology,EAST,Harborview,2018-07-19,FAC-222,Hospital
+PRV-323,P323,Vandermeer Radiology Group 323,Radiology,EAST,Stonebridge,2023-04-11,FAC-151,Hospital
+PRV-324,P324,Fairbanks Dermatology Group 324,Dermatology,SOUTH,Southport,2023-01-27,FAC-032,Clinic
+PRV-325,P325,Vandermeer Physical Therapy Group 325,Physical Therapy,WEST,Sierra Vista,2021-03-28,FAC-099,Clinic
+PRV-326,P326,Brightwater Radiology Group 326,Radiology,WEST,Cedar Falls,2018-06-04,FAC-219,Hospital
+PRV-327,P327,Kessler Orthopedics Group 327,Orthopedics,SOUTH,Palmetto,2019-09-02,FAC-161,Hospital
+PRV-328,P328,Ashby Cardiology Group 328,Cardiology,EAST,Stonebridge,2018-04-07,FAC-155,Hospital
+PRV-329,P329,Fairbanks Physical Therapy Group 329,Physical Therapy,SOUTH,Baywood,2022-06-27,FAC-001,Clinic
+PRV-330,P330,Whitfield Family Medicine Group 330,Family Medicine,WEST,Cedar Falls,2022-04-15,FAC-142,Clinic
+PRV-331,P331,Tanaka Internal Medicine Group 331,Internal Medicine,EAST,Harborview,2022-08-01,FAC-192,Hospital
+PRV-332,P332,Calloway Physical Therapy Group 332,Physical Therapy,WEST,Cedar Falls,2022-02-10,FAC-176,Clinic
+PRV-333,P333,Thornton Family Medicine Group 333,Family Medicine,NORTH,Highfield,2022-08-12,FAC-041,Clinic
+PRV-334,P334,Vandermeer Internal Medicine Group 334,Internal Medicine,EAST,Stonebridge,2021-12-10,FAC-252,Hospital
+PRV-335,P335,Lindqvist Orthopedics Group 335,Orthopedics,EAST,Eastbrook,2021-05-28,FAC-234,Ambulatory Surgery
+PRV-336,P336,Harmon Physical Therapy Group 336,Physical Therapy,EAST,Harborview,2023-09-18,FAC-187,Clinic
+PRV-337,P337,Okafor Dermatology Group 337,Dermatology,WEST,Redrock,2021-05-22,FAC-220,Clinic
+PRV-338,P338,Brightwater Radiology Group 338,Radiology,EAST,Maplewood,2018-05-08,FAC-149,Imaging Center
+PRV-339,P339,Yarrow Dermatology Group 339,Dermatology,WEST,Westlake,2017-06-21,FAC-136,Clinic
+PRV-340,P340,Okafor Internal Medicine Group 340,Internal Medicine,EAST,Stonebridge,2023-05-23,FAC-056,Clinic
+PRV-341,P341,Thornton Internal Medicine Group 341,Internal Medicine,WEST,Westlake,2022-10-01,FAC-220,Clinic
+PRV-342,P342,Navarro Pain Management Group 342,Pain Management,NORTH,Highfield,2024-07-08,FAC-221,Ambulatory Surgery
+PRV-343,P343,Vandermeer Cardiology Group 343,Cardiology,NORTH,Lakemont,2022-11-05,FAC-211,Hospital
+PRV-344,P344,Aldridge Internal Medicine Group 344,Internal Medicine,EAST,Stonebridge,2024-07-31,FAC-077,Clinic
+PRV-345,P345,Delacroix Orthopedics Group 345,Orthopedics,SOUTH,Southport,2018-05-09,FAC-207,Hospital
+PRV-346,P346,Calloway Family Medicine Group 346,Family Medicine,SOUTH,Southport,2019-08-19,FAC-166,Clinic
+PRV-347,P347,Vandermeer Behavioral Health Group 347,Behavioral Health,EAST,Eastbrook,2024-03-22,FAC-187,Clinic
+PRV-348,P348,Sutherland Oncology Group 348,Oncology,NORTH,Lakemont,2021-04-05,FAC-203,Hospital
+PRV-349,P349,Castellan Laboratory Group 349,Laboratory,WEST,Sierra Vista,2017-09-03,FAC-258,Lab
+PRV-350,P350,Ashby Cardiology Group 350,Cardiology,SOUTH,Southport,2020-07-31,FAC-237,Hospital
+PRV-351,P351,Pemberton Dermatology Group 351,Dermatology,NORTH,Northvale,2024-07-01,FAC-063,Clinic
+PRV-352,P352,Kessler Radiology Group 352,Radiology,SOUTH,Baywood,2018-07-14,FAC-162,Imaging Center
+PRV-353,P353,Galloway Cardiology Group 353,Cardiology,NORTH,Highfield,2018-03-24,FAC-057,Hospital
+PRV-354,P354,Castellan Dermatology Group 354,Dermatology,EAST,Harborview,2024-04-05,FAC-060,Clinic
+PRV-355,P355,Ashby Cardiology Group 355,Cardiology,EAST,Stonebridge,2023-01-06,FAC-108,Hospital
+PRV-356,P356,Yarrow Family Medicine Group 356,Family Medicine,NORTH,Northvale,2023-08-26,FAC-007,Clinic
+PRV-357,P357,Lindqvist Behavioral Health Group 357,Behavioral Health,NORTH,Pinecrest,2018-02-21,FAC-086,Clinic
+PRV-358,P358,Wexler Cardiology Group 358,Cardiology,WEST,Cedar Falls,2017-10-27,FAC-091,Clinic
+PRV-359,P359,Wexler Internal Medicine Group 359,Internal Medicine,SOUTH,Baywood,2019-10-26,FAC-174,Clinic
+PRV-360,P360,Sutherland Internal Medicine Group 360,Internal Medicine,SOUTH,Southport,2023-01-01,FAC-247,Clinic
+PRV-361,P361,Sutherland Pain Management Group 361,Pain Management,WEST,Redrock,2021-06-12,FAC-226,Ambulatory Surgery
+PRV-362,P362,Delacroix Internal Medicine Group 362,Internal Medicine,SOUTH,Palmetto,2022-07-31,FAC-229,Hospital
+PRV-363,P363,Zimmerman Family Medicine Group 363,Family Medicine,WEST,Cedar Falls,2023-12-17,FAC-256,Clinic
+PRV-364,P364,Oyelaran Behavioral Health Group 364,Behavioral Health,SOUTH,Sunridge,2019-02-03,FAC-075,Clinic
+PRV-365,P365,Wexler Pain Management Group 365,Pain Management,EAST,Stonebridge,2019-03-09,FAC-097,Ambulatory Surgery
+PRV-366,P366,Calloway Family Medicine Group 366,Family Medicine,SOUTH,Palmetto,2022-08-22,FAC-140,Clinic
+PRV-367,P367,Wexler Internal Medicine Group 367,Internal Medicine,EAST,Harborview,2021-05-25,FAC-108,Hospital
+PRV-368,P368,Whitfield Orthopedics Group 368,Orthopedics,EAST,Harborview,2018-02-18,FAC-192,Hospital
+PRV-369,P369,Sutherland Behavioral Health Group 369,Behavioral Health,WEST,Redrock,2017-11-06,FAC-069,Clinic
+PRV-370,P370,Okafor Orthopedics Group 370,Orthopedics,EAST,Stonebridge,2023-10-30,FAC-131,Ambulatory Surgery
+PRV-371,P371,Galloway Laboratory Group 371,Laboratory,WEST,Sierra Vista,2017-06-18,FAC-214,Lab
+PRV-372,P372,Galloway Family Medicine Group 372,Family Medicine,WEST,Redrock,2024-03-17,FAC-175,Clinic
+PRV-373,P373,Aldridge Behavioral Health Group 373,Behavioral Health,NORTH,Highfield,2017-07-28,FAC-241,Clinic
+PRV-374,P374,Delacroix Obstetrics Group 374,Obstetrics/Gynecology,WEST,Westlake,2020-08-24,FAC-157,Clinic
+PRV-375,P375,Ravenscroft Obstetrics Group 375,Obstetrics/Gynecology,NORTH,Lakemont,2023-08-12,FAC-031,Hospital
+PRV-376,P376,Vandermeer Behavioral Health Group 376,Behavioral Health,SOUTH,Sunridge,2017-12-31,FAC-201,Clinic
+PRV-377,P377,Galloway Orthopedics Group 377,Orthopedics,EAST,Maplewood,2019-07-13,FAC-008,Ambulatory Surgery
+PRV-378,P378,Thornton Oncology Group 378,Oncology,NORTH,Northvale,2024-02-01,FAC-184,Infusion Center
+PRV-379,P379,Ravenscroft Laboratory Group 379,Laboratory,SOUTH,Southport,2018-12-01,FAC-029,Lab
+PRV-380,P380,Fairbanks Internal Medicine Group 380,Internal Medicine,NORTH,Northvale,2019-12-17,FAC-158,Hospital
+PRV-381,P381,Oyelaran Dermatology Group 381,Dermatology,NORTH,Pinecrest,2018-01-17,FAC-027,Clinic
+PRV-382,P382,Zimmerman Radiology Group 382,Radiology,EAST,Harborview,2024-02-06,FAC-222,Hospital
+PRV-383,P383,Delacroix Laboratory Group 383,Laboratory,SOUTH,Sunridge,2019-06-23,FAC-104,Lab
+PRV-384,P384,Aldridge Internal Medicine Group 384,Internal Medicine,EAST,Eastbrook,2021-05-01,FAC-024,Clinic
+PRV-385,P385,Lindqvist Orthopedics Group 385,Orthopedics,EAST,Eastbrook,2018-11-25,FAC-131,Ambulatory Surgery
+PRV-386,P386,Pemberton Family Medicine Group 386,Family Medicine,EAST,Harborview,2017-02-14,FAC-089,Clinic
+PRV-387,P387,Sutherland Orthopedics Group 387,Orthopedics,NORTH,Pinecrest,2018-07-20,FAC-015,Hospital
+PRV-388,P388,Galloway Pain Management Group 388,Pain Management,NORTH,Northvale,2020-02-17,FAC-034,Ambulatory Surgery
+PRV-389,P389,Tanaka Family Medicine Group 389,Family Medicine,EAST,Harborview,2017-07-25,FAC-060,Clinic
+PRV-390,P390,Wexler Laboratory Group 390,Laboratory,SOUTH,Sunridge,2020-08-21,FAC-104,Lab
+PRV-391,P391,Calloway Behavioral Health Group 391,Behavioral Health,WEST,Sierra Vista,2024-06-19,FAC-117,Clinic
+PRV-392,P392,Yarrow Internal Medicine Group 392,Internal Medicine,WEST,Sierra Vista,2023-10-05,FAC-013,Hospital
+PRV-393,P393,Okafor Family Medicine Group 393,Family Medicine,NORTH,Highfield,2019-01-06,FAC-249,Clinic
+PRV-394,P394,Harmon Family Medicine Group 394,Family Medicine,NORTH,Lakemont,2021-08-17,FAC-022,Clinic
+PRV-395,P395,Tanaka Orthopedics Group 395,Orthopedics,EAST,Harborview,2024-02-29,FAC-234,Ambulatory Surgery
+PRV-396,P396,Ravenscroft Orthopedics Group 396,Orthopedics,SOUTH,Sunridge,2022-11-01,FAC-171,Hospital
+PRV-397,P397,Yarrow Behavioral Health Group 397,Behavioral Health,NORTH,Northvale,2019-06-03,FAC-063,Clinic
+PRV-398,P398,Pemberton Obstetrics Group 398,Obstetrics/Gynecology,EAST,Stonebridge,2023-01-01,FAC-010,Clinic
+PRV-399,P399,Lindqvist Obstetrics Group 399,Obstetrics/Gynecology,SOUTH,Baywood,2024-02-08,FAC-161,Hospital
+PRV-400,P400,Ravenscroft Laboratory Group 400,Laboratory,NORTH,Northvale,2018-12-14,FAC-242,Lab
+PRV-401,P401,Oyelaran Internal Medicine Group 401,Internal Medicine,SOUTH,Southport,2021-10-15,FAC-201,Clinic
+PRV-402,P402,Sutherland Physical Therapy Group 402,Physical Therapy,SOUTH,Baywood,2017-04-15,FAC-166,Clinic
+PRV-403,P403,Oyelaran Orthopedics Group 403,Orthopedics,EAST,Harborview,2018-01-17,FAC-114,Hospital
+PRV-404,P404,Harmon Laboratory Group 404,Laboratory,NORTH,Lakemont,2017-05-16,FAC-065,Lab
+PRV-405,P405,Tanaka Obstetrics Group 405,Obstetrics/Gynecology,EAST,Stonebridge,2019-02-15,FAC-154,Hospital
+PRV-406,P406,Delacroix Laboratory Group 406,Laboratory,SOUTH,Sunridge,2021-11-20,FAC-104,Lab
+PRV-407,P407,Delacroix Oncology Group 407,Oncology,NORTH,Northvale,2020-10-23,FAC-057,Hospital
+PRV-408,P408,Sutherland Family Medicine Group 408,Family Medicine,EAST,Stonebridge,2020-05-22,FAC-133,Clinic
+PRV-409,P409,Kessler Laboratory Group 409,Laboratory,WEST,Westlake,2023-02-04,FAC-214,Lab
+PRV-410,P410,Yarrow Family Medicine Group 410,Family Medicine,WEST,Redrock,2018-08-07,FAC-047,Clinic
+PRV-411,P411,Brightwater Family Medicine Group 411,Family Medicine,SOUTH,Palmetto,2017-07-23,FAC-001,Clinic
+PRV-412,P412,Delacroix Physical Therapy Group 412,Physical Therapy,WEST,Westlake,2024-08-08,FAC-254,Clinic
+PRV-413,P413,Brightwater Internal Medicine Group 413,Internal Medicine,SOUTH,Palmetto,2021-01-24,FAC-032,Clinic
+PRV-414,P414,Fairbanks Family Medicine Group 414,Family Medicine,NORTH,Pinecrest,2022-07-15,FAC-120,Clinic
+PRV-415,P415,Brightwater Family Medicine Group 415,Family Medicine,WEST,Cedar Falls,2020-10-24,FAC-235,Clinic
+PRV-416,P416,Kessler Family Medicine Group 416,Family Medicine,NORTH,Northvale,2023-04-20,FAC-231,Clinic
+PRV-417,P417,Thornton Behavioral Health Group 417,Behavioral Health,NORTH,Lakemont,2021-02-26,FAC-014,Clinic
+PRV-418,P418,Yarrow Dermatology Group 418,Dermatology,SOUTH,Palmetto,2017-01-19,FAC-208,Clinic
+PRV-419,P419,Oyelaran Laboratory Group 419,Laboratory,SOUTH,Baywood,2022-04-17,FAC-029,Lab
+PRV-420,P420,Thornton Behavioral Health Group 420,Behavioral Health,EAST,Eastbrook,2023-07-19,FAC-060,Clinic
+PRV-421,P421,Brightwater Internal Medicine Group 421,Internal Medicine,EAST,Harborview,2023-08-08,FAC-024,Clinic
+PRV-422,P422,Oyelaran Family Medicine Group 422,Family Medicine,SOUTH,Palmetto,2022-01-10,FAC-201,Clinic
+PRV-423,P423,Delacroix Cardiology Group 423,Cardiology,NORTH,Northvale,2018-09-20,FAC-205,Clinic
+PRV-424,P424,Kessler Dermatology Group 424,Dermatology,SOUTH,Palmetto,2021-05-29,FAC-191,Clinic
+PRV-425,P425,Okafor Laboratory Group 425,Laboratory,SOUTH,Southport,2022-04-15,FAC-029,Lab
+PRV-426,P426,Ravenscroft Orthopedics Group 426,Orthopedics,SOUTH,Baywood,2018-01-01,FAC-030,Ambulatory Surgery
+PRV-427,P427,Harmon Internal Medicine Group 427,Internal Medicine,NORTH,Highfield,2017-06-05,FAC-057,Hospital
+PRV-428,P428,Vandermeer Laboratory Group 428,Laboratory,WEST,Sierra Vista,2017-09-23,FAC-258,Lab
+PRV-429,P429,Tanaka Laboratory Group 429,Laboratory,SOUTH,Palmetto,2020-03-21,FAC-236,Lab
+PRV-430,P430,Calloway Behavioral Health Group 430,Behavioral Health,EAST,Eastbrook,2022-02-14,FAC-004,Clinic
+PRV-431,P431,Aldridge Behavioral Health Group 431,Behavioral Health,EAST,Eastbrook,2022-06-04,FAC-092,Clinic
+PRV-432,P432,Ravenscroft Family Medicine Group 432,Family Medicine,NORTH,Lakemont,2020-05-30,FAC-241,Clinic
+PRV-433,P433,Ashby Cardiology Group 433,Cardiology,WEST,Sierra Vista,2023-09-19,FAC-219,Hospital
+PRV-434,P434,Vandermeer Family Medicine Group 434,Family Medicine,EAST,Eastbrook,2019-10-02,FAC-089,Clinic
+PRV-435,P435,Bellamy Family Medicine Group 435,Family Medicine,NORTH,Lakemont,2019-12-02,FAC-181,Clinic
+PRV-436,P436,Okafor Internal Medicine Group 436,Internal Medicine,EAST,Harborview,2022-04-22,FAC-108,Hospital
+PRV-437,P437,Vandermeer Dermatology Group 437,Dermatology,NORTH,Northvale,2021-08-14,FAC-160,Clinic
+PRV-438,P438,Aldridge Behavioral Health Group 438,Behavioral Health,NORTH,Northvale,2024-02-08,FAC-153,Clinic
+PRV-439,P439,Pemberton Internal Medicine Group 439,Internal Medicine,WEST,Redrock,2017-12-11,FAC-178,Clinic
+PRV-440,P440,Wexler Internal Medicine Group 440,Internal Medicine,NORTH,Pinecrest,2017-09-16,FAC-182,Hospital
+PRV-441,P441,Okafor Pain Management Group 441,Pain Management,WEST,Sierra Vista,2018-05-09,FAC-134,Ambulatory Surgery
+PRV-442,P442,Tanaka Radiology Group 442,Radiology,SOUTH,Southport,2018-10-18,FAC-036,Imaging Center
+PRV-443,P443,Harmon Dermatology Group 443,Dermatology,EAST,Stonebridge,2020-08-21,FAC-024,Clinic
+PRV-444,P444,Wexler Cardiology Group 444,Cardiology,NORTH,Highfield,2022-06-23,FAC-239,Clinic
+PRV-445,P445,Calloway Oncology Group 445,Oncology,SOUTH,Southport,2018-03-01,FAC-021,Hospital
+PRV-446,P446,Fairbanks Internal Medicine Group 446,Internal Medicine,EAST,Stonebridge,2018-03-27,FAC-004,Clinic
+PRV-447,P447,Fairbanks Behavioral Health Group 447,Behavioral Health,NORTH,Lakemont,2023-01-21,FAC-241,Clinic
+PRV-448,P448,Zimmerman Orthopedics Group 448,Orthopedics,WEST,Westlake,2019-12-13,FAC-012,Ambulatory Surgery
+PRV-449,P449,Harmon Physical Therapy Group 449,Physical Therapy,NORTH,Pinecrest,2023-08-23,FAC-164,Clinic
+PRV-450,P450,Wexler Orthopedics Group 450,Orthopedics,SOUTH,Palmetto,2023-01-24,FAC-062,Ambulatory Surgery
+PRV-451,P451,Sutherland Family Medicine Group 451,Family Medicine,WEST,Westlake,2021-03-21,FAC-157,Clinic
+PRV-452,P452,Bellamy Oncology Group 452,Oncology,SOUTH,Baywood,2024-06-12,FAC-137,Infusion Center
+PRV-453,P453,Sutherland Orthopedics Group 453,Orthopedics,EAST,Eastbrook,2024-01-06,FAC-144,Ambulatory Surgery
+PRV-454,P454,Bellamy Orthopedics Group 454,Orthopedics,NORTH,Highfield,2022-10-17,FAC-194,Ambulatory Surgery
+PRV-455,P455,Whitfield Radiology Group 455,Radiology,EAST,Harborview,2017-11-17,FAC-149,Imaging Center
+PRV-456,P456,Vandermeer Radiology Group 456,Radiology,SOUTH,Baywood,2020-03-06,FAC-237,Hospital
+PRV-457,P457,Fairbanks Orthopedics Group 457,Orthopedics,NORTH,Northvale,2017-11-28,FAC-203,Hospital
+PRV-458,P458,Galloway Family Medicine Group 458,Family Medicine,WEST,Cedar Falls,2018-10-23,FAC-178,Clinic
+PRV-459,P459,Kessler Orthopedics Group 459,Orthopedics,WEST,Cedar Falls,2020-12-25,FAC-115,Ambulatory Surgery
+PRV-460,P460,Galloway Family Medicine Group 460,Family Medicine,EAST,Maplewood,2017-03-26,FAC-056,Clinic
+PRV-461,P461,Oyelaran Oncology Group 461,Oncology,WEST,Sierra Vista,2023-10-09,FAC-105,Infusion Center
+PRV-462,P462,Ravenscroft Physical Therapy Group 462,Physical Therapy,WEST,Sierra Vista,2023-08-09,FAC-035,Clinic
+PRV-463,P463,Marlowe Physical Therapy Group 463,Physical Therapy,WEST,Westlake,2020-10-28,FAC-091,Clinic
+PRV-464,P464,Zimmerman Behavioral Health Group 464,Behavioral Health,SOUTH,Baywood,2024-07-01,FAC-143,Clinic
+PRV-465,P465,Fairbanks Oncology Group 465,Oncology,WEST,Sierra Vista,2022-05-15,FAC-100,Hospital
+PRV-466,P466,Pemberton Family Medicine Group 466,Family Medicine,EAST,Eastbrook,2022-08-01,FAC-139,Clinic
+PRV-467,P467,Kessler Pain Management Group 467,Pain Management,EAST,Harborview,2017-12-26,FAC-152,Ambulatory Surgery
+PRV-468,P468,Lindqvist Dermatology Group 468,Dermatology,NORTH,Highfield,2023-01-25,FAC-231,Clinic
+PRV-469,P469,Ashby Family Medicine Group 469,Family Medicine,WEST,Cedar Falls,2022-03-14,FAC-235,Clinic
+PRV-470,P470,Castellan Physical Therapy Group 470,Physical Therapy,EAST,Eastbrook,2017-03-02,FAC-078,Clinic
+PRV-471,P471,Aldridge Behavioral Health Group 471,Behavioral Health,SOUTH,Baywood,2022-06-01,FAC-143,Clinic
+PRV-472,P472,Castellan Cardiology Group 472,Cardiology,EAST,Harborview,2023-01-02,FAC-187,Clinic
+PRV-473,P473,Pemberton Cardiology Group 473,Cardiology,EAST,Eastbrook,2021-03-25,FAC-187,Clinic
+PRV-474,P474,Tanaka Family Medicine Group 474,Family Medicine,WEST,Redrock,2017-06-17,FAC-117,Clinic
+PRV-475,P475,Marlowe Physical Therapy Group 475,Physical Therapy,EAST,Harborview,2018-12-29,FAC-187,Clinic
+PRV-476,P476,Wexler Physical Therapy Group 476,Physical Therapy,SOUTH,Baywood,2022-11-04,FAC-123,Clinic
+PRV-477,P477,Delacroix Family Medicine Group 477,Family Medicine,NORTH,Highfield,2024-03-14,FAC-022,Clinic
+PRV-478,P478,Ashby Cardiology Group 478,Cardiology,SOUTH,Southport,2017-01-31,FAC-229,Hospital
+PRV-479,P479,Oyelaran Family Medicine Group 479,Family Medicine,WEST,Redrock,2018-01-05,FAC-142,Clinic
+PRV-480,P480,Thornton Dermatology Group 480,Dermatology,SOUTH,Southport,2021-05-22,FAC-191,Clinic
+PRV-481,P481,Aldridge Dermatology Group 481,Dermatology,EAST,Stonebridge,2022-04-16,FAC-204,Clinic
+PRV-482,P482,Ashby Pain Management Group 482,Pain Management,WEST,Westlake,2019-03-20,FAC-050,Ambulatory Surgery
+PRV-483,P483,Okafor Laboratory Group 483,Laboratory,SOUTH,Sunridge,2023-08-27,FAC-029,Lab
+PRV-484,P484,Tanaka Family Medicine Group 484,Family Medicine,EAST,Eastbrook,2017-04-26,FAC-092,Clinic
+PRV-485,P485,Lindqvist Obstetrics Group 485,Obstetrics/Gynecology,SOUTH,Baywood,2019-05-18,FAC-001,Clinic
+PRV-486,P486,Thornton Family Medicine Group 486,Family Medicine,EAST,Eastbrook,2024-07-13,FAC-204,Clinic
+PRV-487,P487,Navarro Internal Medicine Group 487,Internal Medicine,NORTH,Northvale,2017-08-18,FAC-057,Hospital
+PRV-488,P488,Galloway Family Medicine Group 488,Family Medicine,WEST,Cedar Falls,2023-04-17,FAC-109,Clinic
+PRV-489,P489,Aldridge Physical Therapy Group 489,Physical Therapy,SOUTH,Sunridge,2024-04-13,FAC-054,Clinic
+PRV-490,P490,Thornton Oncology Group 490,Oncology,EAST,Eastbrook,2023-09-19,FAC-119,Hospital
+PRV-491,P491,Vandermeer Dermatology Group 491,Dermatology,SOUTH,Baywood,2024-07-12,FAC-032,Clinic
+PRV-492,P492,Thornton Oncology Group 492,Oncology,WEST,Redrock,2019-01-25,FAC-126,Infusion Center
+PRV-493,P493,Oyelaran Family Medicine Group 493,Family Medicine,NORTH,Northvale,2018-11-22,FAC-239,Clinic
+PRV-494,P494,Brightwater Family Medicine Group 494,Family Medicine,EAST,Eastbrook,2019-09-07,FAC-244,Clinic
+PRV-495,P495,Ravenscroft Orthopedics Group 495,Orthopedics,WEST,Redrock,2023-09-05,FAC-210,Hospital
+PRV-496,P496,Kessler Internal Medicine Group 496,Internal Medicine,EAST,Stonebridge,2022-09-09,FAC-253,Clinic
+PRV-497,P497,Okafor Physical Therapy Group 497,Physical Therapy,WEST,Sierra Vista,2020-01-06,FAC-099,Clinic
+PRV-498,P498,Bellamy Dermatology Group 498,Dermatology,SOUTH,Baywood,2020-05-15,FAC-166,Clinic
+PRV-499,P499,Marlowe Obstetrics Group 499,Obstetrics/Gynecology,WEST,Westlake,2019-09-23,FAC-109,Clinic
+PRV-500,P500,Tanaka Behavioral Health Group 500,Behavioral Health,SOUTH,Southport,2019-03-29,FAC-058,Clinic
+PRV-501,P501,Pemberton Family Medicine Group 501,Family Medicine,EAST,Harborview,2021-10-04,FAC-043,Clinic
+PRV-502,P502,Thornton Family Medicine Group 502,Family Medicine,NORTH,Highfield,2017-12-27,FAC-120,Clinic
+PRV-503,P503,Castellan Laboratory Group 503,Laboratory,SOUTH,Southport,2018-03-05,FAC-104,Lab
+PRV-504,P504,Vandermeer Pain Management Group 504,Pain Management,NORTH,Northvale,2022-12-23,FAC-034,Ambulatory Surgery
+PRV-505,P505,Brightwater Cardiology Group 505,Cardiology,SOUTH,Sunridge,2020-12-01,FAC-103,Hospital
+PRV-506,P506,Oyelaran Radiology Group 506,Radiology,NORTH,Highfield,2019-12-30,FAC-101,Hospital
+PRV-507,P507,Ashby Internal Medicine Group 507,Internal Medicine,WEST,Sierra Vista,2022-11-08,FAC-254,Clinic
+PRV-508,P508,Ashby Internal Medicine Group 508,Internal Medicine,WEST,Cedar Falls,2019-12-09,FAC-176,Clinic
+PRV-509,P509,Calloway Physical Therapy Group 509,Physical Therapy,NORTH,Pinecrest,2018-08-05,FAC-205,Clinic
+PRV-510,P510,Sutherland Family Medicine Group 510,Family Medicine,WEST,Sierra Vista,2018-05-03,FAC-157,Clinic
+PRV-511,P511,Delacroix Family Medicine Group 511,Family Medicine,EAST,Harborview,2017-12-06,FAC-010,Clinic
+PRV-512,P512,Delacroix Cardiology Group 512,Cardiology,SOUTH,Southport,2020-03-26,FAC-201,Clinic
+PRV-513,P513,Yarrow Laboratory Group 513,Laboratory,WEST,Cedar Falls,2022-03-12,FAC-145,Lab
+PRV-514,P514,Marlowe Family Medicine Group 514,Family Medicine,SOUTH,Baywood,2024-05-09,FAC-174,Clinic
+PRV-515,P515,Tanaka Family Medicine Group 515,Family Medicine,WEST,Westlake,2020-11-04,FAC-175,Clinic
+PRV-516,P516,Tanaka Family Medicine Group 516,Family Medicine,NORTH,Lakemont,2020-02-26,FAC-185,Clinic
+PRV-517,P517,Bellamy Internal Medicine Group 517,Internal Medicine,WEST,Cedar Falls,2020-12-18,FAC-219,Hospital
+PRV-518,P518,Galloway Physical Therapy Group 518,Physical Therapy,WEST,Redrock,2023-03-21,FAC-176,Clinic
+PRV-519,P519,Ashby Oncology Group 519,Oncology,NORTH,Pinecrest,2021-08-08,FAC-246,Infusion Center
+PRV-520,P520,Ashby Family Medicine Group 520,Family Medicine,SOUTH,Sunridge,2020-01-26,FAC-247,Clinic
+PRV-521,P521,Navarro Family Medicine Group 521,Family Medicine,EAST,Harborview,2019-09-08,FAC-059,Clinic
+PRV-522,P522,Aldridge Behavioral Health Group 522,Behavioral Health,WEST,Sierra Vista,2023-09-13,FAC-047,Clinic
+PRV-523,P523,Ashby Orthopedics Group 523,Orthopedics,EAST,Harborview,2019-06-19,FAC-144,Ambulatory Surgery
+PRV-524,P524,Aldridge Family Medicine Group 524,Family Medicine,EAST,Eastbrook,2024-07-01,FAC-253,Clinic
+PRV-525,P525,Lindqvist Obstetrics Group 525,Obstetrics/Gynecology,SOUTH,Sunridge,2023-11-29,FAC-102,Clinic
+PRV-526,P526,Marlowe Orthopedics Group 526,Orthopedics,WEST,Westlake,2023-07-04,FAC-044,Hospital
+PRV-527,P527,Fairbanks Internal Medicine Group 527,Internal Medicine,EAST,Maplewood,2023-09-06,FAC-089,Clinic
+PRV-528,P528,Oyelaran Physical Therapy Group 528,Physical Therapy,SOUTH,Sunridge,2023-06-22,FAC-001,Clinic
+PRV-529,P529,Vandermeer Laboratory Group 529,Laboratory,EAST,Stonebridge,2024-06-21,FAC-085,Lab
+PRV-530,P530,Whitfield Oncology Group 530,Oncology,EAST,Harborview,2022-01-26,FAC-026,Infusion Center
+PRV-531,P531,Delacroix Orthopedics Group 531,Orthopedics,WEST,Sierra Vista,2021-11-10,FAC-230,Ambulatory Surgery
+PRV-532,P532,Castellan Physical Therapy Group 532,Physical Therapy,WEST,Westlake,2018-03-01,FAC-169,Clinic
+PRV-533,P533,Yarrow Radiology Group 533,Radiology,SOUTH,Sunridge,2024-03-09,FAC-229,Hospital
+PRV-534,P534,Vandermeer Physical Therapy Group 534,Physical Therapy,EAST,Harborview,2024-08-14,FAC-004,Clinic
+PRV-535,P535,Bellamy Physical Therapy Group 535,Physical Therapy,SOUTH,Sunridge,2021-07-06,FAC-095,Clinic
+PRV-536,P536,Brightwater Family Medicine Group 536,Family Medicine,NORTH,Lakemont,2023-02-03,FAC-181,Clinic
+PRV-537,P537,Pemberton Internal Medicine Group 537,Internal Medicine,SOUTH,Palmetto,2019-07-13,FAC-075,Clinic
+PRV-538,P538,Sutherland Dermatology Group 538,Dermatology,EAST,Maplewood,2019-06-07,FAC-139,Clinic
+PRV-539,P539,Lindqvist Family Medicine Group 539,Family Medicine,SOUTH,Baywood,2022-07-02,FAC-058,Clinic
+PRV-540,P540,Kessler Dermatology Group 540,Dermatology,SOUTH,Sunridge,2023-06-18,FAC-143,Clinic
+PRV-541,P541,Calloway Internal Medicine Group 541,Internal Medicine,WEST,Westlake,2020-08-28,FAC-091,Clinic
+PRV-542,P542,Aldridge Laboratory Group 542,Laboratory,WEST,Cedar Falls,2020-01-12,FAC-145,Lab
+PRV-543,P543,Wexler Internal Medicine Group 543,Internal Medicine,WEST,Westlake,2019-12-26,FAC-142,Clinic
+PRV-544,P544,Oyelaran Family Medicine Group 544,Family Medicine,EAST,Harborview,2021-03-31,FAC-111,Clinic
+PRV-545,P545,Kessler Dermatology Group 545,Dermatology,NORTH,Lakemont,2017-04-12,FAC-185,Clinic
+PRV-546,P546,Harmon Dermatology Group 546,Dermatology,WEST,Westlake,2021-12-24,FAC-136,Clinic
+PRV-547,P547,Ashby Cardiology Group 547,Cardiology,NORTH,Lakemont,2020-11-26,FAC-014,Clinic
+PRV-548,P548,Kessler Behavioral Health Group 548,Behavioral Health,SOUTH,Sunridge,2022-05-24,FAC-123,Clinic
+PRV-549,P549,Galloway Physical Therapy Group 549,Physical Therapy,SOUTH,Palmetto,2021-02-21,FAC-088,Clinic
+PRV-550,P550,Yarrow Family Medicine Group 550,Family Medicine,NORTH,Northvale,2023-12-28,FAC-083,Clinic
+PRV-551,P551,Vandermeer Cardiology Group 551,Cardiology,WEST,Redrock,2023-04-25,FAC-176,Clinic
+PRV-552,P552,Ashby Laboratory Group 552,Laboratory,NORTH,Northvale,2017-12-11,FAC-223,Lab
+PRV-553,P553,Zimmerman Physical Therapy Group 553,Physical Therapy,WEST,Westlake,2024-08-13,FAC-069,Clinic
+PRV-554,P554,Thornton Orthopedics Group 554,Orthopedics,SOUTH,Sunridge,2017-07-18,FAC-207,Hospital
+PRV-555,P555,Brightwater Radiology Group 555,Radiology,EAST,Stonebridge,2020-04-06,FAC-222,Hospital
+PRV-556,P556,Aldridge Radiology Group 556,Radiology,SOUTH,Southport,2024-07-17,FAC-090,Imaging Center
+PRV-557,P557,Pemberton Physical Therapy Group 557,Physical Therapy,EAST,Eastbrook,2022-06-14,FAC-042,Clinic
+PRV-558,P558,Bellamy Oncology Group 558,Oncology,NORTH,Northvale,2018-08-17,FAC-068,Hospital
+PRV-559,P559,Kessler Family Medicine Group 559,Family Medicine,NORTH,Lakemont,2020-03-10,FAC-227,Clinic
+PRV-560,P560,Bellamy Family Medicine Group 560,Family Medicine,NORTH,Northvale,2017-12-06,FAC-233,Clinic
+PRV-561,P561,Harmon Radiology Group 561,Radiology,WEST,Redrock,2021-02-14,FAC-080,Imaging Center
+PRV-562,P562,Galloway Orthopedics Group 562,Orthopedics,WEST,Redrock,2020-05-27,FAC-210,Hospital
+PRV-563,P563,Ashby Cardiology Group 563,Cardiology,SOUTH,Southport,2018-06-23,FAC-229,Hospital
+PRV-564,P564,Pemberton Physical Therapy Group 564,Physical Therapy,SOUTH,Sunridge,2021-11-06,FAC-106,Clinic
+PRV-565,P565,Tanaka Pain Management Group 565,Pain Management,EAST,Stonebridge,2017-10-14,FAC-206,Ambulatory Surgery
+PRV-566,P566,Calloway Radiology Group 566,Radiology,SOUTH,Southport,2018-02-08,FAC-090,Imaging Center
+PRV-567,P567,Bellamy Laboratory Group 567,Laboratory,NORTH,Northvale,2020-11-25,FAC-061,Lab
+PRV-568,P568,Pemberton Orthopedics Group 568,Orthopedics,SOUTH,Baywood,2021-02-17,FAC-148,Ambulatory Surgery
+PRV-569,P569,Castellan Internal Medicine Group 569,Internal Medicine,EAST,Harborview,2017-12-31,FAC-228,Clinic
+PRV-570,P570,Ashby Physical Therapy Group 570,Physical Therapy,NORTH,Northvale,2019-09-02,FAC-041,Clinic
+PRV-571,P571,Lindqvist Orthopedics Group 571,Orthopedics,EAST,Eastbrook,2022-03-25,FAC-108,Hospital
+PRV-572,P572,Okafor Radiology Group 572,Radiology,EAST,Stonebridge,2020-02-15,FAC-046,Imaging Center
+PRV-573,P573,Thornton Obstetrics Group 573,Obstetrics/Gynecology,WEST,Redrock,2018-02-07,FAC-142,Clinic
+PRV-574,P574,Kessler Physical Therapy Group 574,Physical Therapy,NORTH,Highfield,2019-07-18,FAC-227,Clinic
+PRV-575,P575,Bellamy Dermatology Group 575,Dermatology,EAST,Harborview,2018-10-08,FAC-187,Clinic
+PRV-576,P576,Thornton Internal Medicine Group 576,Internal Medicine,SOUTH,Southport,2017-09-30,FAC-159,Hospital
+PRV-577,P577,Fairbanks Laboratory Group 577,Laboratory,WEST,Cedar Falls,2019-02-02,FAC-145,Lab
+PRV-578,P578,Galloway Laboratory Group 578,Laboratory,SOUTH,Sunridge,2023-09-24,FAC-029,Lab
+PRV-579,P579,Bellamy Family Medicine Group 579,Family Medicine,WEST,Sierra Vista,2021-05-19,FAC-256,Clinic
+PRV-580,P580,Galloway Radiology Group 580,Radiology,EAST,Eastbrook,2019-09-11,FAC-046,Imaging Center
+PRV-581,P581,Bellamy Physical Therapy Group 581,Physical Therapy,NORTH,Highfield,2018-10-14,FAC-231,Clinic
+PRV-582,P582,Aldridge Internal Medicine Group 582,Internal Medicine,NORTH,Northvale,2023-09-12,FAC-146,Clinic
+PRV-583,P583,Yarrow Obstetrics Group 583,Obstetrics/Gynecology,SOUTH,Southport,2021-02-21,FAC-102,Clinic
+PRV-584,P584,Yarrow Laboratory Group 584,Laboratory,EAST,Stonebridge,2020-10-04,FAC-215,Lab
+PRV-585,P585,Wexler Orthopedics Group 585,Orthopedics,WEST,Westlake,2022-04-21,FAC-012,Ambulatory Surgery
+PRV-586,P586,Oyelaran Behavioral Health Group 586,Behavioral Health,SOUTH,Sunridge,2020-01-18,FAC-054,Clinic
+PRV-587,P587,Okafor Pain Management Group 587,Pain Management,EAST,Harborview,2019-09-26,FAC-183,Ambulatory Surgery
+PRV-588,P588,Thornton Cardiology Group 588,Cardiology,NORTH,Lakemont,2018-01-25,FAC-211,Hospital
+PRV-589,P589,Kessler Laboratory Group 589,Laboratory,EAST,Stonebridge,2022-10-04,FAC-198,Lab
+PRV-590,P590,Vandermeer Behavioral Health Group 590,Behavioral Health,EAST,Maplewood,2022-11-04,FAC-060,Clinic
+PRV-591,P591,Yarrow Physical Therapy Group 591,Physical Therapy,EAST,Eastbrook,2018-05-22,FAC-059,Clinic
+PRV-592,P592,Wexler Cardiology Group 592,Cardiology,NORTH,Northvale,2017-07-17,FAC-101,Hospital
+PRV-593,P593,Zimmerman Family Medicine Group 593,Family Medicine,EAST,Harborview,2020-08-14,FAC-133,Clinic
+PRV-594,P594,Tanaka Physical Therapy Group 594,Physical Therapy,WEST,Cedar Falls,2019-06-04,FAC-136,Clinic
+PRV-595,P595,Aldridge Family Medicine Group 595,Family Medicine,EAST,Harborview,2017-01-22,FAC-078,Clinic
+PRV-596,P596,Oyelaran Oncology Group 596,Oncology,WEST,Sierra Vista,2019-07-12,FAC-255,Hospital
+PRV-597,P597,Oyelaran Cardiology Group 597,Cardiology,SOUTH,Sunridge,2019-09-27,FAC-143,Clinic
+PRV-598,P598,Fairbanks Family Medicine Group 598,Family Medicine,WEST,Cedar Falls,2020-07-21,FAC-178,Clinic
+PRV-599,P599,Fairbanks Behavioral Health Group 599,Behavioral Health,WEST,Cedar Falls,2023-06-27,FAC-254,Clinic
+PRV-600,P600,Galloway Laboratory Group 600,Laboratory,EAST,Eastbrook,2020-09-14,FAC-215,Lab
+PRV-601,P601,Ravenscroft Cardiology Group 601,Cardiology,EAST,Eastbrook,2023-06-08,FAC-155,Hospital
+PRV-602,P602,Wexler Radiology Group 602,Radiology,EAST,Maplewood,2023-07-28,FAC-154,Hospital
+PRV-603,P603,Yarrow Internal Medicine Group 603,Internal Medicine,EAST,Maplewood,2024-09-04,FAC-119,Hospital
+PRV-604,P604,Bellamy Physical Therapy Group 604,Physical Therapy,EAST,Stonebridge,2021-07-21,FAC-042,Clinic
+PRV-605,P605,Lindqvist Pain Management Group 605,Pain Management,EAST,Harborview,2024-08-06,FAC-206,Ambulatory Surgery
+PRV-606,P606,Aldridge Behavioral Health Group 606,Behavioral Health,NORTH,Pinecrest,2023-12-09,FAC-197,Clinic
+PRV-607,P607,Castellan Family Medicine Group 607,Family Medicine,WEST,Sierra Vista,2021-02-07,FAC-117,Clinic
+PRV-608,P608,Wexler Cardiology Group 608,Cardiology,WEST,Sierra Vista,2017-08-08,FAC-169,Clinic
+PRV-609,P609,Yarrow Family Medicine Group 609,Family Medicine,EAST,Stonebridge,2019-04-12,FAC-132,Clinic
+PRV-610,P610,Ashby Physical Therapy Group 610,Physical Therapy,EAST,Maplewood,2019-06-22,FAC-056,Clinic
+PRV-611,P611,Thornton Obstetrics Group 611,Obstetrics/Gynecology,EAST,Stonebridge,2020-03-27,FAC-154,Hospital
+PRV-612,P612,Ravenscroft Family Medicine Group 612,Family Medicine,SOUTH,Southport,2021-04-26,FAC-174,Clinic
+PRV-613,P613,Tanaka Family Medicine Group 613,Family Medicine,NORTH,Pinecrest,2018-05-12,FAC-260,Clinic
+PRV-614,P614,Galloway Orthopedics Group 614,Orthopedics,NORTH,Northvale,2019-07-10,FAC-203,Hospital
+PRV-615,P615,Sutherland Cardiology Group 615,Cardiology,WEST,Cedar Falls,2019-03-12,FAC-219,Hospital
+PRV-616,P616,Calloway Radiology Group 616,Radiology,WEST,Sierra Vista,2021-09-28,FAC-130,Imaging Center
+PRV-617,P617,Castellan Family Medicine Group 617,Family Medicine,NORTH,Highfield,2017-03-17,FAC-213,Clinic
+PRV-618,P618,Vandermeer Internal Medicine Group 618,Internal Medicine,WEST,Redrock,2019-11-20,FAC-047,Clinic
+PRV-619,P619,Vandermeer Laboratory Group 619,Laboratory,NORTH,Highfield,2018-08-05,FAC-223,Lab
+PRV-620,P620,Zimmerman Pain Management Group 620,Pain Management,WEST,Redrock,2022-02-01,FAC-050,Ambulatory Surgery
+PRV-621,P621,Marlowe Cardiology Group 621,Cardiology,EAST,Eastbrook,2017-11-08,FAC-108,Hospital
+PRV-622,P622,Castellan Obstetrics Group 622,Obstetrics/Gynecology,NORTH,Highfield,2018-07-09,FAC-209,Clinic
+PRV-623,P623,Brightwater Obstetrics Group 623,Obstetrics/Gynecology,NORTH,Northvale,2021-09-17,FAC-203,Hospital
+PRV-624,P624,Castellan Cardiology Group 624,Cardiology,EAST,Stonebridge,2021-12-07,FAC-253,Clinic
+PRV-625,P625,Kessler Internal Medicine Group 625,Internal Medicine,WEST,Cedar Falls,2018-03-02,FAC-156,Hospital
+PRV-626,P626,Castellan Family Medicine Group 626,Family Medicine,NORTH,Northvale,2022-05-31,FAC-086,Clinic
+PRV-627,P627,Oyelaran Laboratory Group 627,Laboratory,EAST,Maplewood,2022-06-09,FAC-215,Lab
+PRV-628,P628,Vandermeer Laboratory Group 628,Laboratory,NORTH,Lakemont,2021-02-09,FAC-138,Lab
+PRV-629,P629,Fairbanks Orthopedics Group 629,Orthopedics,EAST,Eastbrook,2021-12-31,FAC-119,Hospital
+PRV-630,P630,Marlowe Physical Therapy Group 630,Physical Therapy,NORTH,Northvale,2021-07-27,FAC-014,Clinic
+PRV-631,P631,Calloway Dermatology Group 631,Dermatology,SOUTH,Palmetto,2022-12-07,FAC-032,Clinic
+PRV-632,P632,Vandermeer Radiology Group 632,Radiology,NORTH,Highfield,2022-05-18,FAC-015,Hospital
+PRV-633,P633,Thornton Radiology Group 633,Radiology,EAST,Stonebridge,2017-12-22,FAC-155,Hospital
+PRV-634,P634,Navarro Internal Medicine Group 634,Internal Medicine,NORTH,Lakemont,2023-12-15,FAC-181,Clinic
+PRV-635,P635,Delacroix Internal Medicine Group 635,Internal Medicine,WEST,Cedar Falls,2018-01-30,FAC-117,Clinic
+PRV-636,P636,Delacroix Orthopedics Group 636,Orthopedics,SOUTH,Baywood,2017-10-12,FAC-030,Ambulatory Surgery
+PRV-637,P637,Pemberton Cardiology Group 637,Cardiology,NORTH,Northvale,2022-07-08,FAC-211,Hospital
+PRV-638,P638,Thornton Internal Medicine Group 638,Internal Medicine,EAST,Eastbrook,2020-08-14,FAC-056,Clinic
+PRV-639,P639,Marlowe Behavioral Health Group 639,Behavioral Health,SOUTH,Southport,2021-11-03,FAC-075,Clinic
+PRV-640,P640,Oyelaran Behavioral Health Group 640,Behavioral Health,NORTH,Pinecrest,2019-12-03,FAC-063,Clinic
+PRV-641,P641,Delacroix Cardiology Group 641,Cardiology,NORTH,Highfield,2021-04-24,FAC-031,Hospital
+PRV-642,P642,Delacroix Physical Therapy Group 642,Physical Therapy,WEST,Redrock,2024-06-22,FAC-235,Clinic
+PRV-643,P643,Brightwater Behavioral Health Group 643,Behavioral Health,WEST,Cedar Falls,2024-02-10,FAC-109,Clinic
+PRV-644,P644,Ashby Family Medicine Group 644,Family Medicine,EAST,Maplewood,2021-06-21,FAC-077,Clinic
+PRV-645,P645,Galloway Cardiology Group 645,Cardiology,SOUTH,Sunridge,2024-02-09,FAC-247,Clinic
+PRV-646,P646,Pemberton Oncology Group 646,Oncology,WEST,Redrock,2023-02-26,FAC-202,Infusion Center
+PRV-647,P647,Vandermeer Family Medicine Group 647,Family Medicine,NORTH,Northvale,2018-12-08,FAC-241,Clinic
+PRV-648,P648,Yarrow Behavioral Health Group 648,Behavioral Health,NORTH,Highfield,2018-01-04,FAC-160,Clinic
+PRV-649,P649,Pemberton Orthopedics Group 649,Orthopedics,SOUTH,Southport,2018-08-26,FAC-207,Hospital
+PRV-650,P650,Castellan Pain Management Group 650,Pain Management,NORTH,Pinecrest,2019-02-26,FAC-074,Ambulatory Surgery
+PRV-651,P651,Yarrow Family Medicine Group 651,Family Medicine,NORTH,Highfield,2017-03-17,FAC-041,Clinic
+PRV-652,P652,Harmon Family Medicine Group 652,Family Medicine,SOUTH,Palmetto,2023-07-28,FAC-127,Clinic
+PRV-653,P653,Whitfield Radiology Group 653,Radiology,EAST,Stonebridge,2024-09-03,FAC-046,Imaging Center
+PRV-654,P654,Kessler Oncology Group 654,Oncology,WEST,Westlake,2018-01-20,FAC-255,Hospital
+PRV-655,P655,Pemberton Pain Management Group 655,Pain Management,SOUTH,Baywood,2023-01-18,FAC-216,Ambulatory Surgery
+PRV-656,P656,Castellan Radiology Group 656,Radiology,EAST,Harborview,2023-06-27,FAC-046,Imaging Center
+PRV-657,P657,Pemberton Family Medicine Group 657,Family Medicine,SOUTH,Sunridge,2018-02-20,FAC-075,Clinic
+PRV-658,P658,Delacroix Family Medicine Group 658,Family Medicine,NORTH,Highfield,2018-01-01,FAC-260,Clinic
+PRV-659,P659,Ashby Family Medicine Group 659,Family Medicine,NORTH,Pinecrest,2019-12-06,FAC-197,Clinic
+PRV-660,P660,Yarrow Family Medicine Group 660,Family Medicine,WEST,Cedar Falls,2020-09-29,FAC-117,Clinic
+PRV-661,P661,Pemberton Family Medicine Group 661,Family Medicine,SOUTH,Palmetto,2017-04-17,FAC-191,Clinic
+PRV-662,P662,Whitfield Family Medicine Group 662,Family Medicine,SOUTH,Sunridge,2023-04-11,FAC-123,Clinic
+PRV-663,P663,Oyelaran Physical Therapy Group 663,Physical Therapy,SOUTH,Palmetto,2017-03-30,FAC-106,Clinic
+PRV-664,P664,Oyelaran Internal Medicine Group 664,Internal Medicine,EAST,Stonebridge,2021-04-14,FAC-224,Clinic
+PRV-665,P665,Wexler Obstetrics Group 665,Obstetrics/Gynecology,NORTH,Highfield,2018-05-01,FAC-031,Hospital
+PRV-666,P666,Yarrow Radiology Group 666,Radiology,SOUTH,Sunridge,2017-10-18,FAC-237,Hospital
+PRV-667,P667,Harmon Internal Medicine Group 667,Internal Medicine,WEST,Redrock,2022-01-21,FAC-100,Hospital
+PRV-668,P668,Sutherland Behavioral Health Group 668,Behavioral Health,EAST,Eastbrook,2023-12-01,FAC-177,Clinic
+PRV-669,P669,Zimmerman Radiology Group 669,Radiology,NORTH,Pinecrest,2021-06-07,FAC-028,Imaging Center
+PRV-670,P670,Marlowe Orthopedics Group 670,Orthopedics,WEST,Sierra Vista,2020-09-28,FAC-156,Hospital
+PRV-671,P671,Kessler Behavioral Health Group 671,Behavioral Health,WEST,Sierra Vista,2018-09-07,FAC-142,Clinic
+PRV-672,P672,Yarrow Internal Medicine Group 672,Internal Medicine,EAST,Maplewood,2020-07-21,FAC-155,Hospital
+PRV-673,P673,Wexler Internal Medicine Group 673,Internal Medicine,NORTH,Northvale,2017-03-16,FAC-203,Hospital
+PRV-674,P674,Brightwater Internal Medicine Group 674,Internal Medicine,EAST,Stonebridge,2021-11-25,FAC-253,Clinic
+PRV-675,P675,Aldridge Physical Therapy Group 675,Physical Therapy,NORTH,Pinecrest,2022-02-24,FAC-260,Clinic
+PRV-676,P676,Castellan Radiology Group 676,Radiology,SOUTH,Palmetto,2019-06-04,FAC-070,Imaging Center
+PRV-677,P677,Yarrow Pain Management Group 677,Pain Management,EAST,Maplewood,2018-09-27,FAC-234,Ambulatory Surgery
+PRV-678,P678,Vandermeer Oncology Group 678,Oncology,EAST,Eastbrook,2021-11-15,FAC-222,Hospital
+PRV-679,P679,Okafor Laboratory Group 679,Laboratory,SOUTH,Palmetto,2023-02-26,FAC-104,Lab
+PRV-680,P680,Pemberton Cardiology Group 680,Cardiology,EAST,Harborview,2020-09-10,FAC-172,Clinic
+PRV-681,P681,Delacroix Laboratory Group 681,Laboratory,EAST,Harborview,2018-03-08,FAC-019,Lab
+PRV-682,P682,Tanaka Orthopedics Group 682,Orthopedics,SOUTH,Baywood,2019-02-16,FAC-084,Hospital
+PRV-683,P683,Oyelaran Family Medicine Group 683,Family Medicine,WEST,Sierra Vista,2019-07-18,FAC-220,Clinic
+PRV-684,P684,Lindqvist Behavioral Health Group 684,Behavioral Health,NORTH,Pinecrest,2018-10-31,FAC-116,Clinic
+PRV-685,P685,Yarrow Radiology Group 685,Radiology,WEST,Westlake,2021-08-05,FAC-044,Hospital
+PRV-686,P686,Zimmerman Cardiology Group 686,Cardiology,EAST,Maplewood,2019-01-21,FAC-009,Clinic
+PRV-687,P687,Zimmerman Behavioral Health Group 687,Behavioral Health,WEST,Redrock,2021-10-20,FAC-235,Clinic
+PRV-688,P688,Bellamy Family Medicine Group 688,Family Medicine,WEST,Cedar Falls,2018-04-12,FAC-055,Clinic
+PRV-689,P689,Brightwater Behavioral Health Group 689,Behavioral Health,SOUTH,Palmetto,2022-02-14,FAC-174,Clinic
+PRV-690,P690,Pemberton Cardiology Group 690,Cardiology,NORTH,Pinecrest,2021-10-02,FAC-027,Clinic
+PRV-691,P691,Tanaka Internal Medicine Group 691,Internal Medicine,EAST,Maplewood,2018-12-13,FAC-252,Hospital
+PRV-692,P692,Lindqvist Obstetrics Group 692,Obstetrics/Gynecology,EAST,Eastbrook,2018-05-04,FAC-089,Clinic
+PRV-693,P693,Harmon Orthopedics Group 693,Orthopedics,EAST,Harborview,2023-08-22,FAC-097,Ambulatory Surgery
+PRV-694,P694,Thornton Pain Management Group 694,Pain Management,SOUTH,Baywood,2022-06-06,FAC-017,Ambulatory Surgery
+PRV-695,P695,Navarro Pain Management Group 695,Pain Management,EAST,Harborview,2022-04-23,FAC-183,Ambulatory Surgery
+PRV-696,P696,Vandermeer Family Medicine Group 696,Family Medicine,EAST,Stonebridge,2019-07-02,FAC-060,Clinic
+PRV-697,P697,Navarro Obstetrics Group 697,Obstetrics/Gynecology,WEST,Sierra Vista,2018-08-06,FAC-157,Clinic
+PRV-698,P698,Whitfield Cardiology Group 698,Cardiology,EAST,Stonebridge,2017-08-15,FAC-132,Clinic
+PRV-699,P699,Bellamy Laboratory Group 699,Laboratory,NORTH,Lakemont,2022-07-09,FAC-065,Lab
+PRV-700,P700,Tanaka Radiology Group 700,Radiology,WEST,Sierra Vista,2018-01-24,FAC-044,Hospital
+PRV-701,P701,Vandermeer Radiology Group 701,Radiology,SOUTH,Sunridge,2020-01-28,FAC-021,Hospital
+PRV-702,P702,Calloway Internal Medicine Group 702,Internal Medicine,NORTH,Pinecrest,2020-01-29,FAC-205,Clinic
+PRV-703,P703,Ravenscroft Oncology Group 703,Oncology,SOUTH,Baywood,2020-12-14,FAC-207,Hospital
+PRV-704,P704,Whitfield Obstetrics Group 704,Obstetrics/Gynecology,EAST,Stonebridge,2023-02-23,FAC-132,Clinic
+PRV-705,P705,Navarro Family Medicine Group 705,Family Medicine,SOUTH,Southport,2023-07-05,FAC-140,Clinic
+PRV-706,P706,Marlowe Internal Medicine Group 706,Internal Medicine,WEST,Redrock,2024-08-24,FAC-100,Hospital
+PRV-707,P707,Harmon Family Medicine Group 707,Family Medicine,WEST,Westlake,2019-07-18,FAC-169,Clinic
+PRV-708,P708,Thornton Family Medicine Group 708,Family Medicine,NORTH,Highfield,2018-01-30,FAC-027,Clinic
+PRV-709,P709,Okafor Family Medicine Group 709,Family Medicine,EAST,Maplewood,2020-06-13,FAC-089,Clinic
+PRV-710,P710,Navarro Oncology Group 710,Oncology,NORTH,Pinecrest,2021-10-31,FAC-006,Infusion Center
+PRV-711,P711,Yarrow Behavioral Health Group 711,Behavioral Health,NORTH,Lakemont,2019-04-18,FAC-231,Clinic
+PRV-712,P712,Bellamy Dermatology Group 712,Dermatology,SOUTH,Baywood,2022-05-11,FAC-032,Clinic
+PRV-713,P713,Brightwater Obstetrics Group 713,Obstetrics/Gynecology,EAST,Maplewood,2017-08-03,FAC-108,Hospital
+PRV-714,P714,Brightwater Family Medicine Group 714,Family Medicine,EAST,Stonebridge,2019-08-18,FAC-056,Clinic
+PRV-715,P715,Vandermeer Orthopedics Group 715,Orthopedics,WEST,Westlake,2024-03-11,FAC-255,Hospital
+PRV-716,P716,Brightwater Cardiology Group 716,Cardiology,NORTH,Lakemont,2023-07-22,FAC-083,Clinic
+PRV-717,P717,Ashby Internal Medicine Group 717,Internal Medicine,SOUTH,Baywood,2021-12-31,FAC-171,Hospital
+PRV-718,P718,Harmon Family Medicine Group 718,Family Medicine,WEST,Cedar Falls,2023-03-24,FAC-178,Clinic
+PRV-719,P719,Delacroix Laboratory Group 719,Laboratory,EAST,Harborview,2018-08-09,FAC-245,Lab
+PRV-720,P720,Whitfield Physical Therapy Group 720,Physical Therapy,NORTH,Highfield,2021-07-02,FAC-120,Clinic
+PRV-721,P721,Whitfield Internal Medicine Group 721,Internal Medicine,SOUTH,Southport,2019-11-12,FAC-237,Hospital
+PRV-722,P722,Ashby Orthopedics Group 722,Orthopedics,NORTH,Lakemont,2019-04-17,FAC-034,Ambulatory Surgery
+PRV-723,P723,Vandermeer Cardiology Group 723,Cardiology,WEST,Cedar Falls,2022-09-29,FAC-256,Clinic
+PRV-724,P724,Galloway Physical Therapy Group 724,Physical Therapy,NORTH,Lakemont,2019-07-02,FAC-153,Clinic
+PRV-725,P725,Ashby Orthopedics Group 725,Orthopedics,WEST,Sierra Vista,2018-11-06,FAC-044,Hospital
+PRV-726,P726,Harmon Family Medicine Group 726,Family Medicine,EAST,Eastbrook,2023-01-01,FAC-204,Clinic
+PRV-727,P727,Harmon Behavioral Health Group 727,Behavioral Health,NORTH,Lakemont,2021-02-23,FAC-164,Clinic
+PRV-728,P728,Oyelaran Behavioral Health Group 728,Behavioral Health,EAST,Maplewood,2018-01-02,FAC-204,Clinic
+PRV-729,P729,Harmon Dermatology Group 729,Dermatology,WEST,Westlake,2019-10-19,FAC-176,Clinic
+PRV-730,P730,Galloway Family Medicine Group 730,Family Medicine,NORTH,Highfield,2018-07-19,FAC-120,Clinic
+PRV-731,P731,Delacroix Internal Medicine Group 731,Internal Medicine,WEST,Redrock,2020-10-16,FAC-189,Clinic
+PRV-732,P732,Okafor Internal Medicine Group 732,Internal Medicine,WEST,Cedar Falls,2017-09-04,FAC-220,Clinic
+PRV-733,P733,Ravenscroft Family Medicine Group 733,Family Medicine,WEST,Sierra Vista,2019-01-18,FAC-035,Clinic
+PRV-734,P734,Wexler Obstetrics Group 734,Obstetrics/Gynecology,EAST,Maplewood,2022-11-27,FAC-150,Hospital
+PRV-735,P735,Fairbanks Physical Therapy Group 735,Physical Therapy,NORTH,Lakemont,2020-10-25,FAC-007,Clinic
+PRV-736,P736,Kessler Family Medicine Group 736,Family Medicine,EAST,Harborview,2020-03-28,FAC-132,Clinic
+PRV-737,P737,Marlowe Family Medicine Group 737,Family Medicine,SOUTH,Sunridge,2024-04-08,FAC-075,Clinic
+PRV-738,P738,Lindqvist Family Medicine Group 738,Family Medicine,SOUTH,Sunridge,2018-01-15,FAC-208,Clinic
+PRV-739,P739,Harmon Physical Therapy Group 739,Physical Therapy,NORTH,Lakemont,2021-08-05,FAC-160,Clinic
+PRV-740,P740,Navarro Dermatology Group 740,Dermatology,NORTH,Pinecrest,2017-12-21,FAC-153,Clinic
+PRV-741,P741,Okafor Dermatology Group 741,Dermatology,EAST,Harborview,2022-10-13,FAC-187,Clinic
+PRV-742,P742,Marlowe Cardiology Group 742,Cardiology,WEST,Cedar Falls,2017-08-07,FAC-210,Hospital
+PRV-743,P743,Bellamy Internal Medicine Group 743,Internal Medicine,EAST,Stonebridge,2019-11-09,FAC-133,Clinic
+PRV-744,P744,Ravenscroft Family Medicine Group 744,Family Medicine,SOUTH,Sunridge,2021-03-16,FAC-174,Clinic
+PRV-745,P745,Pemberton Physical Therapy Group 745,Physical Therapy,SOUTH,Sunridge,2020-01-20,FAC-001,Clinic
+PRV-746,P746,Ravenscroft Internal Medicine Group 746,Internal Medicine,NORTH,Highfield,2023-12-05,FAC-041,Clinic
+PRV-747,P747,Kessler Physical Therapy Group 747,Physical Therapy,WEST,Redrock,2021-04-27,FAC-069,Clinic
+PRV-748,P748,Okafor Cardiology Group 748,Cardiology,WEST,Cedar Falls,2018-11-24,FAC-220,Clinic
+PRV-749,P749,Okafor Family Medicine Group 749,Family Medicine,SOUTH,Sunridge,2023-09-24,FAC-001,Clinic
+PRV-750,P750,Kessler Behavioral Health Group 750,Behavioral Health,EAST,Stonebridge,2017-06-23,FAC-092,Clinic
+PRV-751,P751,Whitfield Radiology Group 751,Radiology,SOUTH,Palmetto,2023-09-10,FAC-162,Imaging Center
+PRV-752,P752,Ashby Family Medicine Group 752,Family Medicine,WEST,Cedar Falls,2019-04-23,FAC-189,Clinic
+PRV-753,P753,Yarrow Dermatology Group 753,Dermatology,NORTH,Pinecrest,2022-10-21,FAC-153,Clinic
+PRV-754,P754,Kessler Laboratory Group 754,Laboratory,EAST,Stonebridge,2019-05-27,FAC-215,Lab
+PRV-755,P755,Fairbanks Cardiology Group 755,Cardiology,WEST,Sierra Vista,2020-05-21,FAC-248,Hospital
+PRV-756,P756,Thornton Family Medicine Group 756,Family Medicine,EAST,Eastbrook,2022-12-16,FAC-228,Clinic
+PRV-757,P757,Oyelaran Family Medicine Group 757,Family Medicine,SOUTH,Sunridge,2021-04-28,FAC-143,Clinic
+PRV-758,P758,Wexler Laboratory Group 758,Laboratory,WEST,Sierra Vista,2021-12-13,FAC-258,Lab
+PRV-759,P759,Fairbanks Family Medicine Group 759,Family Medicine,NORTH,Lakemont,2022-04-01,FAC-113,Clinic
+PRV-760,P760,Okafor Family Medicine Group 760,Family Medicine,NORTH,Lakemont,2021-06-07,FAC-241,Clinic
+PRV-761,P761,Yarrow Pain Management Group 761,Pain Management,NORTH,Northvale,2024-05-16,FAC-034,Ambulatory Surgery
+PRV-762,P762,Okafor Family Medicine Group 762,Family Medicine,NORTH,Northvale,2023-05-14,FAC-209,Clinic
+PRV-763,P763,Tanaka Laboratory Group 763,Laboratory,EAST,Harborview,2019-08-09,FAC-019,Lab
+PRV-764,P764,Kessler Orthopedics Group 764,Orthopedics,EAST,Eastbrook,2020-10-17,FAC-234,Ambulatory Surgery
+PRV-765,P765,Okafor Oncology Group 765,Oncology,SOUTH,Baywood,2020-12-21,FAC-048,Hospital
+PRV-766,P766,Ravenscroft Internal Medicine Group 766,Internal Medicine,EAST,Eastbrook,2021-03-01,FAC-056,Clinic
+PRV-767,P767,Thornton Obstetrics Group 767,Obstetrics/Gynecology,NORTH,Pinecrest,2023-12-10,FAC-160,Clinic
+PRV-768,P768,Marlowe Behavioral Health Group 768,Behavioral Health,EAST,Harborview,2024-07-19,FAC-077,Clinic
+PRV-769,P769,Harmon Dermatology Group 769,Dermatology,NORTH,Pinecrest,2018-07-09,FAC-086,Clinic
+PRV-770,P770,Pemberton Cardiology Group 770,Cardiology,WEST,Sierra Vista,2021-05-05,FAC-047,Clinic
+PRV-771,P771,Brightwater Orthopedics Group 771,Orthopedics,SOUTH,Sunridge,2019-11-15,FAC-161,Hospital
+PRV-772,P772,Delacroix Dermatology Group 772,Dermatology,EAST,Maplewood,2019-07-20,FAC-187,Clinic
+PRV-773,P773,Navarro Radiology Group 773,Radiology,WEST,Redrock,2023-05-05,FAC-110,Imaging Center
+PRV-774,P774,Ravenscroft Pain Management Group 774,Pain Management,EAST,Maplewood,2021-12-22,FAC-097,Ambulatory Surgery
+PRV-775,P775,Bellamy Radiology Group 775,Radiology,NORTH,Northvale,2017-09-06,FAC-031,Hospital
+PRV-776,P776,Zimmerman Cardiology Group 776,Cardiology,EAST,Stonebridge,2021-04-06,FAC-252,Hospital
+PRV-777,P777,Ravenscroft Oncology Group 777,Oncology,EAST,Maplewood,2018-05-11,FAC-200,Infusion Center
+PRV-778,P778,Vandermeer Physical Therapy Group 778,Physical Therapy,SOUTH,Palmetto,2017-01-19,FAC-201,Clinic
+PRV-779,P779,Bellamy Internal Medicine Group 779,Internal Medicine,NORTH,Pinecrest,2022-05-02,FAC-083,Clinic
+PRV-780,P780,Aldridge Behavioral Health Group 780,Behavioral Health,NORTH,Highfield,2022-10-06,FAC-153,Clinic
+PRV-781,P781,Kessler Laboratory Group 781,Laboratory,WEST,Cedar Falls,2020-03-16,FAC-145,Lab
+PRV-782,P782,Brightwater Family Medicine Group 782,Family Medicine,SOUTH,Sunridge,2020-08-28,FAC-208,Clinic
+PRV-783,P783,Whitfield Family Medicine Group 783,Family Medicine,NORTH,Highfield,2023-11-09,FAC-231,Clinic
+PRV-784,P784,Whitfield Obstetrics Group 784,Obstetrics/Gynecology,SOUTH,Palmetto,2019-11-16,FAC-103,Hospital
+PRV-785,P785,Tanaka Dermatology Group 785,Dermatology,SOUTH,Baywood,2021-11-11,FAC-032,Clinic
+PRV-786,P786,Sutherland Pain Management Group 786,Pain Management,WEST,Westlake,2018-12-26,FAC-135,Ambulatory Surgery
+PRV-787,P787,Lindqvist Cardiology Group 787,Cardiology,WEST,Cedar Falls,2020-10-04,FAC-210,Hospital
+PRV-788,P788,Zimmerman Internal Medicine Group 788,Internal Medicine,EAST,Eastbrook,2023-09-07,FAC-253,Clinic
+PRV-789,P789,Brightwater Family Medicine Group 789,Family Medicine,NORTH,Highfield,2020-01-22,FAC-007,Clinic
+PRV-790,P790,Navarro Radiology Group 790,Radiology,NORTH,Pinecrest,2019-12-07,FAC-037,Imaging Center
+PRV-791,P791,Navarro Orthopedics Group 791,Orthopedics,NORTH,Highfield,2021-02-06,FAC-015,Hospital
+PRV-792,P792,Zimmerman Radiology Group 792,Radiology,WEST,Westlake,2019-06-28,FAC-180,Imaging Center
+PRV-793,P793,Fairbanks Laboratory Group 793,Laboratory,SOUTH,Southport,2024-08-30,FAC-029,Lab
+PRV-794,P794,Harmon Laboratory Group 794,Laboratory,NORTH,Highfield,2022-01-05,FAC-118,Lab
+PRV-795,P795,Okafor Oncology Group 795,Oncology,NORTH,Pinecrest,2023-05-11,FAC-173,Infusion Center
+PRV-796,P796,Delacroix Internal Medicine Group 796,Internal Medicine,NORTH,Northvale,2021-06-12,FAC-121,Clinic
+PRV-797,P797,Vandermeer Orthopedics Group 797,Orthopedics,NORTH,Lakemont,2021-09-02,FAC-211,Hospital
+PRV-798,P798,Ashby Internal Medicine Group 798,Internal Medicine,EAST,Harborview,2022-07-29,FAC-089,Clinic
+PRV-799,P799,Ashby Obstetrics Group 799,Obstetrics/Gynecology,EAST,Maplewood,2021-07-03,FAC-244,Clinic
+PRV-800,P800,Tanaka Family Medicine Group 800,Family Medicine,WEST,Sierra Vista,2020-12-31,FAC-254,Clinic
+PRV-801,P801,Castellan Dermatology Group 801,Dermatology,NORTH,Highfield,2017-02-05,FAC-121,Clinic
+PRV-802,P802,Ravenscroft Radiology Group 802,Radiology,EAST,Stonebridge,2023-02-06,FAC-149,Imaging Center
+PRV-803,P803,Bellamy Orthopedics Group 803,Orthopedics,WEST,Redrock,2017-01-14,FAC-156,Hospital
+PRV-804,P804,Sutherland Orthopedics Group 804,Orthopedics,EAST,Maplewood,2019-06-01,FAC-252,Hospital
+PRV-805,P805,Thornton Radiology Group 805,Radiology,SOUTH,Southport,2017-09-15,FAC-207,Hospital
+PRV-806,P806,Whitfield Orthopedics Group 806,Orthopedics,NORTH,Pinecrest,2022-09-14,FAC-101,Hospital
+PRV-807,P807,Kessler Physical Therapy Group 807,Physical Therapy,NORTH,Highfield,2024-03-05,FAC-153,Clinic
+PRV-808,P808,Calloway Family Medicine Group 808,Family Medicine,EAST,Maplewood,2017-04-01,FAC-204,Clinic
+PRV-809,P809,Tanaka Physical Therapy Group 809,Physical Therapy,EAST,Stonebridge,2018-01-06,FAC-172,Clinic
+PRV-810,P810,Ashby Internal Medicine Group 810,Internal Medicine,SOUTH,Palmetto,2022-08-24,FAC-229,Hospital
+PRV-811,P811,Bellamy Orthopedics Group 811,Orthopedics,WEST,Redrock,2022-08-09,FAC-051,Ambulatory Surgery
+PRV-812,P812,Ravenscroft Laboratory Group 812,Laboratory,WEST,Sierra Vista,2021-11-20,FAC-258,Lab
+PRV-813,P813,Pemberton Physical Therapy Group 813,Physical Therapy,EAST,Harborview,2021-11-04,FAC-004,Clinic
+PRV-814,P814,Lindqvist Physical Therapy Group 814,Physical Therapy,NORTH,Lakemont,2024-05-06,FAC-205,Clinic
+PRV-815,P815,Lindqvist Dermatology Group 815,Dermatology,NORTH,Pinecrest,2017-03-07,FAC-233,Clinic
+PRV-816,P816,Kessler Orthopedics Group 816,Orthopedics,SOUTH,Southport,2020-09-15,FAC-159,Hospital
+PRV-817,P817,Vandermeer Internal Medicine Group 817,Internal Medicine,SOUTH,Baywood,2018-07-10,FAC-103,Hospital
+PRV-818,P818,Okafor Cardiology Group 818,Cardiology,NORTH,Pinecrest,2019-03-25,FAC-068,Hospital
+PRV-819,P819,Calloway Pain Management Group 819,Pain Management,NORTH,Highfield,2019-06-09,FAC-074,Ambulatory Surgery
+PRV-820,P820,Zimmerman Dermatology Group 820,Dermatology,NORTH,Lakemont,2017-06-18,FAC-039,Clinic
+PRV-821,P821,Zimmerman Pain Management Group 821,Pain Management,EAST,Eastbrook,2022-12-07,FAC-093,Ambulatory Surgery
+PRV-822,P822,Aldridge Physical Therapy Group 822,Physical Therapy,NORTH,Northvale,2018-06-25,FAC-063,Clinic
+PRV-823,P823,Lindqvist Family Medicine Group 823,Family Medicine,NORTH,Lakemont,2018-01-14,FAC-086,Clinic
+PRV-824,P824,Calloway Internal Medicine Group 824,Internal Medicine,WEST,Cedar Falls,2018-11-27,FAC-157,Clinic
+PRV-825,P825,Zimmerman Radiology Group 825,Radiology,EAST,Harborview,2021-12-03,FAC-243,Hospital
+PRV-826,P826,Ravenscroft Physical Therapy Group 826,Physical Therapy,SOUTH,Sunridge,2022-08-11,FAC-058,Clinic
+PRV-827,P827,Okafor Orthopedics Group 827,Orthopedics,SOUTH,Southport,2022-07-27,FAC-207,Hospital
+PRV-828,P828,Marlowe Physical Therapy Group 828,Physical Therapy,SOUTH,Sunridge,2022-06-22,FAC-208,Clinic
+PRV-829,P829,Bellamy Radiology Group 829,Radiology,EAST,Stonebridge,2019-10-08,FAC-222,Hospital
+PRV-830,P830,Bellamy Laboratory Group 830,Laboratory,WEST,Westlake,2019-08-20,FAC-107,Lab
+PRV-831,P831,Calloway Pain Management Group 831,Pain Management,WEST,Sierra Vista,2022-03-17,FAC-115,Ambulatory Surgery
+PRV-832,P832,Okafor Radiology Group 832,Radiology,SOUTH,Baywood,2020-10-13,FAC-048,Hospital
+PRV-833,P833,Brightwater Cardiology Group 833,Cardiology,NORTH,Pinecrest,2022-07-31,FAC-101,Hospital
+PRV-834,P834,Aldridge Oncology Group 834,Oncology,WEST,Westlake,2024-06-21,FAC-219,Hospital
+PRV-835,P835,Oyelaran Internal Medicine Group 835,Internal Medicine,EAST,Eastbrook,2021-03-31,FAC-192,Hospital
+PRV-836,P836,Vandermeer Oncology Group 836,Oncology,SOUTH,Sunridge,2019-03-13,FAC-073,Infusion Center
+PRV-837,P837,Kessler Physical Therapy Group 837,Physical Therapy,SOUTH,Palmetto,2021-06-28,FAC-123,Clinic
+PRV-838,P838,Kessler Dermatology Group 838,Dermatology,NORTH,Pinecrest,2018-04-20,FAC-197,Clinic
+PRV-839,P839,Bellamy Family Medicine Group 839,Family Medicine,NORTH,Highfield,2020-02-26,FAC-027,Clinic
+PRV-840,P840,Marlowe Behavioral Health Group 840,Behavioral Health,EAST,Harborview,2021-07-24,FAC-253,Clinic
+PRV-841,P841,Marlowe Pain Management Group 841,Pain Management,WEST,Sierra Vista,2022-10-20,FAC-226,Ambulatory Surgery
+PRV-842,P842,Okafor Family Medicine Group 842,Family Medicine,SOUTH,Southport,2020-09-03,FAC-140,Clinic
+PRV-843,P843,Kessler Internal Medicine Group 843,Internal Medicine,SOUTH,Sunridge,2021-05-19,FAC-103,Hospital
+PRV-844,P844,Marlowe Laboratory Group 844,Laboratory,SOUTH,Baywood,2019-10-12,FAC-104,Lab
+PRV-845,P845,Okafor Dermatology Group 845,Dermatology,EAST,Stonebridge,2018-09-19,FAC-024,Clinic
+PRV-846,P846,Castellan Dermatology Group 846,Dermatology,SOUTH,Baywood,2023-10-24,FAC-174,Clinic
+PRV-847,P847,Yarrow Behavioral Health Group 847,Behavioral Health,WEST,Sierra Vista,2023-05-23,FAC-035,Clinic
+PRV-848,P848,Galloway Family Medicine Group 848,Family Medicine,SOUTH,Baywood,2021-08-16,FAC-032,Clinic
+PRV-849,P849,Thornton Oncology Group 849,Oncology,EAST,Stonebridge,2024-03-21,FAC-222,Hospital
+PRV-850,P850,Harmon Physical Therapy Group 850,Physical Therapy,NORTH,Lakemont,2023-06-30,FAC-014,Clinic
+PRV-851,P851,Harmon Family Medicine Group 851,Family Medicine,EAST,Maplewood,2023-07-10,FAC-009,Clinic
+PRV-852,P852,Vandermeer Radiology Group 852,Radiology,SOUTH,Sunridge,2019-05-16,FAC-218,Imaging Center
+PRV-853,P853,Oyelaran Behavioral Health Group 853,Behavioral Health,SOUTH,Southport,2024-02-01,FAC-054,Clinic
+PRV-854,P854,Pemberton Oncology Group 854,Oncology,NORTH,Northvale,2021-03-12,FAC-184,Infusion Center
+PRV-855,P855,Zimmerman Cardiology Group 855,Cardiology,EAST,Harborview,2018-11-04,FAC-222,Hospital
+PRV-856,P856,Bellamy Internal Medicine Group 856,Internal Medicine,SOUTH,Palmetto,2018-03-22,FAC-084,Hospital
+PRV-857,P857,Okafor Orthopedics Group 857,Orthopedics,WEST,Westlake,2018-07-01,FAC-134,Ambulatory Surgery
+PRV-858,P858,Yarrow Oncology Group 858,Oncology,NORTH,Lakemont,2023-04-19,FAC-006,Infusion Center
+PRV-859,P859,Calloway Internal Medicine Group 859,Internal Medicine,NORTH,Highfield,2017-07-20,FAC-120,Clinic
+PRV-860,P860,Pemberton Physical Therapy Group 860,Physical Therapy,SOUTH,Baywood,2024-01-13,FAC-001,Clinic
+PRV-861,P861,Kessler Family Medicine Group 861,Family Medicine,EAST,Harborview,2023-03-13,FAC-172,Clinic
+PRV-862,P862,Vandermeer Internal Medicine Group 862,Internal Medicine,EAST,Stonebridge,2023-10-26,FAC-114,Hospital
+PRV-863,P863,Lindqvist Family Medicine Group 863,Family Medicine,NORTH,Pinecrest,2024-04-28,FAC-153,Clinic
+PRV-864,P864,Tanaka Orthopedics Group 864,Orthopedics,EAST,Stonebridge,2022-05-24,FAC-093,Ambulatory Surgery
+PRV-865,P865,Zimmerman Obstetrics Group 865,Obstetrics/Gynecology,SOUTH,Southport,2023-12-19,FAC-161,Hospital
+PRV-866,P866,Fairbanks Laboratory Group 866,Laboratory,EAST,Stonebridge,2017-05-29,FAC-245,Lab
+PRV-867,P867,Okafor Internal Medicine Group 867,Internal Medicine,EAST,Stonebridge,2022-10-09,FAC-252,Hospital
+PRV-868,P868,Galloway Orthopedics Group 868,Orthopedics,EAST,Harborview,2024-02-22,FAC-003,Hospital
+PRV-869,P869,Whitfield Behavioral Health Group 869,Behavioral Health,NORTH,Northvale,2019-03-22,FAC-022,Clinic
+PRV-870,P870,Brightwater Family Medicine Group 870,Family Medicine,NORTH,Pinecrest,2017-06-24,FAC-213,Clinic
+PRV-871,P871,Sutherland Radiology Group 871,Radiology,NORTH,Northvale,2018-09-28,FAC-057,Hospital
+PRV-872,P872,Ashby Physical Therapy Group 872,Physical Therapy,EAST,Maplewood,2017-11-16,FAC-059,Clinic
+PRV-873,P873,Pemberton Radiology Group 873,Radiology,NORTH,Northvale,2020-06-15,FAC-015,Hospital
+PRV-874,P874,Navarro Internal Medicine Group 874,Internal Medicine,NORTH,Highfield,2021-10-15,FAC-027,Clinic
+PRV-875,P875,Castellan Laboratory Group 875,Laboratory,EAST,Harborview,2020-06-30,FAC-019,Lab
+PRV-876,P876,Navarro Cardiology Group 876,Cardiology,NORTH,Highfield,2024-01-10,FAC-007,Clinic
+PRV-877,P877,Oyelaran Physical Therapy Group 877,Physical Therapy,SOUTH,Palmetto,2017-09-06,FAC-001,Clinic
+PRV-878,P878,Calloway Radiology Group 878,Radiology,NORTH,Lakemont,2020-05-26,FAC-257,Imaging Center
+PRV-879,P879,Harmon Orthopedics Group 879,Orthopedics,NORTH,Lakemont,2023-07-22,FAC-034,Ambulatory Surgery
+PRV-880,P880,Zimmerman Laboratory Group 880,Laboratory,WEST,Cedar Falls,2020-09-27,FAC-145,Lab
+PRV-881,P881,Galloway Orthopedics Group 881,Orthopedics,NORTH,Pinecrest,2024-05-12,FAC-031,Hospital
+PRV-882,P882,Ashby Pain Management Group 882,Pain Management,SOUTH,Sunridge,2024-05-02,FAC-259,Ambulatory Surgery
+PRV-883,P883,Oyelaran Family Medicine Group 883,Family Medicine,SOUTH,Palmetto,2017-08-31,FAC-001,Clinic
+PRV-884,P884,Galloway Orthopedics Group 884,Orthopedics,WEST,Redrock,2021-01-22,FAC-012,Ambulatory Surgery
+PRV-885,P885,Tanaka Family Medicine Group 885,Family Medicine,SOUTH,Sunridge,2021-05-04,FAC-208,Clinic
+PRV-886,P886,Delacroix Radiology Group 886,Radiology,NORTH,Highfield,2023-01-10,FAC-128,Imaging Center
+PRV-887,P887,Fairbanks Laboratory Group 887,Laboratory,NORTH,Highfield,2019-03-13,FAC-065,Lab
+PRV-888,P888,Okafor Dermatology Group 888,Dermatology,SOUTH,Palmetto,2018-09-23,FAC-123,Clinic
+PRV-889,P889,Galloway Laboratory Group 889,Laboratory,SOUTH,Palmetto,2021-12-14,FAC-029,Lab
+PRV-890,P890,Oyelaran Pain Management Group 890,Pain Management,WEST,Redrock,2022-02-01,FAC-115,Ambulatory Surgery
+PRV-891,P891,Marlowe Laboratory Group 891,Laboratory,EAST,Eastbrook,2022-07-07,FAC-122,Lab
+PRV-892,P892,Harmon Orthopedics Group 892,Orthopedics,SOUTH,Baywood,2021-09-02,FAC-103,Hospital
+PRV-893,P893,Calloway Physical Therapy Group 893,Physical Therapy,WEST,Sierra Vista,2021-11-11,FAC-069,Clinic
+PRV-894,P894,Ravenscroft Behavioral Health Group 894,Behavioral Health,EAST,Eastbrook,2018-06-01,FAC-056,Clinic
+PRV-895,P895,Kessler Orthopedics Group 895,Orthopedics,SOUTH,Baywood,2022-03-20,FAC-052,Ambulatory Surgery
+PRV-896,P896,Harmon Pain Management Group 896,Pain Management,EAST,Stonebridge,2018-11-04,FAC-064,Ambulatory Surgery
+PRV-897,P897,Ravenscroft Laboratory Group 897,Laboratory,NORTH,Highfield,2021-04-25,FAC-118,Lab
+PRV-898,P898,Whitfield Physical Therapy Group 898,Physical Therapy,WEST,Cedar Falls,2022-06-21,FAC-176,Clinic
+PRV-899,P899,Navarro Physical Therapy Group 899,Physical Therapy,SOUTH,Baywood,2018-08-16,FAC-191,Clinic
+PRV-900,P900,Marlowe Internal Medicine Group 900,Internal Medicine,EAST,Maplewood,2017-10-31,FAC-151,Hospital
+PRV-901,P901,Harmon Obstetrics Group 901,Obstetrics/Gynecology,EAST,Harborview,2020-12-12,FAC-150,Hospital
+PRV-902,P902,Vandermeer Physical Therapy Group 902,Physical Therapy,NORTH,Northvale,2022-05-14,FAC-063,Clinic
+PRV-903,P903,Calloway Family Medicine Group 903,Family Medicine,EAST,Eastbrook,2019-01-08,FAC-133,Clinic
+PRV-904,P904,Yarrow Orthopedics Group 904,Orthopedics,NORTH,Lakemont,2018-09-26,FAC-194,Ambulatory Surgery
+PRV-905,P905,Marlowe Physical Therapy Group 905,Physical Therapy,WEST,Westlake,2024-07-26,FAC-235,Clinic
+PRV-906,P906,Oyelaran Family Medicine Group 906,Family Medicine,NORTH,Northvale,2019-05-13,FAC-146,Clinic
+PRV-907,P907,Marlowe Family Medicine Group 907,Family Medicine,NORTH,Pinecrest,2023-09-12,FAC-241,Clinic
+PRV-908,P908,Thornton Radiology Group 908,Radiology,SOUTH,Baywood,2023-06-29,FAC-162,Imaging Center
+PRV-909,P909,Bellamy Laboratory Group 909,Laboratory,EAST,Harborview,2023-06-10,FAC-085,Lab
+PRV-910,P910,Galloway Oncology Group 910,Oncology,WEST,Westlake,2022-10-05,FAC-202,Infusion Center
+PRV-911,P911,Vandermeer Family Medicine Group 911,Family Medicine,EAST,Stonebridge,2023-08-31,FAC-187,Clinic
+PRV-912,P912,Thornton Behavioral Health Group 912,Behavioral Health,NORTH,Lakemont,2024-01-04,FAC-160,Clinic
+PRV-913,P913,Whitfield Dermatology Group 913,Dermatology,EAST,Stonebridge,2021-12-09,FAC-094,Clinic
+PRV-914,P914,Thornton Cardiology Group 914,Cardiology,WEST,Redrock,2018-03-15,FAC-055,Clinic
+PRV-915,P915,Yarrow Behavioral Health Group 915,Behavioral Health,NORTH,Pinecrest,2019-03-27,FAC-233,Clinic
+PRV-916,P916,Galloway Family Medicine Group 916,Family Medicine,NORTH,Pinecrest,2022-08-26,FAC-146,Clinic
+PRV-917,P917,Navarro Internal Medicine Group 917,Internal Medicine,NORTH,Lakemont,2021-02-21,FAC-031,Hospital
+PRV-918,P918,Marlowe Radiology Group 918,Radiology,SOUTH,Southport,2021-07-29,FAC-103,Hospital
+PRV-919,P919,Bellamy Dermatology Group 919,Dermatology,NORTH,Lakemont,2023-04-09,FAC-041,Clinic
+PRV-920,P920,Delacroix Family Medicine Group 920,Family Medicine,NORTH,Northvale,2018-08-06,FAC-227,Clinic
+PRV-921,P921,Harmon Family Medicine Group 921,Family Medicine,WEST,Redrock,2021-03-04,FAC-035,Clinic
+PRV-922,P922,Oyelaran Laboratory Group 922,Laboratory,EAST,Maplewood,2017-10-18,FAC-245,Lab
+PRV-923,P923,Calloway Pain Management Group 923,Pain Management,EAST,Harborview,2022-12-04,FAC-152,Ambulatory Surgery
+PRV-924,P924,Lindqvist Behavioral Health Group 924,Behavioral Health,NORTH,Lakemont,2018-08-27,FAC-022,Clinic
+PRV-925,P925,Whitfield Pain Management Group 925,Pain Management,EAST,Eastbrook,2021-03-23,FAC-131,Ambulatory Surgery
+PRV-926,P926,Tanaka Physical Therapy Group 926,Physical Therapy,NORTH,Pinecrest,2019-04-03,FAC-231,Clinic
+PRV-927,P927,Calloway Internal Medicine Group 927,Internal Medicine,NORTH,Lakemont,2021-01-07,FAC-158,Hospital
+PRV-928,P928,Tanaka Cardiology Group 928,Cardiology,EAST,Eastbrook,2018-05-28,FAC-243,Hospital
+PRV-929,P929,Zimmerman Oncology Group 929,Oncology,SOUTH,Palmetto,2024-03-14,FAC-168,Infusion Center
+PRV-930,P930,Ashby Orthopedics Group 930,Orthopedics,WEST,Cedar Falls,2020-02-04,FAC-012,Ambulatory Surgery
+PRV-931,P931,Yarrow Behavioral Health Group 931,Behavioral Health,SOUTH,Baywood,2017-12-13,FAC-075,Clinic
+PRV-932,P932,Wexler Behavioral Health Group 932,Behavioral Health,NORTH,Highfield,2024-01-17,FAC-160,Clinic
+PRV-933,P933,Ashby Physical Therapy Group 933,Physical Therapy,SOUTH,Southport,2022-11-14,FAC-058,Clinic
+PRV-934,P934,Oyelaran Internal Medicine Group 934,Internal Medicine,SOUTH,Palmetto,2022-04-10,FAC-237,Hospital
+PRV-935,P935,Fairbanks Radiology Group 935,Radiology,SOUTH,Baywood,2017-04-27,FAC-124,Imaging Center
+PRV-936,P936,Okafor Orthopedics Group 936,Orthopedics,NORTH,Pinecrest,2021-09-10,FAC-158,Hospital
+PRV-937,P937,Kessler Orthopedics Group 937,Orthopedics,SOUTH,Baywood,2018-02-15,FAC-207,Hospital
+PRV-938,P938,Galloway Dermatology Group 938,Dermatology,WEST,Cedar Falls,2017-05-02,FAC-099,Clinic
+PRV-939,P939,Brightwater Family Medicine Group 939,Family Medicine,EAST,Maplewood,2023-11-05,FAC-244,Clinic
+PRV-940,P940,Delacroix Internal Medicine Group 940,Internal Medicine,EAST,Harborview,2020-12-01,FAC-133,Clinic
+PRV-941,P941,Pemberton Pain Management Group 941,Pain Management,EAST,Maplewood,2018-08-29,FAC-097,Ambulatory Surgery
+PRV-942,P942,Marlowe Behavioral Health Group 942,Behavioral Health,WEST,Redrock,2017-07-10,FAC-109,Clinic
+PRV-943,P943,Thornton Cardiology Group 943,Cardiology,SOUTH,Palmetto,2022-10-05,FAC-021,Hospital
+PRV-944,P944,Aldridge Laboratory Group 944,Laboratory,WEST,Redrock,2020-12-31,FAC-258,Lab
+PRV-945,P945,Whitfield Physical Therapy Group 945,Physical Therapy,SOUTH,Sunridge,2021-06-10,FAC-191,Clinic
+PRV-946,P946,Kessler Obstetrics Group 946,Obstetrics/Gynecology,SOUTH,Baywood,2024-04-15,FAC-102,Clinic
+PRV-947,P947,Wexler Laboratory Group 947,Laboratory,SOUTH,Palmetto,2017-09-06,FAC-066,Lab
+PRV-948,P948,Delacroix Cardiology Group 948,Cardiology,NORTH,Pinecrest,2020-10-11,FAC-101,Hospital
+PRV-949,P949,Delacroix Behavioral Health Group 949,Behavioral Health,EAST,Eastbrook,2024-04-15,FAC-253,Clinic
+PRV-950,P950,Brightwater Family Medicine Group 950,Family Medicine,EAST,Stonebridge,2021-01-07,FAC-133,Clinic
+PRV-951,P951,Harmon Cardiology Group 951,Cardiology,NORTH,Pinecrest,2023-03-08,FAC-031,Hospital
+PRV-952,P952,Brightwater Family Medicine Group 952,Family Medicine,EAST,Eastbrook,2024-03-25,FAC-094,Clinic
+PRV-953,P953,Sutherland Family Medicine Group 953,Family Medicine,EAST,Eastbrook,2022-12-31,FAC-042,Clinic
+PRV-954,P954,Calloway Cardiology Group 954,Cardiology,SOUTH,Southport,2019-07-05,FAC-159,Hospital
+PRV-955,P955,Whitfield Dermatology Group 955,Dermatology,SOUTH,Baywood,2020-03-19,FAC-123,Clinic
+PRV-956,P956,Zimmerman Orthopedics Group 956,Orthopedics,EAST,Stonebridge,2020-09-20,FAC-144,Ambulatory Surgery
+PRV-957,P957,Pemberton Internal Medicine Group 957,Internal Medicine,NORTH,Lakemont,2021-03-07,FAC-225,Clinic
+PRV-958,P958,Harmon Orthopedics Group 958,Orthopedics,WEST,Westlake,2018-04-26,FAC-012,Ambulatory Surgery
+PRV-959,P959,Oyelaran Family Medicine Group 959,Family Medicine,WEST,Redrock,2017-08-09,FAC-176,Clinic
+PRV-960,P960,Wexler Laboratory Group 960,Laboratory,SOUTH,Palmetto,2021-03-03,FAC-029,Lab
+PRV-961,P961,Delacroix Cardiology Group 961,Cardiology,WEST,Westlake,2020-07-25,FAC-210,Hospital
+PRV-962,P962,Delacroix Physical Therapy Group 962,Physical Therapy,EAST,Harborview,2021-12-22,FAC-004,Clinic
+PRV-963,P963,Delacroix Behavioral Health Group 963,Behavioral Health,SOUTH,Palmetto,2020-04-16,FAC-095,Clinic
+PRV-964,P964,Castellan Laboratory Group 964,Laboratory,SOUTH,Baywood,2023-10-06,FAC-066,Lab
+PRV-965,P965,Bellamy Family Medicine Group 965,Family Medicine,WEST,Redrock,2023-02-05,FAC-109,Clinic
+PRV-966,P966,Fairbanks Pain Management Group 966,Pain Management,WEST,Westlake,2019-11-14,FAC-226,Ambulatory Surgery
+PRV-967,P967,Calloway Oncology Group 967,Oncology,WEST,Cedar Falls,2019-11-16,FAC-248,Hospital
+PRV-968,P968,Harmon Obstetrics Group 968,Obstetrics/Gynecology,EAST,Stonebridge,2024-01-08,FAC-114,Hospital
+PRV-969,P969,Tanaka Internal Medicine Group 969,Internal Medicine,NORTH,Pinecrest,2017-07-02,FAC-101,Hospital
+PRV-970,P970,Galloway Dermatology Group 970,Dermatology,SOUTH,Southport,2017-07-28,FAC-054,Clinic
+PRV-971,P971,Okafor Obstetrics Group 971,Obstetrics/Gynecology,NORTH,Pinecrest,2022-03-17,FAC-015,Hospital
+PRV-972,P972,Yarrow Internal Medicine Group 972,Internal Medicine,NORTH,Pinecrest,2017-12-16,FAC-039,Clinic
+PRV-973,P973,Navarro Family Medicine Group 973,Family Medicine,SOUTH,Sunridge,2017-05-13,FAC-123,Clinic
+PRV-974,P974,Oyelaran Behavioral Health Group 974,Behavioral Health,NORTH,Lakemont,2024-02-24,FAC-239,Clinic
+PRV-975,P975,Vandermeer Oncology Group 975,Oncology,WEST,Westlake,2021-12-13,FAC-255,Hospital
+PRV-976,P976,Yarrow Physical Therapy Group 976,Physical Therapy,NORTH,Lakemont,2019-12-07,FAC-113,Clinic
+PRV-977,P977,Whitfield Radiology Group 977,Radiology,SOUTH,Sunridge,2021-08-22,FAC-098,Imaging Center
+PRV-978,P978,Pemberton Family Medicine Group 978,Family Medicine,SOUTH,Baywood,2018-12-22,FAC-054,Clinic
+PRV-979,P979,Galloway Physical Therapy Group 979,Physical Therapy,NORTH,Northvale,2022-09-26,FAC-249,Clinic
+PRV-980,P980,Tanaka Family Medicine Group 980,Family Medicine,NORTH,Northvale,2018-12-09,FAC-239,Clinic
+PRV-981,P981,Ashby Laboratory Group 981,Laboratory,NORTH,Lakemont,2024-09-03,FAC-118,Lab
+PRV-982,P982,Yarrow Laboratory Group 982,Laboratory,EAST,Stonebridge,2018-01-01,FAC-245,Lab
+PRV-983,P983,Delacroix Radiology Group 983,Radiology,NORTH,Lakemont,2023-11-10,FAC-128,Imaging Center
+PRV-984,P984,Whitfield Internal Medicine Group 984,Internal Medicine,SOUTH,Sunridge,2021-07-29,FAC-084,Hospital
+PRV-985,P985,Fairbanks Family Medicine Group 985,Family Medicine,SOUTH,Palmetto,2020-03-23,FAC-127,Clinic
+PRV-986,P986,Aldridge Physical Therapy Group 986,Physical Therapy,SOUTH,Sunridge,2021-04-11,FAC-247,Clinic
+PRV-987,P987,Brightwater Radiology Group 987,Radiology,SOUTH,Southport,2021-05-25,FAC-090,Imaging Center
+PRV-988,P988,Oyelaran Internal Medicine Group 988,Internal Medicine,WEST,Westlake,2021-04-03,FAC-169,Clinic
+PRV-989,P989,Okafor Laboratory Group 989,Laboratory,NORTH,Lakemont,2019-09-27,FAC-138,Lab
+PRV-990,P990,Fairbanks Radiology Group 990,Radiology,SOUTH,Southport,2018-06-15,FAC-098,Imaging Center
+PRV-991,P991,Kessler Family Medicine Group 991,Family Medicine,NORTH,Northvale,2018-11-06,FAC-181,Clinic
+PRV-992,P992,Thornton Family Medicine Group 992,Family Medicine,NORTH,Highfield,2021-12-20,FAC-086,Clinic
+PRV-993,P993,Thornton Orthopedics Group 993,Orthopedics,SOUTH,Baywood,2024-04-29,FAC-017,Ambulatory Surgery
+PRV-994,P994,Oyelaran Internal Medicine Group 994,Internal Medicine,SOUTH,Southport,2019-08-01,FAC-237,Hospital
+PRV-995,P995,Harmon Internal Medicine Group 995,Internal Medicine,WEST,Redrock,2017-07-01,FAC-100,Hospital
+PRV-996,P996,Wexler Internal Medicine Group 996,Internal Medicine,EAST,Harborview,2021-10-28,FAC-043,Clinic
+PRV-997,P997,Brightwater Family Medicine Group 997,Family Medicine,WEST,Redrock,2019-07-15,FAC-142,Clinic
+PRV-998,P998,Tanaka Orthopedics Group 998,Orthopedics,NORTH,Northvale,2021-01-10,FAC-074,Ambulatory Surgery
+PRV-999,P999,Marlowe Dermatology Group 999,Dermatology,WEST,Redrock,2017-03-21,FAC-254,Clinic
+PRV-1000,P1000,Delacroix Laboratory Group 1000,Laboratory,EAST,Harborview,2023-03-06,FAC-122,Lab

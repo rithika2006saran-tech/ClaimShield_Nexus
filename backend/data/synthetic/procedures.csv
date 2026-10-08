@@ -1,0 +1,42 @@
+code,description,category,em_level,base_amount,bundle_group,is_bundle_parent,allowed_sex,min_age,max_age,facility_types,service_minutes,repeat_same_day_ok
+99211,"Office visit, minimal complexity",E/M,1,40,,False,A,0,120,,10,False
+99212,"Office visit, low complexity",E/M,2,75,,False,A,0,120,,15,False
+99213,"Office visit, moderate complexity",E/M,3,115,,False,A,0,120,,20,False
+99214,"Office visit, moderate-high complexity",E/M,4,170,,False,A,0,120,,30,False
+99215,"Office visit, high complexity",E/M,5,235,,False,A,0,120,,40,False
+99391,"Preventive visit, child",PREVENTIVE,,130,,False,A,0,17,,25,False
+71046,"Chest radiograph, two views",IMAGING,,95,,False,A,0,120,Imaging Center|Hospital|Clinic,10,False
+73721,"MRI, lower extremity joint",IMAGING,,480,,False,A,0,120,Imaging Center|Hospital,35,False
+74177,"CT, abdomen and pelvis with contrast",IMAGING,,620,,False,A,0,120,Imaging Center|Hospital,30,False
+76700,Abdominal ultrasound,IMAGING,,210,,False,A,0,120,Imaging Center|Hospital|Clinic,25,False
+80053,Comprehensive metabolic panel,LAB,,45,CMP,True,A,0,120,,5,False
+82947,"Glucose, quantitative",LAB,,12,CMP,False,A,0,120,,3,False
+82565,"Creatinine, blood",LAB,,14,CMP,False,A,0,120,,3,False
+84132,"Potassium, serum",LAB,,13,CMP,False,A,0,120,,3,False
+84295,"Sodium, serum",LAB,,13,CMP,False,A,0,120,,3,False
+82040,"Albumin, serum",LAB,,14,CMP,False,A,0,120,,3,False
+85025,Complete blood count with differential,LAB,,30,CBC,True,A,0,120,,5,False
+85014,Hematocrit,LAB,,8,CBC,False,A,0,120,,3,False
+85018,Hemoglobin,LAB,,8,CBC,False,A,0,120,,3,False
+85048,White blood cell count,LAB,,9,CBC,False,A,0,120,,3,False
+97110,Therapeutic exercise,THERAPY,,55,,False,A,0,120,,30,False
+97140,Manual therapy,THERAPY,,50,,False,A,0,120,,25,False
+97530,Therapeutic activities,THERAPY,,60,,False,A,0,120,,30,False
+93000,"Electrocardiogram, routine",DIAGNOSTIC,,55,,False,A,0,120,,15,False
+93306,"Echocardiography, complete",DIAGNOSTIC,,380,,False,A,0,120,,40,False
+93015,Cardiovascular stress test,DIAGNOSTIC,,310,,False,A,0,120,,45,False
+20610,"Joint injection, major joint",PROCEDURE,,140,,False,A,0,120,,20,False
+29881,Knee arthroscopy with meniscectomy,SURGICAL,,3400,,False,A,0,120,Ambulatory Surgery|Hospital,60,False
+27447,Total knee arthroplasty,SURGICAL,,9800,,False,A,0,120,Ambulatory Surgery|Hospital,120,False
+11102,"Skin biopsy, single lesion",PROCEDURE,,180,,False,A,0,120,,20,False
+17000,Destruction of benign lesion,PROCEDURE,,150,,False,A,0,120,,15,False
+96413,"Chemotherapy infusion, first hour",INFUSION,,1250,,False,A,0,120,Infusion Center|Hospital,120,False
+96365,"Therapeutic infusion, first hour",INFUSION,,410,,False,A,0,120,Infusion Center|Hospital,60,False
+J9035,Oncology biologic injection,INFUSION,,3200,,False,A,0,120,Infusion Center|Hospital,30,False
+90834,"Psychotherapy, 45 minutes",BEHAVIORAL,,130,,False,A,0,120,,45,False
+90837,"Psychotherapy, 60 minutes",BEHAVIORAL,,175,,False,A,0,120,,60,False
+90791,Psychiatric diagnostic evaluation,BEHAVIORAL,,250,,False,A,0,120,,60,False
+64483,"Epidural injection, lumbar",PROCEDURE,,1100,,False,A,0,120,Ambulatory Surgery|Hospital,30,False
+62323,Epidural injection with imaging guidance,PROCEDURE,,1250,,False,A,0,120,Ambulatory Surgery|Hospital,35,False
+59400,Routine obstetric care,OBSTETRIC,,3200,,False,F,12,55,,90,False
+55700,Prostate biopsy,PROCEDURE,,800,,False,M,18,120,,30,False

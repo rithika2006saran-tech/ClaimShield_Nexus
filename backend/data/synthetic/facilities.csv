@@ -1,0 +1,261 @@
+facility_id,name,facility_type,region,city,lat,lon
+FAC-001,Sunridge Clinic 04,Clinic,SOUTH,Sunridge,28.4513,-96.5967
+FAC-002,Maplewood Infusion Center 71,Infusion Center,EAST,Maplewood,40.1981,-75.1143
+FAC-003,Harborview Hospital 17,Hospital,EAST,Harborview,41.3076,-72.9009
+FAC-004,Maplewood Clinic 20,Clinic,EAST,Maplewood,40.1453,-75.0578
+FAC-005,Harborview Infusion Center 37,Infusion Center,EAST,Harborview,41.3442,-72.9155
+FAC-006,Pinecrest Infusion Center 90,Infusion Center,NORTH,Pinecrest,45.6369,-94.001
+FAC-007,Northvale Clinic 74,Clinic,NORTH,Northvale,44.9302,-93.2354
+FAC-008,Eastbrook Ambulatory Surgery 73,Ambulatory Surgery,EAST,Eastbrook,40.6966,-74.0334
+FAC-009,Eastbrook Clinic 89,Clinic,EAST,Eastbrook,40.6993,-73.9962
+FAC-010,Harborview Clinic 54,Clinic,EAST,Harborview,41.2858,-72.9261
+FAC-011,Stonebridge Infusion Center 39,Infusion Center,EAST,Stonebridge,39.9095,-76.2557
+FAC-012,Redrock Ambulatory Surgery 27,Ambulatory Surgery,WEST,Redrock,36.2164,-115.1564
+FAC-013,Redrock Hospital 61,Hospital,WEST,Redrock,36.0939,-115.2778
+FAC-014,Pinecrest Clinic 27,Clinic,NORTH,Pinecrest,45.6383,-94.0528
+FAC-015,Northvale Hospital 40,Hospital,NORTH,Northvale,44.9942,-93.1802
+FAC-016,Eastbrook Clinic 26,Clinic,EAST,Eastbrook,40.6326,-73.9681
+FAC-017,Southport Ambulatory Surgery 78,Ambulatory Surgery,SOUTH,Southport,29.9399,-95.2776
+FAC-018,Cedar Falls Imaging Center 22,Imaging Center,WEST,Cedar Falls,39.463,-119.9045
+FAC-019,Stonebridge Lab 63,Lab,EAST,Stonebridge,39.8959,-76.3334
+FAC-020,Redrock Ambulatory Surgery 50,Ambulatory Surgery,WEST,Redrock,36.0885,-115.3047
+FAC-021,Southport Hospital 32,Hospital,SOUTH,Southport,29.8315,-95.428
+FAC-022,Pinecrest Clinic 75,Clinic,NORTH,Pinecrest,45.6196,-94.1272
+FAC-023,Redrock Lab 85,Lab,WEST,Redrock,36.0766,-115.1436
+FAC-024,Stonebridge Clinic 27,Clinic,EAST,Stonebridge,39.9385,-76.2325
+FAC-025,Stonebridge Ambulatory Surgery 91,Ambulatory Surgery,EAST,Stonebridge,39.86,-76.2571
+FAC-026,Harborview Infusion Center 08,Infusion Center,EAST,Harborview,41.3337,-72.9705
+FAC-027,Pinecrest Clinic 71,Clinic,NORTH,Pinecrest,45.547,-94.1778
+FAC-028,Northvale Imaging Center 57,Imaging Center,NORTH,Northvale,44.9742,-93.285
+FAC-029,Baywood Lab 69,Lab,SOUTH,Baywood,29.9898,-89.9814
+FAC-030,Southport Ambulatory Surgery 66,Ambulatory Surgery,SOUTH,Southport,29.8366,-95.3141
+FAC-031,Northvale Hospital 52,Hospital,NORTH,Northvale,44.9177,-93.2295
+FAC-032,Southport Clinic 65,Clinic,SOUTH,Southport,29.8143,-95.3685
+FAC-033,Northvale Imaging Center 01,Imaging Center,NORTH,Northvale,44.8219,-93.1723
+FAC-034,Northvale Ambulatory Surgery 90,Ambulatory Surgery,NORTH,Northvale,44.9846,-93.2625
+FAC-035,Cedar Falls Clinic 50,Clinic,WEST,Cedar Falls,39.4354,-119.8347
+FAC-036,Baywood Imaging Center 27,Imaging Center,SOUTH,Baywood,29.9447,-90.02
+FAC-037,Highfield Imaging Center 67,Imaging Center,NORTH,Highfield,46.1331,-92.9143
+FAC-038,Sunridge Ambulatory Surgery 07,Ambulatory Surgery,SOUTH,Sunridge,28.4345,-96.6576
+FAC-039,Lakemont Clinic 34,Clinic,NORTH,Lakemont,44.2919,-92.5273
+FAC-040,Redrock Hospital 44,Hospital,WEST,Redrock,36.1319,-115.2035
+FAC-041,Pinecrest Clinic 62,Clinic,NORTH,Pinecrest,45.515,-94.0861
+FAC-042,Harborview Clinic 09,Clinic,EAST,Harborview,41.3142,-72.8821
+FAC-043,Harborview Clinic 10,Clinic,EAST,Harborview,41.3291,-72.8823
+FAC-044,Sierra Vista Hospital 67,Hospital,WEST,Sierra Vista,34.1406,-118.1379
+FAC-045,Redrock Lab 18,Lab,WEST,Redrock,36.1161,-115.1749
+FAC-046,Maplewood Imaging Center 37,Imaging Center,EAST,Maplewood,40.208,-75.082
+FAC-047,Westlake Clinic 79,Clinic,WEST,Westlake,37.7775,-122.327
+FAC-048,Palmetto Hospital 45,Hospital,SOUTH,Palmetto,30.3541,-91.1296
+FAC-049,Cedar Falls Imaging Center 13,Imaging Center,WEST,Cedar Falls,39.4669,-119.872
+FAC-050,Redrock Ambulatory Surgery 05,Ambulatory Surgery,WEST,Redrock,36.1967,-115.2344
+FAC-051,Cedar Falls Ambulatory Surgery 38,Ambulatory Surgery,WEST,Cedar Falls,39.4549,-119.7766
+FAC-052,Baywood Ambulatory Surgery 36,Ambulatory Surgery,SOUTH,Baywood,29.9337,-89.9896
+FAC-053,Sunridge Infusion Center 30,Infusion Center,SOUTH,Sunridge,28.4803,-96.5438
+FAC-054,Baywood Clinic 86,Clinic,SOUTH,Baywood,29.8726,-90.1265
+FAC-055,Westlake Clinic 78,Clinic,WEST,Westlake,37.7827,-122.1858
+FAC-056,Harborview Clinic 81,Clinic,EAST,Harborview,41.2871,-72.8268
+FAC-057,Northvale Hospital 22,Hospital,NORTH,Northvale,44.8876,-93.1945
+FAC-058,Baywood Clinic 76,Clinic,SOUTH,Baywood,29.8853,-89.9856
+FAC-059,Stonebridge Clinic 76,Clinic,EAST,Stonebridge,39.9441,-76.3502
+FAC-060,Stonebridge Clinic 98,Clinic,EAST,Stonebridge,39.9378,-76.4047
+FAC-061,Lakemont Lab 41,Lab,NORTH,Lakemont,44.196,-92.4205
+FAC-062,Palmetto Ambulatory Surgery 84,Ambulatory Surgery,SOUTH,Palmetto,30.3349,-90.9766
+FAC-063,Northvale Clinic 01,Clinic,NORTH,Northvale,44.8751,-93.2303
+FAC-064,Maplewood Ambulatory Surgery 46,Ambulatory Surgery,EAST,Maplewood,40.2565,-75.0877
+FAC-065,Highfield Lab 51,Lab,NORTH,Highfield,46.1546,-92.8501
+FAC-066,Southport Lab 91,Lab,SOUTH,Southport,29.8197,-95.3739
+FAC-067,Redrock Ambulatory Surgery 29,Ambulatory Surgery,WEST,Redrock,36.1944,-115.1423
+FAC-068,Pinecrest Hospital 52,Hospital,NORTH,Pinecrest,45.5468,-94.0388
+FAC-069,Redrock Clinic 11,Clinic,WEST,Redrock,36.0511,-115.1341
+FAC-070,Baywood Imaging Center 04,Imaging Center,SOUTH,Baywood,29.925,-89.9429
+FAC-071,Baywood Ambulatory Surgery 41,Ambulatory Surgery,SOUTH,Baywood,30.0026,-89.9503
+FAC-072,Cedar Falls Imaging Center 93,Imaging Center,WEST,Cedar Falls,39.5337,-119.7686
+FAC-073,Baywood Infusion Center 02,Infusion Center,SOUTH,Baywood,30.002,-89.9405
+FAC-074,Lakemont Ambulatory Surgery 87,Ambulatory Surgery,NORTH,Lakemont,44.168,-92.4927
+FAC-075,Southport Clinic 17,Clinic,SOUTH,Southport,29.7662,-95.3803
+FAC-076,Harborview Clinic 19,Clinic,EAST,Harborview,41.2917,-72.981
+FAC-077,Stonebridge Clinic 46,Clinic,EAST,Stonebridge,39.7495,-76.3182
+FAC-078,Maplewood Clinic 57,Clinic,EAST,Maplewood,40.2046,-75.1212
+FAC-079,Palmetto Ambulatory Surgery 20,Ambulatory Surgery,SOUTH,Palmetto,30.4943,-91.0762
+FAC-080,Westlake Imaging Center 03,Imaging Center,WEST,Westlake,37.8301,-122.2395
+FAC-081,Redrock Ambulatory Surgery 10,Ambulatory Surgery,WEST,Redrock,36.1044,-115.1564
+FAC-082,Palmetto Imaging Center 22,Imaging Center,SOUTH,Palmetto,30.3869,-91.0889
+FAC-083,Pinecrest Clinic 59,Clinic,NORTH,Pinecrest,45.6632,-94.0577
+FAC-084,Baywood Hospital 80,Hospital,SOUTH,Baywood,30.0252,-89.9461
+FAC-085,Maplewood Lab 34,Lab,EAST,Maplewood,40.1495,-75.0888
+FAC-086,Highfield Clinic 28,Clinic,NORTH,Highfield,46.2956,-92.911
+FAC-087,Southport Ambulatory Surgery 68,Ambulatory Surgery,SOUTH,Southport,29.8448,-95.3622
+FAC-088,Southport Clinic 60,Clinic,SOUTH,Southport,29.7739,-95.4775
+FAC-089,Stonebridge Clinic 02,Clinic,EAST,Stonebridge,39.8777,-76.2689
+FAC-090,Baywood Imaging Center 13,Imaging Center,SOUTH,Baywood,29.9942,-90.0345
+FAC-091,Sierra Vista Clinic 29,Clinic,WEST,Sierra Vista,34.0294,-118.1546
+FAC-092,Eastbrook Clinic 33,Clinic,EAST,Eastbrook,40.6734,-73.9965
+FAC-093,Eastbrook Ambulatory Surgery 82,Ambulatory Surgery,EAST,Eastbrook,40.6441,-74.1201
+FAC-094,Eastbrook Clinic 65,Clinic,EAST,Eastbrook,40.6784,-74.0014
+FAC-095,Baywood Clinic 76,Clinic,SOUTH,Baywood,29.9849,-90.0118
+FAC-096,Maplewood Infusion Center 23,Infusion Center,EAST,Maplewood,40.1128,-75.0398
+FAC-097,Maplewood Ambulatory Surgery 39,Ambulatory Surgery,EAST,Maplewood,40.1831,-75.1287
+FAC-098,Baywood Imaging Center 10,Imaging Center,SOUTH,Baywood,29.9341,-90.0292
+FAC-099,Cedar Falls Clinic 90,Clinic,WEST,Cedar Falls,39.4219,-119.7509
+FAC-100,Westlake Hospital 41,Hospital,WEST,Westlake,37.843,-122.2437
+FAC-101,Northvale Hospital 38,Hospital,NORTH,Northvale,44.8878,-93.201
+FAC-102,Sunridge Clinic 04,Clinic,SOUTH,Sunridge,28.5466,-96.6011
+FAC-103,Sunridge Hospital 69,Hospital,SOUTH,Sunridge,28.5415,-96.5612
+FAC-104,Sunridge Lab 20,Lab,SOUTH,Sunridge,28.4791,-96.5503
+FAC-105,Sierra Vista Infusion Center 98,Infusion Center,WEST,Sierra Vista,34.091,-118.27
+FAC-106,Southport Clinic 73,Clinic,SOUTH,Southport,29.743,-95.4214
+FAC-107,Westlake Lab 44,Lab,WEST,Westlake,37.86,-122.3318
+FAC-108,Maplewood Hospital 38,Hospital,EAST,Maplewood,40.1963,-75.1161
+FAC-109,Cedar Falls Clinic 57,Clinic,WEST,Cedar Falls,39.5383,-119.8401
+FAC-110,Sierra Vista Imaging Center 73,Imaging Center,WEST,Sierra Vista,34.0764,-118.1206
+FAC-111,Maplewood Clinic 19,Clinic,EAST,Maplewood,40.199,-75.1964
+FAC-112,Southport Infusion Center 73,Infusion Center,SOUTH,Southport,29.8521,-95.4406
+FAC-113,Highfield Clinic 70,Clinic,NORTH,Highfield,46.2305,-92.9176
+FAC-114,Maplewood Hospital 14,Hospital,EAST,Maplewood,40.2667,-75.0153
+FAC-115,Sierra Vista Ambulatory Surgery 86,Ambulatory Surgery,WEST,Sierra Vista,34.2458,-118.2027
+FAC-116,Northvale Clinic 67,Clinic,NORTH,Northvale,44.8961,-93.3003
+FAC-117,Westlake Clinic 17,Clinic,WEST,Westlake,37.7836,-122.3127
+FAC-118,Northvale Lab 60,Lab,NORTH,Northvale,44.885,-93.1731
+FAC-119,Stonebridge Hospital 21,Hospital,EAST,Stonebridge,39.8321,-76.3239
+FAC-120,Pinecrest Clinic 94,Clinic,NORTH,Pinecrest,45.5711,-94.0841
+FAC-121,Lakemont Clinic 84,Clinic,NORTH,Lakemont,44.1413,-92.4281
+FAC-122,Stonebridge Lab 20,Lab,EAST,Stonebridge,39.9111,-76.3304
+FAC-123,Baywood Clinic 46,Clinic,SOUTH,Baywood,30.0413,-89.9796
+FAC-124,Baywood Imaging Center 65,Imaging Center,SOUTH,Baywood,29.9575,-90.0001
+FAC-125,Palmetto Imaging Center 63,Imaging Center,SOUTH,Palmetto,30.3227,-91.2151
+FAC-126,Redrock Infusion Center 98,Infusion Center,WEST,Redrock,36.1221,-115.2053
+FAC-127,Southport Clinic 11,Clinic,SOUTH,Southport,29.8286,-95.4276
+FAC-128,Highfield Imaging Center 65,Imaging Center,NORTH,Highfield,46.147,-92.8983
+FAC-129,Sierra Vista Infusion Center 19,Infusion Center,WEST,Sierra Vista,34.2051,-118.1198
+FAC-130,Redrock Imaging Center 16,Imaging Center,WEST,Redrock,36.0793,-115.2091
+FAC-131,Stonebridge Ambulatory Surgery 15,Ambulatory Surgery,EAST,Stonebridge,39.8848,-76.3165
+FAC-132,Harborview Clinic 14,Clinic,EAST,Harborview,41.3321,-72.9651
+FAC-133,Harborview Clinic 31,Clinic,EAST,Harborview,41.2763,-72.8742
+FAC-134,Sierra Vista Ambulatory Surgery 63,Ambulatory Surgery,WEST,Sierra Vista,34.054,-118.1561
+FAC-135,Sierra Vista Ambulatory Surgery 37,Ambulatory Surgery,WEST,Sierra Vista,34.0848,-118.1875
+FAC-136,Sierra Vista Clinic 19,Clinic,WEST,Sierra Vista,34.0819,-118.2716
+FAC-137,Baywood Infusion Center 50,Infusion Center,SOUTH,Baywood,30.0532,-90.024
+FAC-138,Pinecrest Lab 82,Lab,NORTH,Pinecrest,45.649,-94.0888
+FAC-139,Eastbrook Clinic 81,Clinic,EAST,Eastbrook,40.7317,-73.979
+FAC-140,Baywood Clinic 21,Clinic,SOUTH,Baywood,29.9627,-89.9761
+FAC-141,Sunridge Hospital 87,Hospital,SOUTH,Sunridge,28.5864,-96.572
+FAC-142,Westlake Clinic 31,Clinic,WEST,Westlake,37.8438,-122.261
+FAC-143,Southport Clinic 90,Clinic,SOUTH,Southport,29.7932,-95.4241
+FAC-144,Eastbrook Ambulatory Surgery 53,Ambulatory Surgery,EAST,Eastbrook,40.649,-74.0468
+FAC-145,Sierra Vista Lab 90,Lab,WEST,Sierra Vista,34.1471,-118.2281
+FAC-146,Pinecrest Clinic 53,Clinic,NORTH,Pinecrest,45.5312,-94.1065
+FAC-147,Redrock Ambulatory Surgery 75,Ambulatory Surgery,WEST,Redrock,36.139,-115.244
+FAC-148,Palmetto Ambulatory Surgery 70,Ambulatory Surgery,SOUTH,Palmetto,30.4087,-91.1492
+FAC-149,Stonebridge Imaging Center 57,Imaging Center,EAST,Stonebridge,39.8154,-76.3072
+FAC-150,Stonebridge Hospital 88,Hospital,EAST,Stonebridge,39.8769,-76.2712
+FAC-151,Harborview Hospital 19,Hospital,EAST,Harborview,41.245,-73.0059
+FAC-152,Maplewood Ambulatory Surgery 68,Ambulatory Surgery,EAST,Maplewood,40.1446,-75.1951
+FAC-153,Highfield Clinic 56,Clinic,NORTH,Highfield,46.1533,-92.8879
+FAC-154,Harborview Hospital 70,Hospital,EAST,Harborview,41.2784,-72.8731
+FAC-155,Stonebridge Hospital 23,Hospital,EAST,Stonebridge,39.9506,-76.3377
+FAC-156,Redrock Hospital 89,Hospital,WEST,Redrock,36.1394,-115.1646
+FAC-157,Cedar Falls Clinic 09,Clinic,WEST,Cedar Falls,39.5448,-119.8132
+FAC-158,Highfield Hospital 20,Hospital,NORTH,Highfield,46.1203,-92.8409
+FAC-159,Palmetto Hospital 65,Hospital,SOUTH,Palmetto,30.4046,-91.0896
+FAC-160,Northvale Clinic 77,Clinic,NORTH,Northvale,44.9285,-93.1909
+FAC-161,Southport Hospital 34,Hospital,SOUTH,Southport,29.7687,-95.389
+FAC-162,Sunridge Imaging Center 27,Imaging Center,SOUTH,Sunridge,28.4435,-96.5987
+FAC-163,Eastbrook Hospital 44,Hospital,EAST,Eastbrook,40.6512,-73.8949
+FAC-164,Highfield Clinic 27,Clinic,NORTH,Highfield,46.1469,-93.0139
+FAC-165,Baywood Ambulatory Surgery 09,Ambulatory Surgery,SOUTH,Baywood,29.9565,-90.0684
+FAC-166,Sunridge Clinic 63,Clinic,SOUTH,Sunridge,28.5795,-96.5995
+FAC-167,Baywood Ambulatory Surgery 77,Ambulatory Surgery,SOUTH,Baywood,29.9888,-89.946
+FAC-168,Sunridge Infusion Center 95,Infusion Center,SOUTH,Sunridge,28.4772,-96.5885
+FAC-169,Redrock Clinic 23,Clinic,WEST,Redrock,36.0759,-115.2596
+FAC-170,Lakemont Imaging Center 14,Imaging Center,NORTH,Lakemont,44.172,-92.4656
+FAC-171,Southport Hospital 05,Hospital,SOUTH,Southport,29.7365,-95.4061
+FAC-172,Harborview Clinic 25,Clinic,EAST,Harborview,41.3459,-72.9262
+FAC-173,Northvale Infusion Center 16,Infusion Center,NORTH,Northvale,44.9072,-93.2265
+FAC-174,Sunridge Clinic 55,Clinic,SOUTH,Sunridge,28.5592,-96.6116
+FAC-175,Westlake Clinic 82,Clinic,WEST,Westlake,37.6751,-122.3332
+FAC-176,Cedar Falls Clinic 21,Clinic,WEST,Cedar Falls,39.559,-119.7869
+FAC-177,Eastbrook Clinic 46,Clinic,EAST,Eastbrook,40.7023,-73.953
+FAC-178,Sierra Vista Clinic 82,Clinic,WEST,Sierra Vista,34.0838,-118.1356
+FAC-179,Cedar Falls Infusion Center 10,Infusion Center,WEST,Cedar Falls,39.4004,-119.8382
+FAC-180,Cedar Falls Imaging Center 43,Imaging Center,WEST,Cedar Falls,39.5936,-119.7688
+FAC-181,Highfield Clinic 14,Clinic,NORTH,Highfield,46.1694,-92.9041
+FAC-182,Highfield Hospital 77,Hospital,NORTH,Highfield,46.2244,-92.7765
+FAC-183,Maplewood Ambulatory Surgery 37,Ambulatory Surgery,EAST,Maplewood,40.1762,-75.0681
+FAC-184,Lakemont Infusion Center 94,Infusion Center,NORTH,Lakemont,44.1854,-92.5584
+FAC-185,Northvale Clinic 16,Clinic,NORTH,Northvale,44.9737,-93.2275
+FAC-186,Baywood Ambulatory Surgery 89,Ambulatory Surgery,SOUTH,Baywood,30.0146,-89.9562
+FAC-187,Maplewood Clinic 92,Clinic,EAST,Maplewood,40.182,-75.1547
+FAC-188,Redrock Imaging Center 09,Imaging Center,WEST,Redrock,36.1339,-115.2947
+FAC-189,Redrock Clinic 81,Clinic,WEST,Redrock,36.1685,-115.1922
+FAC-190,Highfield Lab 07,Lab,NORTH,Highfield,46.2322,-92.9311
+FAC-191,Palmetto Clinic 41,Clinic,SOUTH,Palmetto,30.3335,-91.1576
+FAC-192,Eastbrook Hospital 37,Hospital,EAST,Eastbrook,40.7855,-73.9438
+FAC-193,Highfield Imaging Center 68,Imaging Center,NORTH,Highfield,46.2532,-92.9059
+FAC-194,Northvale Ambulatory Surgery 89,Ambulatory Surgery,NORTH,Northvale,44.9665,-93.1087
+FAC-195,Westlake Infusion Center 62,Infusion Center,WEST,Westlake,37.7638,-122.3065
+FAC-196,Maplewood Lab 02,Lab,EAST,Maplewood,40.0497,-75.0122
+FAC-197,Highfield Clinic 37,Clinic,NORTH,Highfield,46.225,-92.9079
+FAC-198,Harborview Lab 17,Lab,EAST,Harborview,41.345,-72.8991
+FAC-199,Cedar Falls Imaging Center 86,Imaging Center,WEST,Cedar Falls,39.4941,-119.7793
+FAC-200,Eastbrook Infusion Center 66,Infusion Center,EAST,Eastbrook,40.5719,-73.9197
+FAC-201,Palmetto Clinic 34,Clinic,SOUTH,Palmetto,30.4552,-91.0717
+FAC-202,Westlake Infusion Center 27,Infusion Center,WEST,Westlake,37.754,-122.3958
+FAC-203,Pinecrest Hospital 87,Hospital,NORTH,Pinecrest,45.5515,-94.1321
+FAC-204,Stonebridge Clinic 06,Clinic,EAST,Stonebridge,39.9093,-76.2545
+FAC-205,Northvale Clinic 31,Clinic,NORTH,Northvale,44.9248,-93.1589
+FAC-206,Harborview Ambulatory Surgery 14,Ambulatory Surgery,EAST,Harborview,41.3743,-72.8289
+FAC-207,Sunridge Hospital 45,Hospital,SOUTH,Sunridge,28.5514,-96.5295
+FAC-208,Southport Clinic 50,Clinic,SOUTH,Southport,29.7831,-95.393
+FAC-209,Highfield Clinic 82,Clinic,NORTH,Highfield,46.2066,-92.8956
+FAC-210,Redrock Hospital 39,Hospital,WEST,Redrock,36.1087,-115.1472
+FAC-211,Pinecrest Hospital 43,Hospital,NORTH,Pinecrest,45.6279,-94.0881
+FAC-212,Redrock Imaging Center 01,Imaging Center,WEST,Redrock,36.0874,-115.1805
+FAC-213,Northvale Clinic 84,Clinic,NORTH,Northvale,44.8109,-93.1968
+FAC-214,Cedar Falls Lab 24,Lab,WEST,Cedar Falls,39.4473,-119.8613
+FAC-215,Maplewood Lab 87,Lab,EAST,Maplewood,40.2713,-75.0866
+FAC-216,Southport Ambulatory Surgery 20,Ambulatory Surgery,SOUTH,Southport,29.803,-95.3356
+FAC-217,Northvale Ambulatory Surgery 17,Ambulatory Surgery,NORTH,Northvale,44.9613,-93.1577
+FAC-218,Sunridge Imaging Center 62,Imaging Center,SOUTH,Sunridge,28.5502,-96.5314
+FAC-219,Redrock Hospital 96,Hospital,WEST,Redrock,36.0071,-115.1907
+FAC-220,Sierra Vista Clinic 58,Clinic,WEST,Sierra Vista,34.0267,-118.2249
+FAC-221,Pinecrest Ambulatory Surgery 14,Ambulatory Surgery,NORTH,Pinecrest,45.7042,-94.0496
+FAC-222,Stonebridge Hospital 15,Hospital,EAST,Stonebridge,39.9402,-76.372
+FAC-223,Highfield Lab 87,Lab,NORTH,Highfield,46.1008,-92.9513
+FAC-224,Maplewood Clinic 74,Clinic,EAST,Maplewood,40.2945,-75.1352
+FAC-225,Lakemont Clinic 18,Clinic,NORTH,Lakemont,44.2715,-92.4766
+FAC-226,Sierra Vista Ambulatory Surgery 15,Ambulatory Surgery,WEST,Sierra Vista,34.0431,-118.1381
+FAC-227,Pinecrest Clinic 32,Clinic,NORTH,Pinecrest,45.5791,-94.1099
+FAC-228,Harborview Clinic 45,Clinic,EAST,Harborview,41.2876,-72.9161
+FAC-229,Sunridge Hospital 21,Hospital,SOUTH,Sunridge,28.6048,-96.5441
+FAC-230,Sierra Vista Ambulatory Surgery 24,Ambulatory Surgery,WEST,Sierra Vista,34.0944,-118.2493
+FAC-231,Highfield Clinic 62,Clinic,NORTH,Highfield,46.1875,-92.935
+FAC-232,Palmetto Lab 40,Lab,SOUTH,Palmetto,30.4723,-91.0919
+FAC-233,Northvale Clinic 04,Clinic,NORTH,Northvale,44.9344,-93.1375
+FAC-234,Harborview Ambulatory Surgery 76,Ambulatory Surgery,EAST,Harborview,41.2957,-73.0369
+FAC-235,Cedar Falls Clinic 76,Clinic,WEST,Cedar Falls,39.5255,-119.8317
+FAC-236,Baywood Lab 95,Lab,SOUTH,Baywood,30.0164,-90.0075
+FAC-237,Southport Hospital 74,Hospital,SOUTH,Southport,29.9058,-95.3098
+FAC-238,Cedar Falls Infusion Center 80,Infusion Center,WEST,Cedar Falls,39.4625,-119.775
+FAC-239,Highfield Clinic 75,Clinic,NORTH,Highfield,46.1315,-92.8744
+FAC-240,Palmetto Ambulatory Surgery 51,Ambulatory Surgery,SOUTH,Palmetto,30.3049,-91.1417
+FAC-241,Northvale Clinic 11,Clinic,NORTH,Northvale,44.8579,-93.2736
+FAC-242,Pinecrest Lab 43,Lab,NORTH,Pinecrest,45.5625,-94.2245
+FAC-243,Harborview Hospital 44,Hospital,EAST,Harborview,41.2182,-72.8076
+FAC-244,Harborview Clinic 51,Clinic,EAST,Harborview,41.2697,-72.8594
+FAC-245,Eastbrook Lab 98,Lab,EAST,Eastbrook,40.6792,-74.0125
+FAC-246,Northvale Infusion Center 90,Infusion Center,NORTH,Northvale,44.9427,-93.138
+FAC-247,Palmetto Clinic 35,Clinic,SOUTH,Palmetto,30.3262,-91.0734
+FAC-248,Sierra Vista Hospital 72,Hospital,WEST,Sierra Vista,34.0472,-118.1562
+FAC-249,Lakemont Clinic 12,Clinic,NORTH,Lakemont,44.1619,-92.5698
+FAC-250,Redrock Infusion Center 96,Infusion Center,WEST,Redrock,36.1501,-115.1642
+FAC-251,Westlake Infusion Center 18,Infusion Center,WEST,Westlake,37.8334,-122.2691
+FAC-252,Eastbrook Hospital 62,Hospital,EAST,Eastbrook,40.6723,-73.9895
+FAC-253,Eastbrook Clinic 93,Clinic,EAST,Eastbrook,40.7179,-74.0609
+FAC-254,Cedar Falls Clinic 36,Clinic,WEST,Cedar Falls,39.4333,-119.8586
+FAC-255,Westlake Hospital 16,Hospital,WEST,Westlake,37.8263,-122.2757
+FAC-256,Cedar Falls Clinic 03,Clinic,WEST,Cedar Falls,39.4612,-119.7906
+FAC-257,Northvale Imaging Center 65,Imaging Center,NORTH,Northvale,44.9954,-93.0812
+FAC-258,Westlake Lab 66,Lab,WEST,Westlake,37.7969,-122.3347
+FAC-259,Baywood Ambulatory Surgery 55,Ambulatory Surgery,SOUTH,Baywood,30.0014,-89.9516
+FAC-260,Lakemont Clinic 77,Clinic,NORTH,Lakemont,44.1989,-92.423

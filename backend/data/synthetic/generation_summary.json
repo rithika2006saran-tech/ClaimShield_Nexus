@@ -1,0 +1,23 @@
+{
+  "claims_valid": 82682,
+  "claims_planted_invalid": 30,
+  "injected_fwa_claims": 12128,
+  "providers": 1000,
+  "members": 12000,
+  "facilities": 260,
+  "referrals": 4790,
+  "relationships": 1774,
+  "investigations": 300,
+  "scenario_provider_counts": {
+    "duplicate": 14,
+    "upcoding": 12,
+    "unbundling": 8,
+    "implausible": 6,
+    "excessive": 10,
+    "timing": 6,
+    "referral": 10
+  },
+  "data_start": "2025-04-01",
+  "data_end": "2026-09-30",
+  "seed": 20261008
+}

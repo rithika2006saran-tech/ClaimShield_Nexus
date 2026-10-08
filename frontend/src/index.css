@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 30% 7%; --foreground: 210 20% 92%;
+    --card: 222 28% 10%; --card-foreground: 210 20% 92%;
+    --primary: 199 89% 52%; --primary-foreground: 222 30% 7%;
+    --secondary: 222 22% 16%; --secondary-foreground: 210 20% 92%;
+    --muted: 222 20% 14%; --muted-foreground: 215 15% 62%;
+    --accent: 222 22% 18%; --accent-foreground: 210 20% 92%;
+    --border: 222 18% 20%; --input: 222 18% 20%; --ring: 199 89% 52%;
+  }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; font-feature-settings: "tnum"; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: hsl(222 18% 26%); border-radius: 4px; }
+}

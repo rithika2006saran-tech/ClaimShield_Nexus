@@ -1,0 +1,77 @@
+# ClaimShield Nexus — demo/production-style runtime.
+#   docker compose up --build
+# Services: PostgreSQL (source of truth), Elasticsearch (Nexus Second Brain),
+# backend (FastAPI modular monolith), frontend (static build served by nginx).
+name: claimshield-nexus
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-claimshield}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-claimshield}
+      POSTGRES_DB: ${POSTGRES_DB:-claimshield}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-claimshield} -d $${POSTGRES_DB:-claimshield}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.3
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.ml.enabled=false
+      - cluster.routing.allocation.disk.threshold_enabled=false
+      - ES_JAVA_OPTS=-Xms768m -Xmx768m
+    ulimits:
+      memlock: { soft: -1, hard: -1 }
+    mem_limit: 1536m
+    ports:
+      - "${ES_PORT:-9200}:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -qE '\"status\":\"(green|yellow)\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-claimshield}:${POSTGRES_PASSWORD:-claimshield}@postgres:5432/${POSTGRES_DB:-claimshield}
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      LLM_PROVIDER: ${LLM_PROVIDER:-none}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      DATA_DIR: /data
+      AUTO_PIPELINE: ${AUTO_PIPELINE:-true}
+    volumes:
+      - ./data:/data
+      - ./backend:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+
+volumes:
+  pgdata:
+  esdata:

@@ -1,0 +1,16 @@
+.env
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+*.log
+data/synthetic/
+data/second_brain/
+data/artifacts/
+*.zip
+.DS_Store
+*.tsbuildinfo
