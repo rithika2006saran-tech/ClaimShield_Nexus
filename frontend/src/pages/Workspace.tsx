@@ -12,7 +12,7 @@ import BriefPanel from "@/components/BriefPanel";
 import ForecastPanel from "@/components/ForecastPanel";
 import DecisionPanel from "@/components/DecisionPanel";
 import EvidenceTable from "@/components/EvidenceTable";
-import { ErrorBox, Loading, Mono, Page } from "@/components/common";
+import { Bar, ErrorBox, Loading, Mono, Page } from "@/components/common";
 import { useApi } from "@/lib/useApi";
 import { f2, money, num } from "@/lib/utils";
 
@@ -36,7 +36,7 @@ export default function Workspace() {
   const flows = c.network_signals?.[0]?.top_referral_flows ?? [];
 
   return (
-    <Page title={`${c.case_id} - investigation lead on ${c.anchor_provider_id}`} subtitle="High-priority investigation lead for human review. Not a finding of misconduct."
+    <Page title={`${c.case_id} - investigation lead on ${c.anchor_provider_id}`}
       actions={<><BandBadge band={c.review_priority} className="text-xs" /><Badge>{c.review_status}</Badge><Link to={`/provider/${c.anchor_provider_id}`}><Button size="sm" variant="outline">Provider profile</Button></Link></>}>
       <div className="grid gap-4 xl:grid-cols-12">
         {/* LEFT */}
@@ -46,26 +46,25 @@ export default function Workspace() {
               <p className="leading-relaxed text-muted-foreground">{c.summary}</p>
               <div className="grid grid-cols-2 gap-2">
                 <KV k="Exposure" v={money(c.potential_exposure)} /><KV k="Members" v={num(c.member_count)} /><KV k="Claims" v={num(c.claim_count)} /><KV k="Providers" v={c.provider_ids.length} />
-                <KV k="FWA risk score" v={f2(c.model_score)} /><KV k="Anomaly score" v={f2(c.anomaly_score)} />
+                <KV k="FWA risk score" v={<div className="flex items-center gap-2"><Bar value={c.model_score} color="#38bdf8" /><span>{f2(c.model_score)}</span></div>} />
+                <KV k="Anomaly score" v={<div className="flex items-center gap-2"><Bar value={c.anomaly_score} color="#38bdf8" /><span>{f2(c.anomaly_score)}</span></div>} />
               </div>
               <div className="flex flex-wrap gap-1">{c.rule_hits.map((r: string) => <Badge key={r} className="text-sky-300">{r.split("_")[0]} {r.split("_").slice(1).join(" ").toLowerCase()}</Badge>)}</div>
-              <div className="text-[10px] text-muted-foreground">FWA risk score = XGBoost output (not a fraud probability). Anomaly score = Isolation Forest percentile.</div>
             </CardContent></Card>
           <Card><CardHeader><CardTitle>Risk decomposition</CardTitle></CardHeader><CardContent><ComponentBars components={c.components} weights={d.weights} /></CardContent></Card>
           <Card><CardHeader><CardTitle>Evidence ledger summary</CardTitle><button className="text-[11px] text-sky-400 hover:underline" onClick={() => { setFocus(null); setTab("ledger"); }}>open</button></CardHeader>
             <CardContent className="space-y-1 text-xs">
               {Object.entries(d.evidence_summary.reduce((a: any, r: any) => { a[r.evidence_type] = (a[r.evidence_type] ?? 0) + Number(r.n); return a; }, {})).map(([k, v]) => <div key={k} className="flex justify-between"><span>{k}</span><b className="tabular-nums">{v as number}</b></div>)}
-              <div className="pt-1 text-[10px] text-muted-foreground">Each object has source table/row, claim IDs, feature, observed vs expected, timestamp and version.</div>
             </CardContent></Card>
-          <Card><CardHeader><CardTitle>What changed? (Time machine)</CardTitle>
+          <Card><CardHeader><CardTitle>What changed?</CardTitle>
             <select value={series} onChange={(e) => setSeries(e.target.value)} className="h-6 rounded border border-input bg-background text-[10px]">{SERIES.map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}</select></CardHeader>
             <CardContent>{tl.loading ? <Loading /> : tl.data ? <TimelinePanel timeline={tl.data} series={series} /> : <ErrorBox error={tl.error ?? ""} />}
-              <div className="mt-1 text-[10px] text-muted-foreground">Provider {d.timeline.provider_id}; rolling 7/30/90-day features; dashed lines mark detected behavioural phase onsets.</div></CardContent></Card>
+              </CardContent></Card>
         </div>
 
         {/* CENTER */}
         <div className="space-y-4 xl:col-span-6">
-          <Card><CardHeader><CardTitle>Network intelligence - Cytoscape</CardTitle>
+          <Card><CardHeader><CardTitle>Network intelligence</CardTitle>
             <div className="flex gap-1"><Button size="sm" variant={hops === 1 ? "default" : "outline"} onClick={() => setHops(1)}>1-hop</Button><Button size="sm" variant={hops === 2 ? "default" : "outline"} onClick={() => setHops(2)}>2-hop</Button></div></CardHeader>
             <CardContent>
               {net.loading && <Loading />}{net.error && <ErrorBox error={net.error} />}
@@ -78,21 +77,20 @@ export default function Workspace() {
                       {sel.data.evidence_ids?.map((e: string) => <button key={e} onClick={() => cite(e)} className="text-sky-400 hover:underline"><Mono>{e}</Mono></button>)}</div></div>
                 ) : (<div><b>{sel.data.type.replace("_", " ")}</b> <Mono>{sel.data.source} &rarr; {sel.data.target}</Mono><div>{sel.data.label}</div>
                   {sel.data.evidence_ids?.map((e: string) => <button key={e} onClick={() => cite(e)} className="mr-2 text-sky-400 hover:underline"><Mono>{e}</Mono></button>)}</div>)}</div>
-                <div className="rounded border border-border p-2"><div className="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">Largest referral flows in case</div>
+                <div className="rounded border border-border p-2"><div className="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">Top Connection Flows</div>
                   {flows.slice(0, 4).map((f: any, i: number) => <div key={i}><Mono>{f.from} &rarr; {f.to}</Mono> <span className="text-muted-foreground">{f.referrals} referrals</span></div>)}
                   <div className="mt-1 text-muted-foreground">Shared facilities: {Object.entries(c.network_signals?.[0]?.shared_facilities ?? {}).map(([k, v]) => `${k} (${v})`).join(", ") || "none"}</div></div>
               </div>
-              <div className="mt-1 text-[10px] text-muted-foreground">Network relationships are investigation leads, not proof of misconduct. Graph capped at 140 nodes.</div>
             </CardContent></Card>
-          <Card><CardHeader><CardTitle>Providers in case</CardTitle></CardHeader><CardContent className="max-h-56 overflow-auto p-0">
-            <table className="w-full text-[11px]"><thead className="sticky top-0 bg-muted text-left text-muted-foreground"><tr><th className="p-1.5">Provider</th><th>Specialty</th><th>FWA risk</th><th>Anomaly</th><th>Degree</th><th>Rule findings</th></tr></thead><tbody>
-              {d.providers.map((p: any) => <tr key={p.provider_id} className="border-t border-border hover:bg-accent"><td className="p-1.5"><Link className="font-mono text-sky-400 hover:underline" to={`/provider/${p.provider_id}`}>{p.provider_id}</Link>{p.provider_id === c.anchor_provider_id && <Badge className="ml-1">anchor</Badge>}</td>
-                <td>{p.specialty}</td><td className="tabular-nums">{f2(p.xgb_risk)}</td><td className="tabular-nums">{f2(p.anomaly_score)}</td><td>{p.degree}</td><td>{p.rule_findings}</td></tr>)}
+          <Card><CardHeader><CardTitle>Providers in case</CardTitle></CardHeader><CardContent className="max-h-64 overflow-auto p-0">
+            <table className="w-full text-sm"><thead className="sticky top-0 bg-muted/80 backdrop-blur text-left text-xs uppercase tracking-wider text-muted-foreground"><tr><th className="p-3">Provider</th><th className="p-3">Specialty</th><th className="p-3">FWA risk</th><th className="p-3">Anomaly</th><th className="p-3">Degree</th><th className="p-3">Rule findings</th></tr></thead><tbody className="divide-y divide-border">
+              {d.providers.map((p: any) => <tr key={p.provider_id} className="hover:bg-accent/50 transition-colors"><td className="p-3"><Link className="font-mono font-medium text-sky-400 hover:text-sky-300" to={`/provider/${p.provider_id}`}>{p.provider_id}</Link>{p.provider_id === c.anchor_provider_id && <Badge variant="secondary" className="ml-2 text-[10px]">anchor</Badge>}</td>
+                <td className="p-3 text-muted-foreground">{p.specialty}</td><td className="p-3"><div className="flex items-center gap-2"><Bar value={p.xgb_risk} color="#38bdf8" /><span className="tabular-nums font-medium">{f2(p.xgb_risk)}</span></div></td><td className="p-3"><div className="flex items-center gap-2"><Bar value={p.anomaly_score} color="#38bdf8" /><span className="tabular-nums font-medium">{f2(p.anomaly_score)}</span></div></td><td className="p-3 text-muted-foreground">{p.degree}</td><td className="p-3 text-muted-foreground">{p.rule_findings}</td></tr>)}
             </tbody></table></CardContent></Card>
         </div>
 
         {/* RIGHT */}
-        <Card className="flex h-[640px] flex-col xl:col-span-3 xl:sticky xl:top-3 xl:self-start"><CardHeader><CardTitle>Nexus Copilot</CardTitle><Badge>evidence-grounded</Badge></CardHeader>
+        <Card className="flex h-[640px] flex-col xl:col-span-3 xl:sticky xl:top-3 xl:self-start"><CardHeader><CardTitle>Nexus Copilot</CardTitle></CardHeader>
           <CardContent className="min-h-0 flex-1"><Copilot caseId={caseId} onCite={cite} /></CardContent></Card>
       </div>
 
@@ -100,24 +98,23 @@ export default function Workspace() {
       <div id="bottom" className="mt-4 grid gap-4 xl:grid-cols-12">
         <Card className="xl:col-span-8"><CardContent>
           <Tabs value={tab} onValueChange={setTab}>
-            <TabsList><TabsTrigger value="brief">Investigation Brief</TabsTrigger><TabsTrigger value="ledger">Evidence Ledger</TabsTrigger><TabsTrigger value="similar">Similar historical cases</TabsTrigger><TabsTrigger value="shap">Model attribution</TabsTrigger></TabsList>
+            <TabsList><TabsTrigger value="brief">Investigation Brief</TabsTrigger><TabsTrigger value="ledger">Evidence Ledger</TabsTrigger><TabsTrigger value="similar">Similar cases</TabsTrigger><TabsTrigger value="shap">Model attribution</TabsTrigger></TabsList>
             <TabsContent value="brief"><BriefPanel caseId={caseId} onCite={cite} /></TabsContent>
             <TabsContent value="ledger"><EvidenceTable caseId={caseId} focus={focus} />{focus && <button className="mt-1 text-[11px] text-sky-400" onClick={() => setFocus(null)}>clear focus ({focus})</button>}</TabsContent>
             <TabsContent value="similar">
               <div className="space-y-2 text-xs">
                 {d.similar_cases.map((h: any) => (
                   <div key={h.id} className="rounded border border-border p-2"><div className="flex items-center gap-2"><b className="font-mono">{h.id}</b><span>{h.doc.anchor_provider_id} - {h.doc.specialty}</span><Badge>{h.doc.outcome}</Badge>
-                    <span className="ml-auto text-muted-foreground">RRF {h.score.toFixed(4)} - BM25 rank {h.bm25_rank ?? "-"} - kNN rank {h.knn_rank ?? "-"}</span></div>
+                    <span className="ml-auto text-muted-foreground">score {h.score.toFixed(4)}</span></div>
                     <div className="mt-1 text-muted-foreground">{h.doc.summary}</div><div className="mt-1">shared rules: {h.shared_rules.join(", ") || "none"}</div></div>))}
-                {d.reviewer_memory.length > 0 && <div className="pt-2"><div className="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">Reviewer memory on related patterns</div>
+                {d.reviewer_memory.length > 0 && <div className="pt-2"><div className="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">Reviewer memory</div>
                   {d.reviewer_memory.map((m: any) => <div key={m.id} className="mb-1 rounded border border-border p-2"><b>{m.doc.decision}</b> on {m.doc.case_id} - {m.doc.rationale}</div>)}</div>}
-                <div className="text-[10px] text-muted-foreground">Retrieved with hybrid BM25 + vector kNN + structured filters fused by Reciprocal Rank Fusion. Similarity is behavioural, not conclusive.</div>
               </div></TabsContent>
             <TabsContent value="shap"><div className="space-y-1 text-xs">
               {d.shap ? [...d.shap.positive.slice(0, 5), ...d.shap.negative.slice(0, 3)].map((s: any) => (
                 <div key={s.feature} className="flex items-center gap-2"><span className="w-56 truncate">{s.label}</span><div className="h-2 flex-1 rounded bg-muted"><div className={`h-full rounded ${s.shap_value >= 0 ? "bg-red-500" : "bg-green-500"}`} style={{ width: `${Math.min(100, Math.abs(s.shap_value) * 20)}%` }} /></div>
                   <span className="w-16 text-right tabular-nums">{s.shap_value.toFixed(2)}</span><span className="w-20 text-right text-muted-foreground">val {Number(s.feature_value).toFixed(2)}</span></div>)) : <span className="text-muted-foreground">No SHAP output for this provider.</span>}
-              <div className="pt-1 text-[10px] text-muted-foreground">SHAP (TreeExplainer on XGBoost, log-odds) for anchor {c.anchor_provider_id}. Attribution explains the model, it is not proof of fraud.</div></div></TabsContent>
+              </div></TabsContent>
           </Tabs></CardContent></Card>
         <div className="space-y-4 xl:col-span-4">
           <Card><CardHeader><CardTitle>30 / 60 / 90 forward risk</CardTitle></CardHeader><CardContent><ForecastPanel forecast={d.forecast} calibration={models.data?.forecast?.metrics} /></CardContent></Card>

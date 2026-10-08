@@ -121,14 +121,16 @@ def queue(capacity: int = Query(10, ge=1, le=50), include_reviewed: bool = False
         where.append("review_priority = ANY(:bands)")
         p["bands"] = order[order.index(min_band.upper()):] if min_band.upper() in order else order
     rows = db.query_rows(f"SELECT {CASE_LIST_COLS}, components FROM cases WHERE {' AND '.join(where)} ORDER BY priority_score DESC, potential_exposure DESC LIMIT :cap", p)
-    total = db.query_one(f"SELECT count(*) n, COALESCE(sum(potential_exposure),0) e FROM cases WHERE {' AND '.join(where)}", p)
+    total = db.query_one(f"SELECT count(*) n FROM cases WHERE {' AND '.join(where)}", p)
+    global_total = db.query_one("SELECT COALESCE(sum(potential_exposure),0) e FROM cases")
     for i, r in enumerate(rows, 1):
         r["rank"] = i
         r["components"] = jl(r["components"])
         r["top_drivers"] = [k for k, _ in sorted(r["components"].items(), key=lambda kv: -kv[1]) [:3]]
     sel = sum(float(r["potential_exposure"]) for r in rows)
-    return clean({"capacity": capacity, "cases": rows, "selected_exposure": sel, "total_cases_available": total["n"], "total_exposure_available": total["e"],
-                  "exposure_coverage": sel / float(total["e"]) if float(total["e"]) else 0, "weights": config.PRIORITY_WEIGHTS, "policy_version": config.PRIORITY_POLICY_VERSION,
+    tot_e = float(global_total["e"])
+    return clean({"capacity": capacity, "cases": rows, "selected_exposure": sel, "total_cases_available": total["n"], "total_exposure_available": tot_e,
+                  "exposure_coverage": sel / tot_e if tot_e else 0, "weights": config.PRIORITY_WEIGHTS, "policy_version": config.PRIORITY_POLICY_VERSION,
                   "policy_note": "Ranking blends model risk, rule evidence, peer deviation, network, temporal escalation, anomaly, evidence strength, exposure and member impact - not model score alone."})
 
 
@@ -154,7 +156,7 @@ def case_detail(case_id: str):
     ctx = C.build_context(case_id)
     tl = ctx["timeline"] or {}
     mem = brain.search(" ".join(c["patterns"] + c["rule_hits"]), "review_memory", None, 5, mode="hybrid")
-    mem_hits = [h for h in mem["hits"] if h["doc"].get("case_id") != case_id]
+    mem_hits = [h for h in mem["hits"]]
     return clean({"case": c, "providers": provs, "weights": config.PRIORITY_WEIGHTS, "evidence_summary": ev_summary, "claim_count": len(claim_ids),
                   "timeline": {"provider_id": ctx["anchor"], "events": tl.get("events", []), "escalation_score": tl.get("escalation_score"), "current_phase": tl.get("current_phase"),
                                "active_indicators": tl.get("active_indicators")},

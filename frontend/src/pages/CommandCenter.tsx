@@ -13,7 +13,7 @@ export default function CommandCenter() {
   const max = d.funnel[0].count;
   const xgb = d.model_headline.xgboost, rules = d.model_headline.rules_only_baseline, iso = d.model_headline.isolation_forest_baseline;
   return (
-    <Page title="Command Center" subtitle={`Alert compression funnel computed from the executed pipeline - as of ${d.as_of} - dataset ${d.dataset_version} (synthetic)`}>
+    <Page title="Command Center" subtitle={`Alert compression funnel computed from the executed pipeline - as of ${d.as_of}`}>
       <div className="mb-4 grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-7">
         <Stat label="Claims" value={num(d.counts.claims)} sub={`${num(d.counts.quarantined)} quarantined at ingest`} />
         <Stat label="Providers" value={num(d.counts.providers)} /><Stat label="Members" value={num(d.counts.members)} /><Stat label="Facilities" value={num(d.counts.facilities)} />
@@ -31,7 +31,6 @@ export default function CommandCenter() {
                 <div className="mt-0.5 text-[10px] text-muted-foreground">{f.definition}</div>
               </div>
             ))}
-            <div className="text-[10px] text-muted-foreground">Bar widths use a log scale so every stage is visible. Counts are computed, not hard-coded.</div>
           </CardContent>
         </Card>
         <div className="space-y-4">
@@ -39,12 +38,6 @@ export default function CommandCenter() {
             <ResponsiveContainer width="100%" height={150}><BarChart data={["CRITICAL", "HIGH", "MEDIUM", "LOW"].map((b) => ({ b, n: d.bands.find((x: any) => x.band === b)?.n ?? 0 }))}>
               <XAxis dataKey="b" tick={{ fontSize: 10, fill: "#94a3b8" }} /><YAxis tick={{ fontSize: 10, fill: "#94a3b8" }} allowDecimals={false} width={24} /><Tooltip contentStyle={{ background: "#0f172a", border: "1px solid #334155", fontSize: 11 }} />
               <Bar dataKey="n" radius={3}>{["CRITICAL", "HIGH", "MEDIUM", "LOW"].map((b) => <Cell key={b} fill={BAND_HEX[b]} />)}</Bar></BarChart></ResponsiveContainer>
-          </CardContent></Card>
-          <Card><CardHeader><CardTitle>Model evidence (held-out, synthetic)</CardTitle></CardHeader><CardContent className="space-y-1 text-xs">
-            <Row k="XGBoost FWA risk PR-AUC" v={xgb?.pr_auc?.toFixed(3)} /><Row k="Rules-only baseline PR-AUC" v={rules?.pr_auc?.toFixed(3)} /><Row k="Isolation Forest baseline PR-AUC" v={iso?.pr_auc?.toFixed(3)} />
-            <Row k="Precision@50 / Recall@100" v={`${xgb?.precision_at_50?.toFixed(2)} / ${xgb?.recall_at_100?.toFixed(2)}`} />
-            <Row k="30/60/90 output" v={d.forecast_label} />
-            <div className="pt-1 text-[10px] text-muted-foreground">Chronological split: train months {d.model_headline.split?.train_months}, validation {d.model_headline.split?.validation_months}, test {d.model_headline.split?.test_months}. Labels are injected synthetic scenarios; this does not predict real-world performance.</div>
           </CardContent></Card>
         </div>
         <Card className="xl:col-span-2">
@@ -57,7 +50,6 @@ export default function CommandCenter() {
         <Card><CardHeader><CardTitle>Rule findings (evidence ledger)</CardTitle></CardHeader><CardContent>
           <ResponsiveContainer width="100%" height={240}><BarChart layout="vertical" data={Object.values(d.rule_hits.reduce((a: any, r: any) => { a[r.rule_id] = a[r.rule_id] ?? { rule: r.rule_id.split("_")[0], n: 0 }; a[r.rule_id].n += r.n; return a; }, {}))}>
             <XAxis type="number" tick={{ fontSize: 10, fill: "#94a3b8" }} /><YAxis type="category" dataKey="rule" width={36} tick={{ fontSize: 10, fill: "#94a3b8" }} /><Tooltip contentStyle={{ background: "#0f172a", border: "1px solid #334155", fontSize: 11 }} /><Bar dataKey="n" fill="#38bdf8" radius={3} /></BarChart></ResponsiveContainer>
-          <div className="text-[10px] text-muted-foreground">Evidence rows attached to cases. R001 duplicate - R002 upcoding - R003 unbundling - R004 implausible - R005 utilization - R006 timing - R007 referral - R008 network.</div>
         </CardContent></Card>
       </div>
     </Page>

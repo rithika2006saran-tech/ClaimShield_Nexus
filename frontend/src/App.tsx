@@ -8,6 +8,7 @@ import Workspace from "@/pages/Workspace";
 import NetworkExplorer from "@/pages/NetworkExplorer";
 import ProviderProfile from "@/pages/ProviderProfile";
 import Memory from "@/pages/Memory";
+import { GlobalSearch } from "@/components/GlobalSearch";
 
 const NAV = [
   { to: "/", label: "Command Center", icon: Activity, end: true },
@@ -35,15 +36,13 @@ export default function App() {
             </NavLink>
           ))}
         </nav>
-        <div className="space-y-1 border-t border-border p-3 text-[10px] leading-4 text-muted-foreground">
-          <div className="flex items-center gap-1.5"><span className={cn("h-1.5 w-1.5 rounded-full", h?.status === "ok" ? "bg-green-500" : "bg-red-500")} /> API {h?.status ?? (health.error ? "down" : "...")}</div>
-          <div>Second Brain: {h?.second_brain?.using_fallback ? "local fallback" : h?.second_brain?.backend ?? "-"}</div>
-          <div>Copilot: {h ? (h.llm_provider === "none" ? "deterministic" : h.llm_provider) : "-"}</div>
-          <div className="pt-1 text-amber-400/80">Synthetic data only. Leads for human review - not findings of misconduct.</div>
-        </div>
       </aside>
-      <main className="min-w-0 flex-1 overflow-y-auto">
-        <Routes>
+      <main className="min-w-0 flex-1 flex flex-col h-screen">
+        <header className="flex h-14 items-center border-b border-border bg-card/50 px-4 shrink-0">
+          <GlobalSearch />
+        </header>
+        <div className="flex-1 overflow-y-auto">
+          <Routes>
           <Route path="/" element={<CommandCenter />} />
           <Route path="/queue" element={<Queue />} />
           <Route path="/case/:caseId" element={<Workspace />} />
@@ -53,6 +52,7 @@ export default function App() {
           <Route path="/memory" element={<Memory />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        </div>
       </main>
     </div>
   );

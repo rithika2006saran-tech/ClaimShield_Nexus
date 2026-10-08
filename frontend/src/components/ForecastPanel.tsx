@@ -15,9 +15,6 @@ export default function ForecastPanel({ forecast, calibration }: { forecast: { l
           <RBar dataKey="v" radius={3}>{data.map((d, i) => <Cell key={i} fill={d.v >= 0.7 ? "#ef4444" : d.v >= 0.4 ? "#f97316" : "#eab308"} />)}<LabelList dataKey="v" position="right" formatter={(v: number) => v.toFixed(2)} style={{ fill: "#e2e8f0", fontSize: 11 }} /></RBar>
         </BarChart>
       </ResponsiveContainer>
-      {calibration?.horizons && (
-        <div className="text-[10px] leading-4 text-muted-foreground">Held-out chronological test: {Object.entries<any>(calibration.horizons).map(([h, v]) => `${h}d ECE ${v.calibrated.ece.toFixed(3)} / Brier ${v.calibrated.brier.toFixed(3)} (baseline ${v.brier_constant_baseline.toFixed(3)})`).join(" - ")}. Synthetic data.</div>
-      )}
     </div>
   );
 }

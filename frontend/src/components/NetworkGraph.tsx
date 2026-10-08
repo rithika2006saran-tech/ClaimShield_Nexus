@@ -42,7 +42,7 @@ export default function NetworkGraph({ nodes, edges, center, onSelect, height = 
     inst.on("tap", "edge", (ev) => onSelect?.("edge", ev.target.data()));
     cy.current = inst;
     return () => { inst.destroy(); cy.current = null; };
-  }, [nodes, edges, center]);
+  }, [nodes.length, edges.length, center?.join()]);
 
   return (
     <div className="relative">

@@ -30,22 +30,22 @@ export default function EvidenceTable({ caseId, focus }: { caseId: string; focus
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search claim ID / text" className="h-7 w-44 rounded-md border border-input bg-background px-2 text-xs" />
         <span className="text-[11px] text-muted-foreground">{rows.length} of {total} evidence objects</span>
       </div>
-      <div className="max-h-80 overflow-auto rounded-md border border-border">
-        <table className="w-full text-[11px]">
-          <thead className="sticky top-0 bg-muted text-left text-muted-foreground"><tr><th className="p-1.5">ID</th><th>Type</th><th>Rule / feature</th><th>Sev</th><th>Observed</th><th>Expected</th><th>Provider</th><th>Date</th></tr></thead>
-          <tbody>
+      <div className="max-h-96 overflow-auto rounded-md border border-border bg-card/50 shadow-sm">
+        <table className="w-full text-sm">
+          <thead className="sticky top-0 bg-muted/80 backdrop-blur text-left text-xs uppercase tracking-wider text-muted-foreground"><tr><th className="p-3">ID</th><th className="p-3">Type</th><th className="p-3">Rule / feature</th><th className="p-3">Sev</th><th className="p-3">Observed</th><th className="p-3">Expected</th><th className="p-3">Provider</th><th className="p-3">Date</th></tr></thead>
+          <tbody className="divide-y divide-border">
             {rows.map((r) => (
               <Fragment key={r.evidence_id}>
-                <tr onClick={() => setOpen(open === r.evidence_id ? null : r.evidence_id)} className="cursor-pointer border-t border-border hover:bg-accent">
-                  <td className="p-1.5"><Mono className="text-sky-400">{r.evidence_id}</Mono></td><td><Badge>{r.evidence_type}</Badge></td>
-                  <td className="max-w-[170px] truncate" title={r.rule_id ?? r.feature}>{r.rule_id ?? r.feature}</td><td className={SEV[r.severity]}>{r.severity ?? "-"}</td>
-                  <td className="tabular-nums">{r.observed_value != null ? Number(r.observed_value).toFixed(2) : "-"}</td><td className="tabular-nums">{r.expected_value != null ? Number(r.expected_value).toFixed(2) : "-"}</td>
-                  <td>{r.provider_id}</td><td>{r.event_ts?.slice(0, 10)}</td>
+                <tr onClick={() => setOpen(open === r.evidence_id ? null : r.evidence_id)} className="cursor-pointer hover:bg-accent/50 transition-colors">
+                  <td className="p-3"><Mono className="text-sky-400 font-medium">{r.evidence_id}</Mono></td><td className="p-3"><Badge variant="outline">{r.evidence_type}</Badge></td>
+                  <td className="p-3 max-w-[200px] truncate text-muted-foreground" title={r.rule_id ?? r.feature}>{r.rule_id ?? r.feature}</td><td className={`p-3 font-medium ${SEV[r.severity]}`}>{r.severity ?? "-"}</td>
+                  <td className="p-3 tabular-nums font-medium">{r.observed_value != null ? Number(r.observed_value).toFixed(2) : "-"}</td><td className="p-3 tabular-nums text-muted-foreground">{r.expected_value != null ? Number(r.expected_value).toFixed(2) : "-"}</td>
+                  <td className="p-3 text-muted-foreground font-medium">{r.provider_id}</td><td className="p-3 text-muted-foreground">{r.event_ts?.slice(0, 10)}</td>
                 </tr>
                 {open === r.evidence_id && (
-                  <tr className="bg-muted/40"><td colSpan={8} className="space-y-1 p-2 text-[11px]">
-                    <div>{r.explanation}</div>
-                    <div className="text-muted-foreground">source: <Mono>{r.source_table}#{r.source_row_id}</Mono> - feature <Mono>{r.feature}</Mono> {r.rule_version && <>- <Mono>{r.rule_version}</Mono></>} {r.model_version && <>- <Mono>{r.model_version}</Mono></>}</div>
+                  <tr className="bg-muted/30"><td colSpan={8} className="space-y-2 p-4 text-xs">
+                    <div className="font-medium text-foreground">{r.explanation}</div>
+                    <div className="text-muted-foreground flex gap-3 flex-wrap"><span>source: <Mono className="text-sky-400/80">{r.source_table}#{r.source_row_id}</Mono></span> <span>feature <Mono>{r.feature}</Mono></span> {r.rule_version && <span>rule v<Mono>{r.rule_version}</Mono></span>} {r.model_version && <span>model v<Mono>{r.model_version}</Mono></span>}</div>
                     {r.claim_ids?.length > 0 && <div className="text-muted-foreground">claims: <Mono>{r.claim_ids.join(", ")}</Mono></div>}
                   </td></tr>
                 )}

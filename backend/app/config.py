@@ -5,11 +5,23 @@ import os
 from datetime import date
 from pathlib import Path
 
+env_path = Path(__file__).resolve().parents[2] / ".env"
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+    load_dotenv(env_path)
 except ImportError:
-    pass
+    if env_path.exists():
+        import re
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
+                m = re.match(r'^([^=]+)=(.*)$', line)
+                if m:
+                    k, v = m.group(1).strip(), m.group(2).strip()
+                    # Strip quotes if any
+                    if len(v) >= 2 and v[0] == v[-1] and v[0] in ('"', "'"):
+                        v = v[1:-1]
+                    os.environ.setdefault(k, v)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 

@@ -37,7 +37,7 @@ export default function Memory() {
   }, []);
   const st = mem.data?.status;
   return (
-    <Page title="Nexus Memory" subtitle="Second Brain: hybrid retrieval over cases, evidence, entities, patterns and reviewer memory. PostgreSQL remains the source of truth.">
+    <Page title="Nexus Memory" subtitle="Hybrid retrieval over cases, evidence, entities, patterns and reviewer memory.">
       {mem.loading && <Loading />}{mem.error && <ErrorBox error={mem.error} />}
       {st && (
         <div className="mb-4 flex flex-wrap items-center gap-3 rounded-md border border-border bg-card p-3 text-xs">

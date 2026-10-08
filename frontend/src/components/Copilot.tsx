@@ -68,8 +68,10 @@ function Rendered({ text, onCite }: { text: string; onCite?: (id: string) => voi
     <div className="space-y-1">
       {text.split("\n").filter(Boolean).map((line, i) => (
         <div key={i} className="leading-relaxed">
-          {line.replace(/^- /, "").split(/(\[EV-\d{6}\])/g).map((p, j) => /^\[EV-\d{6}\]$/.test(p)
-            ? <button key={j} onClick={() => onCite?.(p.slice(1, -1))} className="mx-0.5 text-sky-400 hover:underline"><Mono>{p}</Mono></button> : <span key={j}>{p}</span>)}
+          {line.replace(/^- /, "").split(/(\[EV-\d{6}\]|\*\*.*?\*\*)/g).map((p, j) => /^\[EV-\d{6}\]$/.test(p)
+            ? <button key={j} onClick={() => onCite?.(p.slice(1, -1))} className="mx-0.5 text-sky-400 hover:underline"><Mono>{p}</Mono></button> 
+            : /^\*\*.*?\*\*$/.test(p) ? <strong key={j} className="text-slate-200">{p.slice(2, -2)}</strong> 
+            : <span key={j}>{p}</span>)}
         </div>
       ))}
     </div>

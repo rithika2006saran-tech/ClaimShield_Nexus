@@ -5,6 +5,7 @@ from __future__ import annotations
 import httpx
 
 from .. import config
+from . import guardrails
 
 SYSTEM = ("You are the ClaimShield Nexus Investigation Copilot. Rewrite the GROUNDED ANSWER for an SIU investigator using ONLY the facts and IDs it contains. "
           "Never add claim IDs, evidence IDs, case IDs, numbers or facts. Never state that a provider committed fraud; use 'investigation lead' wording. Keep every [EV-...] citation.")
@@ -57,7 +58,21 @@ class Gemini(LLM):
         return r.json()["candidates"][0]["content"]["parts"][0]["text"]
 
 
+class GuardrailedLLM(LLM):
+    def __init__(self, base: LLM):
+        self.base = base
+        self.name = base.name
+
+    def available(self):
+        return self.base.available()
+
+    def rewrite(self, question, grounded):
+        out = self.base.rewrite(question, grounded)
+        if out:
+            return guardrails.protect_privacy(out)
+        return out
+
 def get_llm() -> LLM:
     p = (config.LLM_PROVIDER or "none").lower()
     llm = {"anthropic": Anthropic, "openai": OpenAI, "gemini": Gemini}.get(p, LLM)()
-    return llm if llm.available() else LLM()
+    return GuardrailedLLM(llm) if llm.available() else LLM()
