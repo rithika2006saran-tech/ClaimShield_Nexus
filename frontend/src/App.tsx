@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Route, Routes, Navigate, useLocation } from "react-router-dom";
-import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, PanelLeftClose, PanelLeftOpen, ChevronDown } from "lucide-react";
+import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, Search, Settings, LogOut, User, PanelLeftClose, PanelLeftOpen, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useApi } from "@/lib/useApi";
+import { supabase } from "@/lib/supabase";
 import CommandCenter from "@/pages/CommandCenter";
 import Queue from "@/pages/Queue";
 import Workspace from "@/pages/Workspace";
 import NetworkExplorer from "@/pages/NetworkExplorer";
 import ProviderProfile from "@/pages/ProviderProfile";
 import Memory from "@/pages/Memory";
+import Config from "@/pages/Config";
+import Login from "@/pages/Login";
 import { GlobalSearch } from "@/components/GlobalSearch";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { LiveEvents } from "@/components/LiveEvents";
 
 const NAV = [
   { to: "/", label: "Command Center", icon: Activity, end: true },
@@ -24,13 +29,39 @@ const NAV = [
   { to: "/network", label: "Network Explorer", icon: Network },
   { to: "/provider/PRV-102", label: "Provider Profile", icon: Stethoscope },
   { to: "/memory", label: "Nexus Memory", icon: Brain },
+  { to: "/config", label: "Configuration", icon: Settings },
 ];
 
 export default function App() {
-  const health = useApi<any>("/health");
+  const [session, setSession] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
   const [workspaceOpen, setWorkspaceOpen] = useState(true);
   const location = useLocation();
+  const health = useApi<any>("/health");
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setLoading(false);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  if (loading) return null;
+
+  if (!session) {
+    return <Login onLogin={() => {}} />;
+  }
+
+  const email = session.user.email;
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
@@ -88,6 +119,15 @@ export default function App() {
       <main className="min-w-0 flex-1 flex flex-col h-screen">
         <header className="flex h-12 items-center border-b border-border bg-card px-4 shrink-0">
           <GlobalSearch />
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-accent/50 px-2 py-1 rounded-md">
+              <User className="h-3 w-3" /> {email}
+            </div>
+            <button onClick={() => supabase.auth.signOut()} className="text-xs flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors">
+              <LogOut className="h-4 w-4" /> Sign Out
+            </button>
+            <ThemeToggle />
+          </div>
         </header>
         <div className="flex-1 overflow-y-auto">
           <Routes>
@@ -99,10 +139,12 @@ export default function App() {
           <Route path="/network/:center" element={<NetworkExplorer />} />
           <Route path="/provider/:providerId" element={<ProviderProfile />} />
           <Route path="/memory" element={<Memory />} />
+          <Route path="/config" element={<Config />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         </div>
       </main>
+      <LiveEvents />
     </div>
   );
 }

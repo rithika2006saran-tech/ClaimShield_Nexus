@@ -21,9 +21,9 @@ export default function CommandCenter() {
         <Stat label="Potential exposure (cases)" value={money(d.total_potential_exposure)} />
       </div>
       <div className="grid gap-4 xl:grid-cols-3">
-        <Card className="xl:col-span-2">
-          <CardHeader><CardTitle>Alert compression funnel</CardTitle><span className="text-[11px] text-muted-foreground">{num(d.funnel[0].count)} claims &rarr; {d.funnel[5].count} SIU priorities</span></CardHeader>
-          <CardContent className="space-y-2.5">
+        <Card className="xl:col-span-2 flex flex-col h-full">
+          <CardHeader className="py-4"><CardTitle>Alert compression funnel</CardTitle><span className="text-[11px] text-muted-foreground">{num(d.funnel[0].count)} claims &rarr; {d.funnel[5].count} SIU priorities</span></CardHeader>
+          <CardContent className="space-y-2.5 flex-1 flex flex-col justify-center">
             {d.funnel.map((f: any, i: number) => (
               <div key={f.stage} title={f.definition}>
                 <div className="mb-0.5 flex items-baseline justify-between text-xs"><span className="font-medium">{f.stage}</span><span className="tabular-nums">{num(f.count)} <span className="text-muted-foreground">{i > 0 ? `(${pct(f.count / d.funnel[i - 1].count, f.count / d.funnel[i - 1].count < 0.01 ? 2 : 1)} of previous)` : ""}</span></span></div>
@@ -33,22 +33,23 @@ export default function CommandCenter() {
             ))}
           </CardContent>
         </Card>
-        <div className="space-y-4">
-          <Card><CardHeader><CardTitle>Cases by priority band</CardTitle></CardHeader><CardContent>
-            <ResponsiveContainer width="100%" height={150}><BarChart data={["CRITICAL", "HIGH", "MEDIUM", "LOW"].map((b) => ({ b, n: d.bands.find((x: any) => x.band === b)?.n ?? 0 }))}>
-              <XAxis dataKey="b" tick={{ fontSize: 10, fill: "#94a3b8" }} /><YAxis tick={{ fontSize: 10, fill: "#94a3b8" }} allowDecimals={false} width={24} /><Tooltip contentStyle={{ background: "#0f172a", border: "1px solid #334155", fontSize: 11 }} />
-              <Bar dataKey="n" radius={3}>{["CRITICAL", "HIGH", "MEDIUM", "LOW"].map((b) => <Cell key={b} fill={BAND_HEX[b]} />)}</Bar></BarChart></ResponsiveContainer>
-          </CardContent></Card>
-        </div>
-        <Card className="xl:col-span-2">
-          <CardHeader><CardTitle>Top investigation leads</CardTitle><Link to="/queue" className="text-xs text-sky-400 hover:underline">Open SIU queue</Link></CardHeader>
-          <CardContent className="p-0"><table className="w-full text-xs"><thead className="text-left text-[10px] uppercase text-muted-foreground"><tr><th className="p-2">Case</th><th>Anchor</th><th>Specialty</th><th>Priority</th><th>Exposure</th><th>Patterns</th></tr></thead><tbody>
-            {d.top_cases.map((c: any) => <tr key={c.case_id} className="border-t border-border hover:bg-accent"><td className="p-2"><Link to={`/case/${c.case_id}`} className="font-mono text-sky-400 hover:underline">{c.case_id}</Link></td><td>{c.anchor_provider_id}</td><td>{c.specialty}</td>
-              <td><BandBadge band={c.review_priority} /> <span className="tabular-nums text-muted-foreground">{c.priority_score.toFixed(2)}</span></td><td className="tabular-nums">{money(c.potential_exposure)}</td><td className="max-w-[260px] truncate text-muted-foreground">{c.patterns.join(", ")}</td></tr>)}
+        
+        <Card className="flex flex-col h-full"><CardHeader className="py-4"><CardTitle>Cases by priority band</CardTitle></CardHeader><CardContent className="flex-1 flex flex-col justify-center">
+          <ResponsiveContainer width="100%" height="100%" minHeight={200}><BarChart data={["CRITICAL", "HIGH", "MEDIUM", "LOW"].map((b) => ({ b, n: d.bands.find((x: any) => x.band === b)?.n ?? 0 }))}>
+            <XAxis dataKey="b" tick={{ fontSize: 10, fill: "#94a3b8" }} /><YAxis tick={{ fontSize: 10, fill: "#94a3b8" }} allowDecimals={false} width={24} /><Tooltip contentStyle={{ background: "#0f172a", border: "1px solid #334155", fontSize: 11 }} />
+            <Bar dataKey="n" radius={3}>{["CRITICAL", "HIGH", "MEDIUM", "LOW"].map((b) => <Cell key={b} fill={BAND_HEX[b]} />)}</Bar></BarChart></ResponsiveContainer>
+        </CardContent></Card>
+        
+        <Card className="xl:col-span-2 flex flex-col h-full">
+          <CardHeader className="py-4 flex flex-row items-center justify-between"><CardTitle>Top investigation leads</CardTitle><Link to="/queue" className="text-xs text-sky-400 hover:underline">Open SIU queue</Link></CardHeader>
+          <CardContent className="p-0 flex-1 overflow-auto"><table className="w-full text-xs"><thead className="text-left text-[10px] uppercase text-muted-foreground bg-muted/50"><tr><th className="p-3">Case</th><th>Anchor</th><th>Specialty</th><th>Priority</th><th>Exposure</th><th>Patterns</th></tr></thead><tbody className="divide-y divide-border">
+            {d.top_cases.map((c: any) => <tr key={c.case_id} className="hover:bg-accent/30 transition-colors"><td className="p-3"><Link to={`/case/${c.case_id}`} className="font-mono text-sky-400 hover:underline">{c.case_id}</Link></td><td>{c.anchor_provider_id}</td><td>{c.specialty}</td>
+              <td><BandBadge band={c.review_priority} /> <span className="tabular-nums text-muted-foreground ml-2">{c.priority_score.toFixed(2)}</span></td><td className="tabular-nums">{money(c.potential_exposure)}</td><td className="max-w-[260px] truncate text-muted-foreground">{c.patterns.join(", ")}</td></tr>)}
           </tbody></table></CardContent>
         </Card>
-        <Card><CardHeader><CardTitle>Rule findings (evidence ledger)</CardTitle></CardHeader><CardContent>
-          <ResponsiveContainer width="100%" height={240}><BarChart layout="vertical" data={Object.values(d.rule_hits.reduce((a: any, r: any) => { a[r.rule_id] = a[r.rule_id] ?? { rule: r.rule_id.split("_")[0], n: 0 }; a[r.rule_id].n += r.n; return a; }, {}))}>
+        
+        <Card className="flex flex-col h-full"><CardHeader className="py-4"><CardTitle>Rule findings (evidence ledger)</CardTitle></CardHeader><CardContent className="flex-1">
+          <ResponsiveContainer width="100%" height="100%" minHeight={200}><BarChart layout="vertical" data={Object.values(d.rule_hits.reduce((a: any, r: any) => { a[r.rule_id] = a[r.rule_id] ?? { rule: r.rule_id.split("_")[0], n: 0 }; a[r.rule_id].n += r.n; return a; }, {}))}>
             <XAxis type="number" tick={{ fontSize: 10, fill: "#94a3b8" }} /><YAxis type="category" dataKey="rule" width={36} tick={{ fontSize: 10, fill: "#94a3b8" }} /><Tooltip contentStyle={{ background: "#0f172a", border: "1px solid #334155", fontSize: 11 }} /><Bar dataKey="n" fill="#38bdf8" radius={3} /></BarChart></ResponsiveContainer>
         </CardContent></Card>
       </div>

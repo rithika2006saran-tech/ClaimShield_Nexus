@@ -3,8 +3,8 @@ import { AlertTriangle, Loader2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-export const Page = ({ title, subtitle, actions, children }: { title: string; subtitle?: string; actions?: ReactNode; children: ReactNode }) => (
-  <div className="p-6 max-w-7xl mx-auto space-y-6">
+export const Page = ({ title, subtitle, actions, children, fullWidth }: { title: string; subtitle?: string; actions?: ReactNode; children: ReactNode; fullWidth?: boolean }) => (
+  <div className={cn("p-6 mx-auto space-y-6", fullWidth ? "w-full" : "max-w-7xl")}>
     <div className="mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-border pb-4">
       <div><h1 className="text-2xl font-bold tracking-tight">{title}</h1>{subtitle && <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>}</div>
       <div className="flex items-center gap-3">{actions}</div>

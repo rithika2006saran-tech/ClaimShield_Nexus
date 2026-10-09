@@ -34,13 +34,14 @@ export default function Workspace() {
   const flows = c.network_signals?.[0]?.top_referral_flows ?? [];
 
   return (
+
     <Page fullWidth title={`${c.case_id}`} subtitle={`Lead on ${c.anchor_provider_id} - ${c.specialty} • ${c.review_status}`}
       actions={<><BandBadge band={c.review_priority} className="text-xs" /><Badge variant="outline">Score {f2(c.priority_score)}</Badge><Link to={`/provider/${c.anchor_provider_id}`}><Button size="sm" variant="outline" className="h-8">Provider Profile</Button></Link></>}>
       
       {tabId === "overview" && (
-        <div className="grid gap-4 xl:grid-cols-[1fr_400px] items-start">
+        <div className="grid gap-4 xl:grid-cols-[1fr_400px]">
           {/* LEFT: Intelligence & Overview */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col">
             <Card className="overflow-hidden">
               <CardHeader className="py-4 border-b border-border/50 bg-muted/5"><CardTitle>Case Summary</CardTitle></CardHeader>
               <CardContent className="p-0">
@@ -83,7 +84,7 @@ export default function Workspace() {
               <CardContent><ComponentBars components={c.components} weights={d.weights} /></CardContent>
             </Card>
               
-            <div className="grid gap-4 md:grid-cols-2 items-start">
+            <div className="grid gap-4 md:grid-cols-2 items-start flex-1">
               <Card className="flex flex-col h-full">
                 <CardHeader className="py-3"><CardTitle>Forward Risk Forecast</CardTitle></CardHeader>
                 <CardContent className="flex-1 p-4 pt-0"><ForecastPanel forecast={d.forecast} calibration={models.data?.forecast?.metrics} /></CardContent>
@@ -108,15 +109,15 @@ export default function Workspace() {
           </div>
 
           {/* RIGHT: Temporal Intelligence */}
-          <div className="space-y-4 xl:sticky xl:top-4">
-            <Card>
+          <div className="space-y-4 flex flex-col xl:sticky xl:top-4 h-full min-h-[500px]">
+            <Card className="flex flex-col flex-1">
               <CardHeader className="py-3 flex flex-row items-center justify-between">
                 <CardTitle>Temporal Intelligence</CardTitle>
                 <select value={series} onChange={(e) => setSeries(e.target.value)} className="h-6 rounded border border-border bg-muted text-[10px] outline-none px-1">
                   {SERIES.map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}
                 </select>
               </CardHeader>
-              <CardContent className="p-4 pt-0">
+              <CardContent className="p-4 pt-0 flex-1 min-h-0">
                 {tl.loading ? <Loading label="Loading timeline" /> : tl.data ? <TimelinePanel timeline={tl.data} series={series} /> : <ErrorBox error={tl.error ?? ""} />}
               </CardContent>
             </Card>
