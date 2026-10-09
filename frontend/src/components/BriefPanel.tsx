@@ -19,7 +19,7 @@ export default function BriefPanel({ caseId, onCite }: { caseId: string; onCite?
   return (
     <div>
       <div className="mb-2 flex items-center justify-between">
-        <div className="flex items-center gap-2 text-xs text-muted-foreground"><Badge>{data.generator}</Badge><Badge className="text-green-400">citations validated</Badge></div>
+        <div className="flex items-center gap-2 text-xs text-muted-foreground"><Badge>{data.generator}</Badge><Badge variant="outline" className="text-green-400 border-green-400/30">citations validated</Badge></div>
         <Button size="sm" variant="outline" onClick={download}><Download className="h-3.5 w-3.5" /> Markdown</Button>
       </div>
       <div className="divide-y divide-border rounded-md border border-border">

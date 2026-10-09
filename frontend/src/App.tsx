@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-import { NavLink, Route, Routes, Navigate } from "react-router-dom";
-import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, Search, Settings, LogOut, User } from "lucide-react";
-import { useState } from "react";
 import { NavLink, Route, Routes, Navigate, useLocation } from "react-router-dom";
-import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, PanelLeftClose, PanelLeftOpen, ChevronDown } from "lucide-react";
+import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, Search, Settings, LogOut, User, PanelLeftClose, PanelLeftOpen, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useApi } from "@/lib/useApi";
 import { supabase } from "@/lib/supabase";
@@ -38,6 +35,10 @@ const NAV = [
 export default function App() {
   const [session, setSession] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
+  const [workspaceOpen, setWorkspaceOpen] = useState(true);
+  const location = useLocation();
+  const health = useApi<any>("/health");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -61,10 +62,6 @@ export default function App() {
   }
 
   const email = session.user.email;
-  const health = useApi<any>("/health");
-  const [collapsed, setCollapsed] = useState(false);
-  const [workspaceOpen, setWorkspaceOpen] = useState(true);
-  const location = useLocation();
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">

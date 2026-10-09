@@ -34,52 +34,14 @@ export default function Workspace() {
   const flows = c.network_signals?.[0]?.top_referral_flows ?? [];
 
   return (
-    <Page title={`${c.case_id} - investigation lead on ${c.anchor_provider_id}`}
-      actions={<><BandBadge band={c.review_priority} className="text-xs" /><Badge>{c.review_status}</Badge>
-        <Button size="sm" variant="outline" onClick={async () => {
-          try {
-            const res = await fetch(`/api/cases/${c.case_id}/brief?format=markdown`);
-            const data = await res.json();
-            const blob = new Blob([data.markdown], { type: "text/markdown" });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = `${c.case_id}_Report.md`;
-            a.click();
-            URL.revokeObjectURL(url);
-          } catch (e) { alert("Failed to export report"); }
-        }}>Export Report</Button>
-        <Link to={`/provider/${c.anchor_provider_id}`}><Button size="sm" variant="outline">Provider profile</Button></Link></>}>
-      <div className="grid gap-4 xl:grid-cols-12">
-        {/* LEFT */}
-        <div className="space-y-4 xl:col-span-3">
-          <Card><CardHeader><CardTitle>Case summary</CardTitle><span className="text-lg font-semibold tabular-nums">{f2(c.priority_score)}</span></CardHeader>
-            <CardContent className="space-y-2 text-xs">
-              <p className="leading-relaxed text-muted-foreground">{c.summary}</p>
-              <div className="grid grid-cols-2 gap-2">
-                <KV k="Exposure" v={money(c.potential_exposure)} /><KV k="Members" v={num(c.member_count)} /><KV k="Claims" v={num(c.claim_count)} /><KV k="Providers" v={c.provider_ids.length} />
-                <KV k="FWA risk score" v={<div className="flex items-center gap-2"><Bar value={c.model_score} color="#38bdf8" /><span>{f2(c.model_score)}</span></div>} />
-                <KV k="Anomaly score" v={<div className="flex items-center gap-2"><Bar value={c.anomaly_score} color="#38bdf8" /><span>{f2(c.anomaly_score)}</span></div>} />
-              </div>
-              <div className="flex flex-wrap gap-1">{c.rule_hits.map((r: string) => <Badge key={r} className="text-sky-300">{r.split("_")[0]} {r.split("_").slice(1).join(" ").toLowerCase()}</Badge>)}</div>
-            </CardContent></Card>
-          <Card><CardHeader><CardTitle>Risk decomposition</CardTitle></CardHeader><CardContent><ComponentBars components={c.components} weights={d.weights} /></CardContent></Card>
-          <Card><CardHeader><CardTitle>Evidence ledger summary</CardTitle><button className="text-[11px] text-sky-400 hover:underline" onClick={() => { setFocus(null); setTab("ledger"); }}>open</button></CardHeader>
-            <CardContent className="space-y-1 text-xs">
-              {Object.entries(d.evidence_summary.reduce((a: any, r: any) => { a[r.evidence_type] = (a[r.evidence_type] ?? 0) + Number(r.n); return a; }, {})).map(([k, v]) => <div key={k} className="flex justify-between"><span>{k}</span><b className="tabular-nums">{v as number}</b></div>)}
-            </CardContent></Card>
-          <Card><CardHeader><CardTitle>What changed?</CardTitle>
-            <select value={series} onChange={(e) => setSeries(e.target.value)} className="h-6 rounded border border-input bg-background text-[10px]">{SERIES.map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}</select></CardHeader>
-            <CardContent>{tl.loading ? <Loading /> : tl.data ? <TimelinePanel timeline={tl.data} series={series} /> : <ErrorBox error={tl.error ?? ""} />}
-              </CardContent></Card>
-        </div>
+
     <Page fullWidth title={`${c.case_id}`} subtitle={`Lead on ${c.anchor_provider_id} - ${c.specialty} • ${c.review_status}`}
       actions={<><BandBadge band={c.review_priority} className="text-xs" /><Badge variant="outline">Score {f2(c.priority_score)}</Badge><Link to={`/provider/${c.anchor_provider_id}`}><Button size="sm" variant="outline" className="h-8">Provider Profile</Button></Link></>}>
       
       {tabId === "overview" && (
-        <div className="grid gap-4 xl:grid-cols-[1fr_400px] items-start">
+        <div className="grid gap-4 xl:grid-cols-[1fr_400px]">
           {/* LEFT: Intelligence & Overview */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col">
             <Card className="overflow-hidden">
               <CardHeader className="py-4 border-b border-border/50 bg-muted/5"><CardTitle>Case Summary</CardTitle></CardHeader>
               <CardContent className="p-0">
@@ -122,7 +84,7 @@ export default function Workspace() {
               <CardContent><ComponentBars components={c.components} weights={d.weights} /></CardContent>
             </Card>
               
-            <div className="grid gap-4 md:grid-cols-2 items-start">
+            <div className="grid gap-4 md:grid-cols-2 items-start flex-1">
               <Card className="flex flex-col h-full">
                 <CardHeader className="py-3"><CardTitle>Forward Risk Forecast</CardTitle></CardHeader>
                 <CardContent className="flex-1 p-4 pt-0"><ForecastPanel forecast={d.forecast} calibration={models.data?.forecast?.metrics} /></CardContent>
@@ -147,15 +109,15 @@ export default function Workspace() {
           </div>
 
           {/* RIGHT: Temporal Intelligence */}
-          <div className="space-y-4 xl:sticky xl:top-4">
-            <Card>
+          <div className="space-y-4 flex flex-col xl:sticky xl:top-4 h-full min-h-[500px]">
+            <Card className="flex flex-col flex-1">
               <CardHeader className="py-3 flex flex-row items-center justify-between">
                 <CardTitle>Temporal Intelligence</CardTitle>
                 <select value={series} onChange={(e) => setSeries(e.target.value)} className="h-6 rounded border border-border bg-muted text-[10px] outline-none px-1">
                   {SERIES.map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}
                 </select>
               </CardHeader>
-              <CardContent className="p-4 pt-0">
+              <CardContent className="p-4 pt-0 flex-1 min-h-0">
                 {tl.loading ? <Loading label="Loading timeline" /> : tl.data ? <TimelinePanel timeline={tl.data} series={series} /> : <ErrorBox error={tl.error ?? ""} />}
               </CardContent>
             </Card>

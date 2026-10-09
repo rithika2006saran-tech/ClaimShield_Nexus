@@ -4,5 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./components/ThemeProvider";
 import App from "./App";
 import "./index.css";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(<React.StrictMode><ThemeProvider defaultTheme="dark"><BrowserRouter><App /></BrowserRouter></ThemeProvider></React.StrictMode>);
+ReactDOM.createRoot(document.getElementById("root")!).render(<React.StrictMode><ErrorBoundary><ThemeProvider defaultTheme="dark"><BrowserRouter><App /></BrowserRouter></ThemeProvider></ErrorBoundary></React.StrictMode>);
