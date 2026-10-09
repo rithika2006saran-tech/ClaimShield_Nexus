@@ -7,7 +7,7 @@ export default function ForecastPanel({ forecast, calibration }: { forecast: { l
   const data = [{ h: "30-day", v: forecast.d30 }, { h: "60-day", v: forecast.d60 }, { h: "90-day", v: forecast.d90 }];
   return (
     <div>
-      <div className="mb-1 flex items-center gap-2 text-xs"><Badge className={isProb ? "text-green-400" : "text-amber-400"}>{isProb ? "calibrated probability" : "escalation index (not calibrated)"}</Badge>
+      <div className="mb-2 flex items-center gap-2 text-xs"><Badge variant="outline" className={`text-[9px] uppercase tracking-wider ${isProb ? "text-green-400 border-green-500/20 bg-green-500/10" : "text-amber-400 border-amber-500/20 bg-amber-500/10"}`}>{isProb ? "calibrated probability" : "escalation index (not calibrated)"}</Badge>
         {forecast.provider_id && <span className="text-muted-foreground">driven by {forecast.provider_id}</span>}</div>
       <ResponsiveContainer width="100%" height={110}>
         <BarChart data={data} layout="vertical" margin={{ left: 10, right: 30 }}>
