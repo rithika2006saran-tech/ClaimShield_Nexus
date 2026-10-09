@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { NavLink, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { NavLink, Route, Routes, Navigate, useLocation, useParams } from "react-router-dom";
+
+function CaseRedirect() {
+  const { caseId } = useParams();
+  return <Navigate to={`/case/${caseId}/overview`} replace />;
+}
 import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, PanelLeftClose, PanelLeftOpen, ChevronDown, Search, Settings, LogOut, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useApi } from "@/lib/useApi";
@@ -16,27 +21,30 @@ import { GlobalSearch } from "@/components/GlobalSearch";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LiveEvents } from "@/components/LiveEvents";
 
-const NAV = [
-  { to: "/", label: "Command Center", icon: Activity, end: true },
-  { to: "/queue", label: "SIU Queue", icon: ListOrdered },
-  { 
-    id: "workspace", label: "Workspace", icon: ShieldCheck,
-    sub: [
-      { to: "/case/CASE-1024/overview", label: "Overview & Analytics" },
-      { to: "/case/CASE-1024/network", label: "Network & Evidence" }
-    ]
-  },
-  { to: "/network", label: "Network Explorer", icon: Network },
-  { to: "/provider/PRV-102", label: "Provider Profile", icon: Stethoscope },
-  { to: "/memory", label: "Nexus Memory", icon: Brain },
-  { to: "/config", label: "Configuration", icon: Settings },
-];
-
 export default function App() {
   const health = useApi<any>("/health");
   const [collapsed, setCollapsed] = useState(false);
   const [workspaceOpen, setWorkspaceOpen] = useState(true);
   const location = useLocation();
+
+  const currentCaseMatch = location.pathname.match(/\/case\/([^\/]+)/);
+  const activeCaseId = currentCaseMatch ? currentCaseMatch[1] : "CASE-1024";
+
+  const NAV = [
+    { to: "/", label: "Command Center", icon: Activity, end: true },
+    { to: "/queue", label: "SIU Queue", icon: ListOrdered },
+    { 
+      id: "workspace", label: "Workspace", icon: ShieldCheck,
+      sub: [
+        { to: `/case/${activeCaseId}/overview`, label: "Overview & Analytics" },
+        { to: `/case/${activeCaseId}/network`, label: "Network & Evidence" }
+      ]
+    },
+    { to: "/network", label: "Network Explorer", icon: Network },
+    { to: "/provider/PRV-102", label: "Provider Profile", icon: Stethoscope },
+    { to: "/memory", label: "Nexus Memory", icon: Brain },
+    { to: "/config", label: "Configuration", icon: Settings },
+  ];
 
   const [session, setSession] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -134,7 +142,7 @@ export default function App() {
           <Routes>
           <Route path="/" element={<CommandCenter />} />
           <Route path="/queue" element={<Queue />} />
-          <Route path="/case/:caseId" element={<Navigate to="/case/CASE-1024/overview" replace />} />
+          <Route path="/case/:caseId" element={<CaseRedirect />} />
           <Route path="/case/:caseId/:tabId" element={<Workspace />} />
           <Route path="/network" element={<NetworkExplorer />} />
           <Route path="/network/:center" element={<NetworkExplorer />} />
