@@ -1,5 +1,6 @@
-import { NavLink, Route, Routes, Navigate } from "react-router-dom";
-import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, Search } from "lucide-react";
+import { useState } from "react";
+import { NavLink, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Activity, Brain, ListOrdered, Network, ShieldCheck, Stethoscope, PanelLeftClose, PanelLeftOpen, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useApi } from "@/lib/useApi";
 import CommandCenter from "@/pages/CommandCenter";
@@ -13,7 +14,13 @@ import { GlobalSearch } from "@/components/GlobalSearch";
 const NAV = [
   { to: "/", label: "Command Center", icon: Activity, end: true },
   { to: "/queue", label: "SIU Queue", icon: ListOrdered },
-  { to: "/case/CASE-1024", label: "Investigation Workspace", icon: ShieldCheck },
+  { 
+    id: "workspace", label: "Workspace", icon: ShieldCheck,
+    sub: [
+      { to: "/case/CASE-1024/overview", label: "Overview & Analytics" },
+      { to: "/case/CASE-1024/network", label: "Network & Evidence" }
+    ]
+  },
   { to: "/network", label: "Network Explorer", icon: Network },
   { to: "/provider/PRV-102", label: "Provider Profile", icon: Stethoscope },
   { to: "/memory", label: "Nexus Memory", icon: Brain },
@@ -21,31 +28,73 @@ const NAV = [
 
 export default function App() {
   const health = useApi<any>("/health");
-  const h = health.data;
+  const [collapsed, setCollapsed] = useState(false);
+  const [workspaceOpen, setWorkspaceOpen] = useState(true);
+  const location = useLocation();
+
   return (
-    <div className="flex h-screen overflow-hidden">
-      <aside className="flex w-56 shrink-0 flex-col border-r border-border bg-card">
-        <div className="px-4 py-4 border-b border-border">
-          <div className="flex items-center gap-2 text-sm font-bold tracking-tight"><ShieldCheck className="h-5 w-5 text-primary" /> ClaimShield <span className="text-primary">Nexus</span></div>
-          <div className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">FWA Investigation Intelligence</div>
+    <div className="flex h-screen overflow-hidden bg-background">
+      <aside className={cn("flex shrink-0 flex-col border-r border-border bg-[#101620] transition-all duration-300", collapsed ? "w-[68px]" : "w-[220px]")}>
+        <div className={cn("flex items-center px-4 py-3 border-b border-border h-12", collapsed ? "justify-center px-0" : "justify-between")}>
+          {!collapsed && (
+            <div className="flex items-center gap-2 text-[13px] font-bold tracking-tight text-foreground truncate">
+              <ShieldCheck className="h-4 w-4 text-primary shrink-0" />
+              <span>ClaimShield <span className="text-primary">Nexus</span></span>
+            </div>
+          )}
+          {collapsed && <ShieldCheck className="h-5 w-5 text-primary shrink-0" />}
+          <button onClick={() => setCollapsed(!collapsed)} className="text-muted-foreground hover:text-foreground shrink-0">
+            {collapsed ? null : <PanelLeftClose className="h-4 w-4" />}
+          </button>
         </div>
-        <nav className="flex-1 space-y-0.5 p-2">
-          {NAV.map((n) => (
-            <NavLink key={n.to} to={n.to} end={n.end} className={({ isActive }) => cn("flex items-center gap-2 rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-foreground", isActive && "bg-accent text-foreground")}>
-              <n.icon className="h-4 w-4" /> {n.label}
-            </NavLink>
+        <nav className="flex-1 space-y-1 p-2">
+          {NAV.map((n: any) => (
+            n.sub ? (
+              <div key={n.id} className="space-y-1">
+                <button onClick={() => setWorkspaceOpen(!workspaceOpen)} className={cn("flex w-full items-center gap-3 rounded-md px-3 py-2 text-[13px] text-muted-foreground hover:bg-accent hover:text-foreground transition-colors", (location.pathname.startsWith("/case/") && !collapsed) ? "bg-accent/50 text-foreground font-medium" : "", collapsed && "justify-center px-0")} title={collapsed ? n.label : undefined}>
+                  <n.icon className="h-4 w-4 shrink-0" />
+                  {!collapsed && <span className="flex-1 text-left truncate">{n.label}</span>}
+                  {!collapsed && <ChevronDown className={cn("h-3 w-3 shrink-0 transition-transform", workspaceOpen ? "rotate-180" : "")} />}
+                </button>
+                {!collapsed && workspaceOpen && (
+                  <div className="pl-9 pr-2 space-y-1 mt-1">
+                    {n.sub.map((s: any) => (
+                      <NavLink key={s.to} to={s.to} className={({ isActive }) => cn("flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] text-muted-foreground hover:bg-accent hover:text-foreground transition-colors", isActive && "bg-accent text-foreground font-medium")}>
+                        {s.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <NavLink key={n.to} to={n.to} end={n.end} title={collapsed ? n.label : undefined} className={({ isActive }) => cn("flex items-center gap-3 rounded-md px-3 py-2 text-[13px] text-muted-foreground hover:bg-accent hover:text-foreground transition-colors", isActive && "bg-accent text-foreground font-medium", collapsed && "justify-center px-0")}>
+                <n.icon className="h-4 w-4 shrink-0" />
+                {!collapsed && <span className="truncate">{n.label}</span>}
+              </NavLink>
+            )
           ))}
         </nav>
+        <div className="p-2 border-t border-border">
+          <button onClick={() => setCollapsed(!collapsed)} className={cn("flex w-full items-center justify-center gap-2 rounded-md p-2 text-muted-foreground hover:bg-accent hover:text-foreground", !collapsed && "hidden")}>
+             <PanelLeftOpen className="h-4 w-4" />
+          </button>
+          {!collapsed && (
+            <div className="px-3 py-2 text-[11px] uppercase tracking-wider text-muted-foreground/70 font-medium">
+              FWA Intelligence
+            </div>
+          )}
+        </div>
       </aside>
       <main className="min-w-0 flex-1 flex flex-col h-screen">
-        <header className="flex h-14 items-center border-b border-border bg-card/50 px-4 shrink-0">
+        <header className="flex h-12 items-center border-b border-border bg-card px-4 shrink-0">
           <GlobalSearch />
         </header>
         <div className="flex-1 overflow-y-auto">
           <Routes>
           <Route path="/" element={<CommandCenter />} />
           <Route path="/queue" element={<Queue />} />
-          <Route path="/case/:caseId" element={<Workspace />} />
+          <Route path="/case/:caseId" element={<Navigate to="/case/CASE-1024/overview" replace />} />
+          <Route path="/case/:caseId/:tabId" element={<Workspace />} />
           <Route path="/network" element={<NetworkExplorer />} />
           <Route path="/network/:center" element={<NetworkExplorer />} />
           <Route path="/provider/:providerId" element={<ProviderProfile />} />
