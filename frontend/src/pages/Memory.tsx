@@ -12,7 +12,6 @@ import { money } from "@/lib/utils";
 const INDICES = ["cases", "evidence", "entities", "patterns", "review_memory"] as const;
 const MODES = ["hybrid", "bm25", "knn"] as const;
 
-/** Nexus Memory: Second Brain search (BM25 + kNN + structured filters + RRF), pattern memory and reviewer memory. */
 export default function Memory() {
   const mem = useApi<any>("/brain/memory");
   const [q, setQ] = useState("referral concentration shared facility duplicate billing");
@@ -38,51 +37,87 @@ export default function Memory() {
   const st = mem.data?.status;
   return (
     <Page title="Nexus Memory" subtitle="Hybrid retrieval over cases, evidence, entities, patterns and reviewer memory.">
-      {mem.loading && <Loading />}{mem.error && <ErrorBox error={mem.error} />}
+      {mem.loading && <Loading label="Loading Memory" />}
+      {mem.error && <ErrorBox error={mem.error} />}
+      
       {st && (
-        <div className="mb-4 flex flex-wrap items-center gap-3 rounded-md border border-border bg-card p-3 text-xs">
-          <Badge className={st.using_fallback ? "text-amber-400" : "text-green-400"}>{st.backend}</Badge>
-          {st.using_fallback && <span className="text-amber-400">Elasticsearch not reachable - in-process fallback with identical BM25 + kNN + RRF semantics.</span>}
-          <span className="text-muted-foreground">vectors: {st.vector_mode}</span>
-          {Object.entries<number>(st.indices ?? {}).map(([k, v]) => <span key={k}><b>{k}</b> {v}</span>)}
+        <div className="mb-4 flex flex-wrap items-center gap-3 rounded-md border border-border bg-card p-3 text-[11px] uppercase tracking-wider text-muted-foreground shadow-sm">
+          <Badge variant="outline" className={st.using_fallback ? "border-amber-500/50 text-amber-500" : "border-green-500/50 text-green-500"}>{st.backend}</Badge>
+          {st.using_fallback && <span className="text-amber-500 normal-case tracking-normal text-[12px]">Elasticsearch not reachable - in-process fallback with identical BM25 + kNN + RRF semantics.</span>}
+          <span>vectors: <strong className="text-foreground">{st.vector_mode}</strong></span>
+          {Object.entries<number>(st.indices ?? {}).map(([k, v]) => <span key={k}><b>{k}</b> <span className="text-foreground">{v}</span></span>)}
         </div>
       )}
-      <div className="grid gap-4 xl:grid-cols-3">
-        <Card className="xl:col-span-2">
-          <CardHeader><CardTitle>Search the Second Brain</CardTitle></CardHeader>
-          <CardContent className="space-y-3">
+      
+      <div className="grid gap-4 xl:grid-cols-[1fr_360px]">
+        <Card className="flex flex-col">
+          <CardHeader className="py-3"><CardTitle>Search Second Brain</CardTitle></CardHeader>
+          <CardContent className="space-y-4">
             <form className="flex flex-wrap gap-2" onSubmit={(e) => { e.preventDefault(); run(); }}>
-              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Claim ID, provider, case, rule, or behaviour description" className="h-8 min-w-[240px] flex-1 rounded-md border border-input bg-background px-2 text-xs" />
-              <select value={index} onChange={(e) => setIndex(e.target.value as any)} className="h-8 rounded-md border border-input bg-background px-1 text-xs">{INDICES.map((i) => <option key={i}>{i}</option>)}</select>
-              <select value={mode} onChange={(e) => setMode(e.target.value as any)} className="h-8 rounded-md border border-input bg-background px-1 text-xs">{MODES.map((i) => <option key={i}>{i}</option>)}</select>
-              <select value={kind} onChange={(e) => setKind(e.target.value)} className="h-8 rounded-md border border-input bg-background px-1 text-xs"><option value="">any kind</option><option value="historical_investigation">historical investigation</option><option value="current_case">current case</option></select>
-              <input value={specialty} onChange={(e) => setSpecialty(e.target.value)} placeholder="specialty filter" className="h-8 w-32 rounded-md border border-input bg-background px-2 text-xs" />
-              <input value={outcome} onChange={(e) => setOutcome(e.target.value)} placeholder="outcome filter" className="h-8 w-36 rounded-md border border-input bg-background px-2 text-xs" />
-              <Button size="sm" type="submit" disabled={busy}><Search className="h-3.5 w-3.5" /> Search</Button>
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Claim ID, provider, case, rule, or behaviour description" className="h-8 min-w-[240px] flex-1 rounded-md border border-input bg-background px-2 text-[12px]" />
+              <select value={index} onChange={(e) => setIndex(e.target.value as any)} className="h-8 w-28 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider">{INDICES.map((i) => <option key={i}>{i}</option>)}</select>
+              <select value={mode} onChange={(e) => setMode(e.target.value as any)} className="h-8 w-20 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider">{MODES.map((i) => <option key={i}>{i}</option>)}</select>
+              <select value={kind} onChange={(e) => setKind(e.target.value)} className="h-8 w-32 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider"><option value="">any kind</option><option value="historical_investigation">historical investigation</option><option value="current_case">current case</option></select>
+              <input value={specialty} onChange={(e) => setSpecialty(e.target.value)} placeholder="specialty filter" className="h-8 w-28 rounded-md border border-input bg-background px-2 text-[12px]" />
+              <input value={outcome} onChange={(e) => setOutcome(e.target.value)} placeholder="outcome filter" className="h-8 w-28 rounded-md border border-input bg-background px-2 text-[12px]" />
+              <Button size="sm" type="submit" disabled={busy} className="h-8 text-[11px] uppercase tracking-wider px-4"><Search className="h-3.5 w-3.5 mr-1.5" /> Search</Button>
             </form>
+            
             {err && <ErrorBox error={err} />}
+            
             {res && (
-              <div className="space-y-2">
-                <div className="text-[11px] text-muted-foreground">{res.hits.length} hits - backend {res.backend} - mode {res.mode} - fused by RRF (k=60) when hybrid</div>
+              <div className="space-y-3">
+                <div className="text-[11px] uppercase tracking-wider text-muted-foreground pb-1 border-b border-border/50">{res.hits.length} hits • backend {res.backend} • mode {res.mode} • fused by RRF (k=60)</div>
                 {res.hits.map((h: any) => (
-                  <div key={h.id} className="rounded border border-border p-2 text-xs">
-                    <div className="flex flex-wrap items-center gap-2">
-                      {h.index === "cases" ? <Link to={h.doc.kind === "current_case" ? `/case/${h.id}` : "/memory"} className="font-mono font-semibold text-sky-400">{h.id}</Link> : <Mono className="font-semibold text-sky-400">{h.id}</Mono>}
-                      <Badge>{h.index}</Badge>{h.doc.kind && <Badge>{h.doc.kind.replace("_", " ")}</Badge>}{h.doc.outcome && <Badge>{h.doc.outcome}</Badge>}{h.doc.specialty && <span className="text-muted-foreground">{h.doc.specialty}</span>}
-                      <span className="ml-auto text-muted-foreground">RRF {h.score.toFixed(4)} - BM25 #{h.bm25_rank ?? "-"} - kNN #{h.knn_rank ?? "-"}</span></div>
-                    <div className="mt-1 text-muted-foreground">{(h.doc.summary || h.doc.text || h.doc.profile || h.doc.description || h.doc.rationale || "").slice(0, 300)}</div>
-                  </div>))}
+                  <div key={h.id} className="rounded border border-border p-3 text-[12px] hover:bg-accent/30 transition-colors">
+                    <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                      {h.index === "cases" ? <Link to={h.doc.kind === "current_case" ? `/case/${h.id}` : "/memory"} className="font-mono font-medium text-primary hover:underline">{h.id}</Link> : <Mono className="font-medium text-primary">{h.id}</Mono>}
+                      <Badge variant="outline" className="text-[9px] bg-transparent">{h.index}</Badge>
+                      {h.doc.kind && <Badge variant="outline" className="text-[9px] bg-transparent">{h.doc.kind.replace("_", " ")}</Badge>}
+                      {h.doc.outcome && <Badge variant="secondary" className="text-[9px]">{h.doc.outcome}</Badge>}
+                      {h.doc.specialty && <span className="text-[10px] uppercase tracking-wider text-muted-foreground ml-1">{h.doc.specialty}</span>}
+                      
+                      <span className="ml-auto text-[10px] text-muted-foreground font-mono">
+                        RRF {h.score.toFixed(4)} <span className="mx-1">•</span> BM25 #{h.bm25_rank ?? "-"} <span className="mx-1">•</span> kNN #{h.knn_rank ?? "-"}
+                      </span>
+                    </div>
+                    <div className="text-muted-foreground leading-relaxed">{(h.doc.summary || h.doc.text || h.doc.profile || h.doc.description || h.doc.rationale || "").slice(0, 350)}...</div>
+                  </div>
+                ))}
               </div>
             )}
           </CardContent>
         </Card>
-        <div className="space-y-4">
-          <Card><CardHeader><CardTitle>Pattern memory</CardTitle></CardHeader><CardContent className="space-y-2 text-xs">
-            {mem.data?.patterns.map((p: any) => <div key={p.pattern_id}><b className="font-mono">{p.pattern_id}</b> <span className="text-muted-foreground">support {p.support} past investigations{p.typical_outcomes?.length ? `; typical: ${p.typical_outcomes.join(", ")}` : ""}</span></div>)}</CardContent></Card>
-          <Card><CardHeader><CardTitle>Historical outcomes</CardTitle></CardHeader><CardContent className="space-y-1 text-xs">
-            {mem.data?.historical_outcomes.map((o: any) => <div key={o.outcome} className="flex justify-between"><span>{o.outcome}</span><span className="tabular-nums">{o.n} - {money(o.amount)}</span></div>)}</CardContent></Card>
-          <Card><CardHeader><CardTitle>Reviewer memory</CardTitle></CardHeader><CardContent className="space-y-2 text-xs">
-            {mem.data?.reviewer_memory.length ? mem.data.reviewer_memory.map((r: any) => <div key={r.review_id} className="rounded border border-border p-2"><b>{r.decision}</b> on <Link className="font-mono text-sky-400" to={`/case/${r.case_id}`}>{r.case_id}</Link> by {r.reviewer}<div className="text-muted-foreground">{r.rationale}</div></div>) : <span className="text-muted-foreground">No human decisions recorded yet. Decisions made in the Investigation Workspace appear here and are retrievable for similar future cases.</span>}</CardContent></Card>
+        
+        <div className="space-y-4 flex flex-col">
+          <Card>
+            <CardHeader className="py-3"><CardTitle>Pattern Memory</CardTitle></CardHeader>
+            <CardContent className="space-y-3 text-[12px] pb-4">
+              {mem.data?.patterns.map((p: any) => <div key={p.pattern_id} className="flex flex-col gap-0.5"><b className="font-mono text-foreground">{p.pattern_id}</b> <span className="text-muted-foreground text-[11px] leading-snug">support {p.support} past investigations{p.typical_outcomes?.length ? `; typical: ${p.typical_outcomes.join(", ")}` : ""}</span></div>)}
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardHeader className="py-3"><CardTitle>Historical Outcomes</CardTitle></CardHeader>
+            <CardContent className="space-y-1.5 text-[12px] pb-4">
+              {mem.data?.historical_outcomes.map((o: any) => <div key={o.outcome} className="flex justify-between items-center"><span className="text-muted-foreground">{o.outcome}</span><span className="tabular-nums font-medium text-foreground">{o.n} <span className="text-muted-foreground mx-1">•</span> {money(o.amount)}</span></div>)}
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardHeader className="py-3"><CardTitle>Reviewer Memory</CardTitle></CardHeader>
+            <CardContent className="space-y-3 text-[12px] pb-4">
+              {mem.data?.reviewer_memory.length ? mem.data.reviewer_memory.map((r: any) => (
+                <div key={r.review_id} className="rounded border border-border p-2.5 bg-muted/20">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Badge variant={r.decision === "APPROVE" ? "default" : "secondary"} className="text-[9px]">{r.decision}</Badge>
+                    <span className="text-[11px] text-muted-foreground">on <Link className="font-mono text-primary hover:underline mx-1" to={`/case/${r.case_id}`}>{r.case_id}</Link> by {r.reviewer}</span>
+                  </div>
+                  <div className="text-muted-foreground leading-snug italic">"{r.rationale}"</div>
+                </div>
+              )) : <span className="text-muted-foreground italic">No human decisions recorded yet. Decisions made in the Investigation Workspace appear here.</span>}
+            </CardContent>
+          </Card>
         </div>
       </div>
     </Page>
