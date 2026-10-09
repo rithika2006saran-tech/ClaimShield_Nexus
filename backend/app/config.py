@@ -45,6 +45,9 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 
+SUPABASE_URL = os.getenv("SUPABASE_URL", "")
+SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
+
 # --- Synthetic dataset definition -------------------------------------------------
 SEED = 20261008
 DATA_START = date(2025, 4, 1)          # month index 1
@@ -73,3 +76,11 @@ PRIORITY_WEIGHTS = {
     "exposure": 0.10,
     "member_impact": 0.05,
 }
+
+_weights_file = DATA_DIR / "priority_weights.json"
+if _weights_file.exists():
+    import json
+    try:
+        PRIORITY_WEIGHTS.update(json.loads(_weights_file.read_text(encoding="utf-8")))
+    except Exception:
+        pass

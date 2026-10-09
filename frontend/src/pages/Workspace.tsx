@@ -35,7 +35,24 @@ export default function Workspace() {
 
   return (
     <Page fullWidth title={`${c.case_id}`} subtitle={`Lead on ${c.anchor_provider_id} - ${c.specialty} • ${c.review_status}`}
-      actions={<><BandBadge band={c.review_priority} className="text-xs" /><Badge variant="outline">Score {f2(c.priority_score)}</Badge><Link to={`/provider/${c.anchor_provider_id}`}><Button size="sm" variant="outline" className="h-8">Provider Profile</Button></Link></>}>
+      actions={<>
+        <BandBadge band={c.review_priority} className="text-xs" />
+        <Badge variant="outline">Score {f2(c.priority_score)}</Badge>
+        <Button size="sm" variant="outline" className="h-8" onClick={async () => {
+          try {
+            const res = await fetch(`/api/cases/${c.case_id}/brief?format=markdown`);
+            const data = await res.json();
+            const blob = new Blob([data.markdown], { type: "text/markdown" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `${c.case_id}_Report.md`;
+            a.click();
+            URL.revokeObjectURL(url);
+          } catch (e) { alert("Failed to export report"); }
+        }}>Export Report</Button>
+        <Link to={`/provider/${c.anchor_provider_id}`}><Button size="sm" variant="outline" className="h-8">Provider Profile</Button></Link>
+      </>}>
       
       {tabId === "overview" && (
         <div className="grid gap-4 xl:grid-cols-[1fr_400px] items-start">

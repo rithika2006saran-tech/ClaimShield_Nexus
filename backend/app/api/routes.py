@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Request, WebSocket, WebSocketDisconnect, Depends
 from pydantic import BaseModel, Field
 
 from .. import config, db
@@ -14,10 +14,41 @@ from ..ai.llm import get_llm
 from ..brain import service as brain
 from ..graph import STORE
 from .util import clean, jl
+from ..auth import require_role
 
 router = APIRouter(prefix="/api")
 
 STATUS_OF = {"ESCALATE": "ESCALATED", "REQUEST_DOCUMENTATION": "DOCUMENTATION_REQUESTED", "MONITOR": "MONITORING", "CLOSE": "CLOSED"}
+
+class ConnectionManager:
+    def __init__(self):
+        self.active_connections: list[WebSocket] = []
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self.active_connections.append(websocket)
+
+    def disconnect(self, websocket: WebSocket):
+        if websocket in self.active_connections:
+            self.active_connections.remove(websocket)
+
+    async def broadcast(self, message: dict):
+        for connection in self.active_connections:
+            try:
+                await connection.send_json(message)
+            except Exception:
+                pass
+
+manager = ConnectionManager()
+
+@router.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await manager.connect(websocket)
+    try:
+        while True:
+            await websocket.receive_text()
+    except WebSocketDisconnect:
+        manager.disconnect(websocket)
 
 
 # ------------------------------------------------------------------------------------------------ models
@@ -38,6 +69,7 @@ class SearchIn(BaseModel):
     mode: Literal["hybrid", "bm25", "knn"] = "hybrid"
     filters: dict = Field(default_factory=dict)
     size: int = Field(default=10, ge=1, le=50)
+    offset: int = Field(default=0, ge=0)
 
 
 def _case_or_404(case_id: str) -> dict:
@@ -108,9 +140,9 @@ def models():
 
 # ------------------------------------------------------------------------------------------------ queue
 @router.get("/queue")
-def queue(capacity: int = Query(10, ge=1, le=50), include_reviewed: bool = False, specialty: str | None = None, min_band: str | None = None):
-    """Highest-value investigations for the chosen investigator capacity (5/10/20 in the UI)."""
-    where, p = ["1=1"], {"cap": capacity}
+def queue(capacity: int = Query(10, ge=1, le=10000), offset: int = 0, include_reviewed: bool = False, specialty: str | None = None, min_band: str | None = None):
+    """Highest-value investigations for the chosen investigator capacity."""
+    where, p = ["1=1"], {"cap": capacity, "off": offset}
     if not include_reviewed:
         where.append("review_status IN ('PENDING','MONITORING','DOCUMENTATION_REQUESTED','ESCALATED')")
     if specialty:
@@ -120,19 +152,53 @@ def queue(capacity: int = Query(10, ge=1, le=50), include_reviewed: bool = False
         order = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
         where.append("review_priority = ANY(:bands)")
         p["bands"] = order[order.index(min_band.upper()):] if min_band.upper() in order else order
-    rows = db.query_rows(f"SELECT {CASE_LIST_COLS}, components FROM cases WHERE {' AND '.join(where)} ORDER BY priority_score DESC, potential_exposure DESC LIMIT :cap", p)
+    rows = db.query_rows(f"SELECT {CASE_LIST_COLS}, components FROM cases WHERE {' AND '.join(where)} ORDER BY priority_score DESC, potential_exposure DESC LIMIT :cap OFFSET :off", p)
     total = db.query_one(f"SELECT count(*) n FROM cases WHERE {' AND '.join(where)}", p)
-    global_total = db.query_one("SELECT COALESCE(sum(potential_exposure),0) e FROM cases")
+    global_total = db.query_one(f"SELECT COALESCE(sum(potential_exposure),0) e FROM cases WHERE {' AND '.join(where)}", p)
     for i, r in enumerate(rows, 1):
-        r["rank"] = i
+        r["rank"] = offset + i
         r["components"] = jl(r["components"])
         r["top_drivers"] = [k for k, _ in sorted(r["components"].items(), key=lambda kv: -kv[1]) [:3]]
     sel = sum(float(r["potential_exposure"]) for r in rows)
     tot_e = float(global_total["e"])
-    return clean({"capacity": capacity, "cases": rows, "selected_exposure": sel, "total_cases_available": total["n"], "total_exposure_available": tot_e,
+    return clean({"capacity": capacity, "offset": offset, "cases": rows, "selected_exposure": sel, "total_cases_available": total["n"], "total_exposure_available": tot_e,
                   "exposure_coverage": sel / tot_e if tot_e else 0, "weights": config.PRIORITY_WEIGHTS, "policy_version": config.PRIORITY_POLICY_VERSION,
                   "policy_note": "Ranking blends model risk, rule evidence, peer deviation, network, temporal escalation, anomaly, evidence strength, exposure and member impact - not model score alone."})
 
+
+def audit_log(action: str, user: str, details: dict):
+    import json
+    from datetime import datetime
+    try:
+        with open(config.DATA_DIR / "audit.log", "a") as f:
+            f.write(json.dumps({"ts": datetime.utcnow().isoformat(), "action": action, "user": user, "details": details}) + "\n")
+    except Exception:
+        pass
+
+@router.post("/config/weights")
+def update_weights(weights: dict, background_tasks: BackgroundTasks, user: dict = Depends(require_role(["LEAD"]))):
+    audit_log("UPDATE_WEIGHTS", user["role"], {"weights": weights})
+
+    
+    # Update in memory
+    config.PRIORITY_WEIGHTS.update(weights)
+    # Save to disk
+    import json
+    weights_path = config.DATA_DIR / "priority_weights.json"
+    weights_path.write_text(json.dumps(config.PRIORITY_WEIGHTS, indent=2), encoding="utf-8")
+    
+    # Recalculate priority_scores for all cases in DB
+    cases = db.query_rows("SELECT case_id, components FROM cases")
+    from ..cases import band
+    for c in cases:
+        comps = json.loads(c["components"])
+        w = config.PRIORITY_WEIGHTS
+        new_score = float(sum(comps.get(k, 0) * w.get(k, 0) for k in w))
+        new_band = band(new_score)
+        db.execute("UPDATE cases SET priority_score=:s, review_priority=:b WHERE case_id=:id", {"s": new_score, "b": new_band, "id": c["case_id"]})
+        
+    background_tasks.add_task(manager.broadcast, {"type": "weights_updated", "weights": config.PRIORITY_WEIGHTS})
+    return {"status": "ok", "weights": config.PRIORITY_WEIGHTS}
 
 # ------------------------------------------------------------------------------------------------ case
 @router.get("/cases")
@@ -272,9 +338,12 @@ def case_reviews(case_id: str):
     return clean(db.query_rows("SELECT * FROM review_actions WHERE case_id=:c ORDER BY review_id DESC", {"c": case_id}))
 
 
+from fastapi import BackgroundTasks
+
 @router.post("/cases/{case_id}/review")
-def submit_review(case_id: str, body: ReviewIn):
+def submit_review(case_id: str, body: ReviewIn, background_tasks: BackgroundTasks, user: dict = Depends(require_role(["LEAD", "REVIEWER"]))):
     """Human SIU decision. Stored in PostgreSQL (source of truth) and written to reviewer memory in the Second Brain."""
+    role = user["role"]
     c = _case_or_404(case_id)
     new = STATUS_OF[body.decision]
     with db.begin() as conn:
@@ -286,6 +355,11 @@ def submit_review(case_id: str, body: ReviewIn):
         conn.execute(text("UPDATE cases SET review_status=:n, updated_at=now() WHERE case_id=:c"), {"n": new, "c": case_id})
     row = db.query_one("SELECT * FROM review_actions WHERE review_id=:i", {"i": rid})
     mem = brain.record_review(row)
+    
+    audit_log("SUBMIT_REVIEW", role, {"case_id": case_id, "decision": body.decision, "reviewer": body.reviewer})
+    
+    background_tasks.add_task(manager.broadcast, {"type": "review_submitted", "case_id": case_id, "status": new})
+    
     return clean({"review": row, "case_status": new, "reviewer_memory": mem, "note": "Decision recorded by a human reviewer. The system took no automated action on claims or providers."})
 
 
@@ -367,7 +441,7 @@ def brain_status():
 
 @router.post("/brain/search")
 def brain_search(body: SearchIn):
-    return clean(brain.search(body.query, body.index, body.filters, body.size, body.mode))
+    return clean(brain.search(body.query, body.index, body.filters, body.size, body.offset, body.mode))
 
 
 @router.get("/brain/memory")

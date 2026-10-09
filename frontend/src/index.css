@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+<<<<<<< HEAD
     --background: 218 34% 6%;
     --foreground: 214 36% 93%;
     --card: 218 34% 11%;
@@ -19,6 +20,25 @@
     --border: 217 27% 21%;
     --input: 217 27% 21%;
     --ring: 196 89% 53%;
+=======
+    --background: 0 0% 100%; --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; --card-foreground: 222.2 84% 4.9%;
+    --primary: 199 89% 52%; --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%; --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%; --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%; --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%; --input: 214.3 31.8% 91.4%; --ring: 199 89% 52%;
+  }
+
+  .dark {
+    --background: 222 30% 7%; --foreground: 210 20% 92%;
+    --card: 222 28% 10%; --card-foreground: 210 20% 92%;
+    --primary: 199 89% 52%; --primary-foreground: 222 30% 7%;
+    --secondary: 222 22% 16%; --secondary-foreground: 210 20% 92%;
+    --muted: 222 20% 14%; --muted-foreground: 215 15% 62%;
+    --accent: 222 22% 18%; --accent-foreground: 210 20% 92%;
+    --border: 222 18% 20%; --input: 222 18% 20%; --ring: 199 89% 52%;
+>>>>>>> origin/main
   }
   * { @apply border-border; }
   body { @apply bg-background text-foreground antialiased text-[13px]; font-feature-settings: "tnum"; }

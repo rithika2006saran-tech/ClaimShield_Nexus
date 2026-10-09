@@ -9,13 +9,18 @@ import { money, pct } from "@/lib/utils";
 
 export default function Queue() {
   const [cap, setCap] = useState(10);
+  const [offset, setOffset] = useState(0);
   const [reviewed, setReviewed] = useState(false);
-  const { data, error, loading } = useApi<any>(`/queue?capacity=${cap}&include_reviewed=${reviewed}`);
+  const { data, error, loading } = useApi<any>(`/queue?capacity=${cap}&offset=${offset}&include_reviewed=${reviewed}`);
   return (
     <Page title="SIU Queue" subtitle="Highest-value investigation priorities based on selected capacity."
       actions={<>
-        <Button size="sm" variant={reviewed ? "secondary" : "outline"} onClick={() => setReviewed(!reviewed)} className="h-8 text-[11px] uppercase tracking-wider">Include Closed / Working</Button>
-        <div className="flex bg-muted rounded p-0.5">{[5, 10, 20].map((c) => <Button key={c} size="sm" variant={cap === c ? "secondary" : "ghost"} className="h-7 text-[11px] px-3" onClick={() => setCap(c)}>Top {c}</Button>)}</div></>}>
+        <Button size="sm" variant={reviewed ? "secondary" : "outline"} onClick={() => { setReviewed(!reviewed); setOffset(0); }} className={reviewed ? "bg-accent text-[11px] uppercase tracking-wider h-8" : "text-muted-foreground text-[11px] uppercase tracking-wider h-8"}>Include Closed / Working</Button>
+        <div className="flex bg-muted rounded p-0.5">{(["All", 5, 10, 20] as const).map((c) => {
+          const isAll = c === "All";
+          const capValue = isAll ? 10000 : (c as number);
+          return <Button key={c} size="sm" variant={cap === capValue ? "secondary" : "ghost"} className="h-7 text-[11px] px-3" onClick={() => { setCap(capValue); setOffset(0); }}>{isAll ? "All" : `Top ${c}`}</Button>
+        })}</div></>}>
       {loading && <Loading />}
       {error && <ErrorBox error={error} />}
       {data && (
@@ -72,6 +77,16 @@ export default function Queue() {
               </table>
             </div>
           </Card>
+          
+          <div className="mt-4 flex items-center justify-between">
+            <span className="text-xs text-muted-foreground">
+              Showing {data.offset + 1} to {Math.min(data.offset + data.cases.length, data.total_cases_available)} of {data.total_cases_available}
+            </span>
+            <div className="flex gap-2">
+              <Button size="sm" variant="outline" disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - cap))}>Previous</Button>
+              <Button size="sm" variant="outline" disabled={data.offset + data.cases.length >= data.total_cases_available} onClick={() => setOffset(offset + cap)}>Next</Button>
+            </div>
+          </div>
         </div>
       )}
     </Page>

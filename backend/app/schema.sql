@@ -16,6 +16,11 @@ CREATE TABLE facilities (
   lon            DOUBLE PRECISION NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS user_roles (
+  email TEXT PRIMARY KEY,
+  role TEXT NOT NULL
+);
+
 CREATE TABLE providers (
   provider_id          TEXT PRIMARY KEY,           -- canonical, e.g. PRV-102
   display_label        TEXT NOT NULL,              -- display label, e.g. P102

@@ -23,16 +23,17 @@ export default function Memory() {
   const [res, setRes] = useState<any>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
+  const [offset, setOffset] = useState(0);
 
-  const run = async () => {
+  const run = async (currentOffset = offset) => {
     setBusy(true); setErr(null);
     const filters: any = {};
     if (index === "cases" && kind) filters.kind = kind;
     if (specialty && (index === "cases" || index === "entities" || index === "review_memory")) filters.specialty = specialty;
     if (outcome && index === "cases") filters.outcome = outcome;
-    try { setRes(await post("/brain/search", { query: q, index, mode, filters, size: 10 })); } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
+    try { setRes(await post("/brain/search", { query: q, index, mode, filters, size: 10, offset: currentOffset })); } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
   };
-  useEffect(() => { run(); /* initial example search */ // eslint-disable-next-line
+  useEffect(() => { run(0); /* initial example search */ // eslint-disable-next-line
   }, []);
   const st = mem.data?.status;
   return (
@@ -42,10 +43,12 @@ export default function Memory() {
       
       {st && (
         <div className="mb-4 flex flex-wrap items-center gap-3 rounded-md border border-border bg-card p-3 text-[11px] uppercase tracking-wider text-muted-foreground shadow-sm">
-          <Badge variant="outline" className={st.using_fallback ? "border-amber-500/50 text-amber-500" : "border-green-500/50 text-green-500"}>{st.backend}</Badge>
-          {st.using_fallback && <span className="text-amber-500 normal-case tracking-normal text-[12px]">Elasticsearch not reachable - in-process fallback with identical BM25 + kNN + RRF semantics.</span>}
-          <span>vectors: <strong className="text-foreground">{st.vector_mode}</strong></span>
-          {Object.entries<number>(st.indices ?? {}).map(([k, v]) => <span key={k}><b>{k}</b> <span className="text-foreground">{v}</span></span>)}
+          <span><b>Documents</b>: {st.document_count}</span>
+          <span className="h-3 w-px bg-border"></span>
+          <span><b>Cases</b>: {st.index_counts?.cases ?? 0}</span>
+          <span><b>Entities</b>: {st.index_counts?.entities ?? 0}</span>
+          <span><b>Evidence</b>: {st.index_counts?.evidence ?? 0}</span>
+          <span><b>Patterns</b>: {st.index_counts?.patterns ?? 0}</span>
         </div>
       )}
       
@@ -53,21 +56,24 @@ export default function Memory() {
         <Card className="flex flex-col">
           <CardHeader className="py-3"><CardTitle>Search Second Brain</CardTitle></CardHeader>
           <CardContent className="space-y-4">
-            <form className="flex flex-wrap gap-2" onSubmit={(e) => { e.preventDefault(); run(); }}>
+            <form className="flex flex-wrap gap-2 items-center" onSubmit={(e) => { e.preventDefault(); setOffset(0); run(0); }}>
               <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Claim ID, provider, case, rule, or behaviour description" className="h-8 min-w-[240px] flex-1 rounded-md border border-input bg-background px-2 text-[12px]" />
-              <select value={index} onChange={(e) => setIndex(e.target.value as any)} className="h-8 w-28 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider">{INDICES.map((i) => <option key={i}>{i}</option>)}</select>
+              <select value={index} onChange={(e) => setIndex(e.target.value as any)} className="h-8 w-24 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider">{INDICES.map((i) => <option key={i}>{i}</option>)}</select>
               <select value={mode} onChange={(e) => setMode(e.target.value as any)} className="h-8 w-20 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider">{MODES.map((i) => <option key={i}>{i}</option>)}</select>
-              <select value={kind} onChange={(e) => setKind(e.target.value)} className="h-8 w-32 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider"><option value="">any kind</option><option value="historical_investigation">historical investigation</option><option value="current_case">current case</option></select>
-              <input value={specialty} onChange={(e) => setSpecialty(e.target.value)} placeholder="specialty filter" className="h-8 w-28 rounded-md border border-input bg-background px-2 text-[12px]" />
-              <input value={outcome} onChange={(e) => setOutcome(e.target.value)} placeholder="outcome filter" className="h-8 w-28 rounded-md border border-input bg-background px-2 text-[12px]" />
-              <Button size="sm" type="submit" disabled={busy} className="h-8 text-[11px] uppercase tracking-wider px-4"><Search className="h-3.5 w-3.5 mr-1.5" /> Search</Button>
+              <select value={kind} onChange={(e) => setKind(e.target.value)} className="h-8 w-28 rounded-md border border-input bg-background px-1 text-[11px] uppercase tracking-wider"><option value="">any kind</option><option value="historical_investigation">historical investigation</option><option value="current_case">current case</option></select>
+              <input value={specialty} onChange={(e) => setSpecialty(e.target.value)} placeholder="specialty" className="h-8 w-28 rounded-md border border-input bg-background px-2 text-[12px]" />
+              <input value={outcome} onChange={(e) => setOutcome(e.target.value)} placeholder="outcome" className="h-8 w-28 rounded-md border border-input bg-background px-2 text-[12px]" />
+              <Button size="sm" type="submit" disabled={busy} className="h-8 text-[11px] uppercase tracking-wider"><Search className="h-3 w-3 mr-1" /> Search</Button>
             </form>
             
             {err && <ErrorBox error={err} />}
             
             {res && (
               <div className="space-y-3">
-                <div className="text-[11px] uppercase tracking-wider text-muted-foreground pb-1 border-b border-border/50">{res.hits.length} hits • backend {res.backend} • mode {res.mode} • fused by RRF (k=60)</div>
+                <div className="text-[11px] uppercase tracking-wider text-muted-foreground pb-1 border-b border-border/50 flex justify-between">
+                  <span>{res.hits.length} hits • backend {res.backend} • mode {res.mode} • fused by RRF (k=60)</span>
+                  <span>offset {res.offset}</span>
+                </div>
                 {res.hits.map((h: any) => (
                   <div key={h.id} className="rounded border border-border p-3 text-[12px] hover:bg-accent/30 transition-colors">
                     <div className="flex flex-wrap items-center gap-2 mb-1.5">
@@ -84,6 +90,11 @@ export default function Memory() {
                     <div className="text-muted-foreground leading-relaxed">{(h.doc.summary || h.doc.text || h.doc.profile || h.doc.description || h.doc.rationale || "").slice(0, 350)}...</div>
                   </div>
                 ))}
+                
+                <div className="mt-4 flex gap-2 justify-end">
+                  <Button size="sm" variant="outline" className="h-8 text-[11px] uppercase tracking-wider" disabled={offset === 0} onClick={() => { setOffset(Math.max(0, offset - 10)); run(Math.max(0, offset - 10)); }}>Previous</Button>
+                  <Button size="sm" variant="outline" className="h-8 text-[11px] uppercase tracking-wider" disabled={res.hits.length < 10} onClick={() => { setOffset(offset + 10); run(offset + 10); }}>Next</Button>
+                </div>
               </div>
             )}
           </CardContent>

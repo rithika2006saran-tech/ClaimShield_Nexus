@@ -63,7 +63,7 @@ class Backend:
     def health(self) -> dict: ...
 
 
-def rrf_fuse(rank_lists: list[list[Hit]], k: int = RRF_K, size: int = 10) -> list[Hit]:
+def rrf_fuse(rank_lists: list[list[Hit]], k: int = RRF_K, size: int = 10, offset: int = 0) -> list[Hit]:
     """Reciprocal Rank Fusion: score = sum 1 / (k + rank) across ranked lists."""
     fused: dict[tuple[str, str], Hit] = {}
     for lst in rank_lists:
@@ -78,13 +78,13 @@ def rrf_fuse(rank_lists: list[list[Hit]], k: int = RRF_K, size: int = 10) -> lis
                 cur.bm25_rank, cur.bm25_score = h.bm25_rank, h.bm25_score
             if h.knn_rank is not None:
                 cur.knn_rank, cur.knn_score = h.knn_rank, h.knn_score
-    out = sorted(fused.values(), key=lambda h: -h.rrf_score)[:size]
+    out = sorted(fused.values(), key=lambda h: -h.rrf_score)[offset:offset+size]
     for h in out:
         h.explain = {"method": "RRF(k=%d)" % k, "bm25_rank": h.bm25_rank, "knn_rank": h.knn_rank}
     return out
 
 
-def hybrid_search(backend: Backend, index: str, query: str, vector: list[float] | None, filters: dict | None = None, size: int = 10, window: int = 50,
+def hybrid_search(backend: Backend, index: str, query: str, vector: list[float] | None, filters: dict | None = None, size: int = 10, offset: int = 0, window: int = 100,
                   mode: str = "hybrid") -> list[Hit]:
     """BM25 + structured filters + vector/kNN fused with RRF. `mode` in {hybrid, bm25, knn}. Falls back to BM25 if kNN is unavailable."""
     lists: list[list[Hit]] = []
@@ -97,10 +97,10 @@ def hybrid_search(backend: Backend, index: str, query: str, vector: list[float] 
             if not lists and query.strip():
                 lists.append(backend.lexical(index, query, filters, window))
     if not lists:
-        return backend.filter_only(index, filters, size)
+        return backend.filter_only(index, filters, window)[offset:offset+size]
     if len(lists) == 1:
         for r, h in enumerate(lists[0], 1):
             h.rrf_score = 1.0 / (RRF_K + r)
             h.explain = {"method": "single-ranker", "bm25_rank": h.bm25_rank, "knn_rank": h.knn_rank}
-        return lists[0][:size]
-    return rrf_fuse(lists, size=size)
+        return lists[0][offset:offset+size]
+    return rrf_fuse(lists, size=size, offset=offset)
