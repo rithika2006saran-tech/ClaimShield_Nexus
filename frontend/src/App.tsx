@@ -74,7 +74,7 @@ export default function App() {
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
-      <aside className={cn("flex shrink-0 flex-col border-r border-border bg-[#101620] transition-all duration-300", collapsed ? "w-[68px]" : "w-[220px]")}>
+      <aside className={cn("flex shrink-0 flex-col border-r border-border bg-card transition-all duration-300", collapsed ? "w-[68px]" : "w-[220px]")}>
         <div className={cn("flex items-center px-4 py-3 border-b border-border h-12", collapsed ? "justify-center px-0" : "justify-between")}>
           {!collapsed && (
             <div className="flex items-center gap-2 text-[13px] font-bold tracking-tight text-foreground truncate">
