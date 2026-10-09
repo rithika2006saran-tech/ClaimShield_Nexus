@@ -187,9 +187,9 @@ export default function Workspace() {
           {/* RIGHT: Copilot, Evidence Summary, Selection Details, Decision */}
           <div className="space-y-4 flex flex-col xl:sticky xl:top-4 max-h-[calc(100vh-80px)] overflow-y-auto pb-4 hide-scrollbar">
             
-            <Card className="flex flex-col min-h-[350px]">
+            <Card className="flex-1 flex flex-col min-h-[450px]">
               <CardHeader className="py-3"><CardTitle>Nexus Copilot</CardTitle></CardHeader>
-              <CardContent className="p-0 flex-1 flex flex-col min-h-0 overflow-hidden">
+              <CardContent className="p-4 pt-0 flex-1 flex flex-col min-h-0 overflow-hidden">
                 <Copilot caseId={caseId} onCite={cite} />
               </CardContent>
             </Card>
