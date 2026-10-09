@@ -46,11 +46,11 @@ def status() -> dict:
     return h
 
 
-def search(query: str, index: str = "cases", filters: dict | None = None, size: int = 10, mode: str = "hybrid") -> dict:
+def search(query: str, index: str = "cases", filters: dict | None = None, size: int = 10, offset: int = 0, mode: str = "hybrid") -> dict:
     if index not in INDICES:
         raise ValueError(f"unknown index {index}")
     b = get_backend()
-    hits = hybrid_search(b, index, query, embed_query(query) if query.strip() else None, filters, size, mode=mode)
+    hits = hybrid_search(b, index, query, embed_query(query) if query.strip() else None, filters, size, offset=offset, mode=mode)
     return {"query": query, "index": index, "filters": filters or {}, "mode": mode, "backend": b.name, "vector_mode": b.vector_mode, "hits": [h.to_dict() for h in hits]}
 
 

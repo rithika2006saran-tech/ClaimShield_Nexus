@@ -24,16 +24,17 @@ export default function Memory() {
   const [res, setRes] = useState<any>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
+  const [offset, setOffset] = useState(0);
 
-  const run = async () => {
+  const run = async (currentOffset = offset) => {
     setBusy(true); setErr(null);
     const filters: any = {};
     if (index === "cases" && kind) filters.kind = kind;
     if (specialty && (index === "cases" || index === "entities" || index === "review_memory")) filters.specialty = specialty;
     if (outcome && index === "cases") filters.outcome = outcome;
-    try { setRes(await post("/brain/search", { query: q, index, mode, filters, size: 10 })); } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
+    try { setRes(await post("/brain/search", { query: q, index, mode, filters, size: 10, offset: currentOffset })); } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
   };
-  useEffect(() => { run(); /* initial example search */ // eslint-disable-next-line
+  useEffect(() => { run(0); /* initial example search */ // eslint-disable-next-line
   }, []);
   const st = mem.data?.status;
   return (
@@ -51,7 +52,7 @@ export default function Memory() {
         <Card className="xl:col-span-2">
           <CardHeader><CardTitle>Search the Second Brain</CardTitle></CardHeader>
           <CardContent className="space-y-3">
-            <form className="flex flex-wrap gap-2" onSubmit={(e) => { e.preventDefault(); run(); }}>
+            <form className="flex flex-wrap gap-2" onSubmit={(e) => { e.preventDefault(); setOffset(0); run(0); }}>
               <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Claim ID, provider, case, rule, or behaviour description" className="h-8 min-w-[240px] flex-1 rounded-md border border-input bg-background px-2 text-xs" />
               <select value={index} onChange={(e) => setIndex(e.target.value as any)} className="h-8 rounded-md border border-input bg-background px-1 text-xs">{INDICES.map((i) => <option key={i}>{i}</option>)}</select>
               <select value={mode} onChange={(e) => setMode(e.target.value as any)} className="h-8 rounded-md border border-input bg-background px-1 text-xs">{MODES.map((i) => <option key={i}>{i}</option>)}</select>
@@ -63,7 +64,7 @@ export default function Memory() {
             {err && <ErrorBox error={err} />}
             {res && (
               <div className="space-y-2">
-                <div className="text-[11px] text-muted-foreground">{res.hits.length} hits - backend {res.backend} - mode {res.mode} - fused by RRF (k=60) when hybrid</div>
+                <div className="text-[11px] text-muted-foreground">{res.hits.length} hits - backend {res.backend} - mode {res.mode} - fused by RRF (k=60) when hybrid - offset {res.offset}</div>
                 {res.hits.map((h: any) => (
                   <div key={h.id} className="rounded border border-border p-2 text-xs">
                     <div className="flex flex-wrap items-center gap-2">
@@ -72,6 +73,10 @@ export default function Memory() {
                       <span className="ml-auto text-muted-foreground">RRF {h.score.toFixed(4)} - BM25 #{h.bm25_rank ?? "-"} - kNN #{h.knn_rank ?? "-"}</span></div>
                     <div className="mt-1 text-muted-foreground">{(h.doc.summary || h.doc.text || h.doc.profile || h.doc.description || h.doc.rationale || "").slice(0, 300)}</div>
                   </div>))}
+                <div className="mt-4 flex gap-2">
+                  <Button size="sm" variant="outline" disabled={offset === 0} onClick={() => { setOffset(Math.max(0, offset - 10)); run(Math.max(0, offset - 10)); }}>Previous</Button>
+                  <Button size="sm" variant="outline" disabled={res.hits.length < 10} onClick={() => { setOffset(offset + 10); run(offset + 10); }}>Next</Button>
+                </div>
               </div>
             )}
           </CardContent>

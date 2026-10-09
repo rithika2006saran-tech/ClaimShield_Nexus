@@ -1,6 +1,9 @@
-// Thin typed client. Every number in the UI comes from these endpoints (no client-side fabricated data).
+import { supabase } from "./supabase";
+
 export async function api<T = any>(path: string, init?: RequestInit): Promise<T> {
-  const r = await fetch(`/api${path}`, { headers: { "Content-Type": "application/json" }, ...init });
+  const { data: { session } } = await supabase.auth.getSession();
+  const token = session?.access_token || "";
+  const r = await fetch(`/api${path}`, { headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` }, ...init });
   if (!r.ok) {
     let msg = r.statusText;
     try { const j = await r.json(); msg = typeof j.detail === "string" ? j.detail : JSON.stringify(j.detail); } catch { /* ignore */ }
